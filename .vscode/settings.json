@@ -1,0 +1,28 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    // Columns at which to show vertical rulers
+    "typescript.implementationsCodeLens.enabled": true,
+    "editor.autoClosingBrackets": false,
+    "editor.minimap.enabled": true,
+    "editor.rulers": [160],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+
+        ".idea": true,
+        ".vscode": false,
+        "bower_components": true,
+        "node_modules": true,
+        "tools": false,
+        "typings": false,
+        "wwwroot": true
+    },
+
+    "css.validate": false,
+
+    // Auto Import configuration
+    "autoimport.doubleQuotes": true,
+    "typescript.tsdk": "./node_modules/typescript/lib"
+}

@@ -1,0 +1,89 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [{
+            "taskName": "build debug",
+            "args": [
+                "run",
+                "build-debug"
+            ],
+            // Watching
+            "isWatching": false,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Usar los mismos que la tarea 'build watch' si se quieren usar
+            "problemMatcher": []
+        },
+        {
+            "taskName": "build release",
+            "args": [
+                "run",
+                "build-release"
+            ],
+            // Watching
+            "isBackground": false,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Usar los mismos que la tarea 'build watch' si se quieren usar
+            "problemMatcher": []
+        },
+        {
+            "taskName": "watch",
+            "args": [
+                "run",
+                "watch"
+            ],
+            // Make this the default build command.
+            "isBuildCommand": true,
+            // Watching
+            "isBackground": true,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Use the standard less compilation problem matcher.
+            "problemMatcher": [
+                // Actualmente vscode implementa gestor de errores para typescript (descomentar si no funciona bien.)
+                // {
+                //     "owner": "gulp-typescript",
+                //     "fileLocation": "absolute",
+                //     "pattern": {
+                //         "regexp": "^\\[gulp-typescript\\] (.*)\\((\\d*),(\\d*)\\): (error|warning) (.*)$",
+                //         "file": 1,
+                //         "line": 2,
+                //         "column": 3,
+                //         "severity": 4,
+                //         "message": 5
+                //     },
+                //     "watching": {
+                //         "activeOnStart": true,
+                //         "beginsPattern": ".*Starting 'build-ts-debug'\\.\\.\\.",
+                //         "endsPattern": ".*Finished 'build-ts-debug' after.*"
+                //     }
+                // },
+                // Actualmente existe una extension para vscode 'tslint' que implementa la funcionalidad (descomentar si no se quiere usar la extension)
+                // {
+                //     "owner": "gulp-tslint",
+                //     "severity": "warning",
+                //     "fileLocation": "relative",
+                //     "pattern": {
+                //         // RegEx Prose
+                //         "regexp": "^.*\\[gulp-tslint\\] (error|warning) (.*)\\[(\\d*), (\\d*)\\]: (.*)$",
+                //         "file": 2,
+                //         "line": 3,
+                //         "column": 4,
+                //         "message": 5
+                //     },
+                //     "watching": {
+                //         "activeOnStart": false,
+                //         "beginsPattern": ".*Starting 'lint-ts'\\.\\.\\.",
+                //         "endsPattern": ".*Finished 'lint-ts' after.*"
+                //     }
+                // }
+            ]
+        }
+    ]
+}

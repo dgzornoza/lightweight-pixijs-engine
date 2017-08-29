@@ -1,0 +1,53 @@
+var webpack = require("webpack");
+var path = require("path");
+
+// `CheckerPlugin` is optional. Use it if you want async error reporting.
+// We need this plugin to detect a `--watch` mode. It may be removed later
+// after https://github.com/webpack/webpack/issues/3460 will be resolved.
+const { CheckerPlugin } = require("awesome-typescript-loader")
+
+
+var libraryName = "lightweight-pixijs-engine";
+var baseUrl = __dirname + "/..";
+var plugins = [new CheckerPlugin()];
+
+// environment options
+var outputFile;
+if (process.env.NODE_ENV === "production") {
+    plugins.push(new webpack.optimize.UglifyJsPlugin({ minimize: true }));
+    outputFile = libraryName + ".min.js";
+} else {
+    outputFile = libraryName + ".js";
+}
+
+
+// webpack config
+var config = {
+    entry: [
+        baseUrl + "/src/pixiApp.ts"
+    ],
+    // Source maps support ("inline-source-map" also works)
+    devtool: "source-map",
+    output: {
+        path: path.join(baseUrl, "/../dist/engine"),
+        filename: outputFile,
+        library: libraryName,
+        libraryTarget: "umd",
+        umdNamedDefine: true
+    },
+    module: {
+        rules: [{
+            test: /\.tsx?$/,
+            loader: "awesome-typescript-loader",
+            options: {
+                configFileName: baseUrl + "/src/tsconfig.json"
+            }
+        }]
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".jsx"]
+    },
+    plugins: plugins
+};
+
+module.exports = config;
