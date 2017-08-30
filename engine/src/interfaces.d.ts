@@ -51,3 +51,18 @@ interface IContainerProperties {
     width: number;
     height: number;
 }
+
+
+/**  Extend PIXI.Container interface with new features  */
+declare namespace PIXI {
+
+    /* tslint:disable interface-name */
+    interface Container {
+        /** Extend method for get container properties */
+        getContainerProperties(): IContainerProperties;
+        /** Extend method for set container properties */
+        setContainerProperties(properties: IContainerProperties): void;
+    }
+    /* tslint:enable interface-name */
+
+}

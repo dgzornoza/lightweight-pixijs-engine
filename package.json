@@ -22,7 +22,8 @@
         "prepublish": "npm run build-release && npm run build-debug",
         "watch": "cross-env NODE_ENV=development webpack --debug --watch --config ./engine/webpack/webpack.config.js",
         "build-debug": "cross-env NODE_ENV=development webpack --debug --config ./engine/webpack/webpack.config.js",
-        "build-release": "cross-env NODE_ENV=production webpack --debug --config ./engine/webpack/webpack.config.js"
+        "build-release": "cross-env NODE_ENV=production webpack --debug --config ./engine/webpack/webpack.config.js",
+        "build-definitions": "tsc --config /engine/src/tsconfig.json"
     },
     "devDependencies": {
         "@types/es6-shim": "~0.31.32",

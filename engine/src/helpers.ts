@@ -4,7 +4,7 @@
 
 
 /** @Brief Class for define help methods */
-class Helpers {
+export class Helpers {
 
     /** Funcion para crear un mixing en typescript y poder componer clases
      * @param clase derivada de los objetos que se quiere componer
@@ -78,20 +78,6 @@ class Helpers {
         }
 }
 
-
-/**  Extend PIXI.Container interface with new features  */
-declare namespace PIXI {
-
-    /* tslint:disable interface-name */
-    interface Container {
-        /** Extend method for get container properties */
-        getContainerProperties(): IContainerProperties;
-        /** Extend method for set container properties */
-        setContainerProperties(properties: IContainerProperties): void;
-    }
-    /* tslint:enable interface-name */
-
-}
 
 /* tslint:disable no-invalid-this */
 
