@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === "production") {
 var config = {
     entry: {
         "polyfills": baseUrl + "/src/polyfills.ts",
-        "vendor": baseUrl + "/src/thirdparty.ts",
+        "thirdparty": baseUrl + "/src/thirdparty.ts",
         "app": baseUrl + "/src/app.ts"
     },
     // Source maps support ("inline-source-map" also works)
