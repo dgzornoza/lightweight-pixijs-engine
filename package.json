@@ -21,17 +21,25 @@
     "scripts": {
         "prepublish": "npm run build-release && npm run build-debug",
         "watch": "cross-env NODE_ENV=development webpack --debug --watch --config ./engine/webpack/webpack.config.js",
-        "build-debug": "cross-env NODE_ENV=development webpack --debug --config ./engine/webpack/webpack.config.js",
-        "build-release": "cross-env NODE_ENV=production webpack --debug --config ./engine/webpack/webpack.config.js",
-        "build-definitions": "tsc --config /engine/src/tsconfig.json"
+        "build-debug": "cross-env NODE_ENV=development webpack --display-reasons  --debug --config ./engine/webpack/webpack.config.js",
+        "build-release": "cross-env NODE_ENV=production webpack --display-reasons --debug --config ./engine/webpack/webpack.config.js",
+        "watch-samples": "cross-env NODE_ENV=development webpack --debug --watch --config ./samples/webpack/webpack.config.js",
+        "build-samples-debug": "cross-env NODE_ENV=development webpack --debug --config ./samples/webpack/webpack.config.js",
+        "build-samples-release": "cross-env NODE_ENV=production webpack --debug --config ./samples/webpack/webpack.config.js"
     },
     "devDependencies": {
         "@types/es6-shim": "~0.31.32",
         "@types/fpsmeter": "~0.3.28",
         "@types/pixi.js": "~4.5.3",
-        "http-server": "^0.9.0",
         "awesome-typescript-loader": "~3.2.3",
+        "css-loader": "~0.28.6",
         "cross-env": "~5.0.5",
+        "extract-text-webpack-plugin": "~3.0.0",
+        "file-loader": "~0.11.2",
+        "html-loader": "~0.5.1",
+        "http-server": "^0.9.0",
+        "html-webpack-plugin": "~2.30.1",
+        "style-loader": "~0.18.2",
         "tslint": "^5.0.0",
         "typescript": "~2.4.2",
         "webpack": "~3.5.5"

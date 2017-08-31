@@ -4,6 +4,7 @@
 
 
 /** @Brief Class for define help methods */
+
 export class Helpers {
 
     /** Funcion para crear un mixing en typescript y poder componer clases
@@ -29,25 +30,6 @@ export class Helpers {
         let instance: any = Object.create(context[name].prototype);
         instance.constructor.apply(instance, args);
         return instance as T;
-    }
-
-
-    /** Funcion para cargar un css de forma dinamica
-     * @param url url del css a cargar
-     * @param insertBeforeId (Opcional) Identificador del elemento que sera usado para insertarse antes de el.
-     * en caso de no especificarse sera añadido como ultimo elemento de <head>
-     */
-    public static loadCss(url: string, insertBeforeId?: string): void {
-        let link: HTMLLinkElement = document.createElement("link");
-        link.type = "text/css";
-        link.rel = "stylesheet";
-        link.href = url;
-        if (insertBeforeId) {
-            let element: Element | null = document.querySelector(`#${insertBeforeId}`);
-            element!.parentNode!.insertBefore(link, element);
-        } else {
-            document.getElementsByTagName("head")[0].appendChild(link);
-        }
     }
 
     /**
@@ -77,38 +59,3 @@ export class Helpers {
             document.body.appendChild(script);
         }
 }
-
-
-/* tslint:disable no-invalid-this */
-
-PIXI.Container.prototype.getContainerProperties = function (): IContainerProperties {
-    return {
-        height: this.height,
-        pivotX: this.pivotX,
-        pivotY: this.pivotY,
-        rotation: this.rotation,
-        scaleX: this.scaleX,
-        scaleY: this.scaleY,
-        skewX: this.skewX,
-        skewY: this.skewY,
-        width: this.width,
-        x: this.x,
-        y: this.y
-    };
-};
-
-PIXI.Container.prototype.setContainerProperties = function (properties: IContainerProperties): void {
-        this.height = properties.height;
-        this.pivotX = properties.pivotX;
-        this.pivotY = properties.pivotY;
-        this.rotation = properties.rotation;
-        this.scaleX = properties.scaleX;
-        this.scaleY = properties.scaleY;
-        this.skewX = properties.skewX;
-        this.skewY = properties.skewY;
-        this.width = properties.width;
-        this.x = properties.x;
-        this.y = properties.y;
-};
-
-/* tslint:enable no-invalid-this */

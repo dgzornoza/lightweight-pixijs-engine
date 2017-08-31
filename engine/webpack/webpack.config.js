@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
 // webpack config
 var config = {
     entry: [
-        baseUrl + "/src/pixiApp.ts"
+        baseUrl + "/src/pixiEngine.ts"
     ],
     // Source maps support ("inline-source-map" also works)
     devtool: "source-map",
@@ -34,6 +34,9 @@ var config = {
         library: libraryName,
         libraryTarget: "umd",
         umdNamedDefine: true
+    },
+    externals: {
+        "es6-shim": "es6-shim"
     },
     module: {
         rules: [{

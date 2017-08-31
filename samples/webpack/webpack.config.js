@@ -1,47 +1,68 @@
 var webpack = require("webpack");
 var path = require("path");
 
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 // `CheckerPlugin` is optional. Use it if you want async error reporting.
 // We need this plugin to detect a `--watch` mode. It may be removed later
 // after https://github.com/webpack/webpack/issues/3460 will be resolved.
 const { CheckerPlugin } = require("awesome-typescript-loader")
 
 
-var libraryName = "charm";
 var baseUrl = __dirname + "/..";
-var plugins = [new CheckerPlugin()];
+var plugins = [
+    new CheckerPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: ["app", "thirdparty", "polyfills"]
+    }),
+    new HtmlWebpackPlugin({
+        template: baseUrl + "/src/index.html"
+    })
+];
 
 // environment options
-var outputFile;
 if (process.env.NODE_ENV === "production") {
     plugins.push(new webpack.optimize.UglifyJsPlugin({ minimize: true }));
-    outputFile = libraryName + ".min.js";
-} else {
-    outputFile = libraryName + ".js";
 }
 
 
 // webpack config
 var config = {
-    entry: [
-        baseUrl + "/src/charm.ts"
-    ],
+    entry: {
+        "polyfills": baseUrl + "/src/polyfills.ts",
+        "vendor": baseUrl + "/src/thirdparty.ts",
+        "app": baseUrl + "/src/app.ts"
+    },
     // Source maps support ("inline-source-map" also works)
     devtool: "source-map",
     output: {
-        path: path.join(baseUrl, "/dist"),
-        filename: outputFile,
-        library: libraryName,
-        libraryTarget: "umd",
-        umdNamedDefine: true
-    },
-    externals: {
-        "pixi.js": "pixi.js",
-        "es6-shim": "es6-shim"
+        path: path.join(baseUrl, "/../dist/samples"),
+        filename: "[name].js"
     },
     module: {
-        loaders: [
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" }
+        rules: [{
+                test: /\.tsx?$/,
+                loader: "awesome-typescript-loader",
+                options: {
+                    configFileName: baseUrl + "/src/tsconfig.json"
+                }
+            },
+            {
+                test: /\.html$/,
+                loader: "html-loader"
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"
+                })
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                loader: "file-loader?name=assets/[name].[hash].[ext]"
+            },
         ]
     },
     resolve: {

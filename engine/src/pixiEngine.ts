@@ -1,4 +1,7 @@
-import "./helpers";
+import "./prototypes";
+import "./interfaces";
+import "./containerTransitions";
+
 import { ICharm, Charm } from "pixijs-charm";
 import "fpsmeter";
 
@@ -7,27 +10,23 @@ import { sceneManagerInstance, ISceneManager } from "./sceneManager";
 /**
  * Enum with allowed engine states
  */
-export enum enumEngineStates {
+export enum EnumEngineStates {
     PAUSED = 1,
     RUNNING = 2
 }
 
 /** PixiApp Configuration */
-export interface IPixiAppConfiguration {
-    /** Flag for set debug mode  */
-    isDebugMode: boolean;
-    /** design resolution width */
-    designResolutionWidth: number;
-    /** design resolution height */
-    designResolutionHeight: number;
-    /** pixi canvas background colour */
-    backgroundColor: number;
+export interface IPixiEngineConfiguration extends PIXI.RendererOptions {
+    /** Flag for set debug mode (default = false) */
+    debugMode?: boolean;
     /** main scene path */
     mainScene: string;
+    /** Flag for set full-screen mode (default = false) */
+    scaleToWindow?: boolean;
 }
 
 /** Interface for pixi main app */
-export interface IPixiApp {
+export interface IPixiEngine {
 
     /** Property for get pixi renderer */
     readonly renderer: PIXI.WebGLRenderer | PIXI.CanvasRenderer;
@@ -38,17 +37,15 @@ export interface IPixiApp {
     /**
      * Get current engine state
      */
-    readonly state: enumEngineStates;
+    readonly state: EnumEngineStates;
 
     /**
      * Get charm library instance for Tweening
      */
     readonly charm: ICharm;
 
-    /** Initialice pixiApp
-     * @param config configuration for pixi app
-     */
-    initialize(config: IPixiAppConfiguration): void;
+    /** Property for get debu-gmode */
+    readonly debugMode: boolean;
 
     /**
      * Pause engine
@@ -59,22 +56,29 @@ export interface IPixiApp {
      * resume engine
      */
     resume(): void;
+
+    /** Initialice pixiApp
+     * @param config configuration for pixi app
+     */
+    initialize(config: IPixiEngineConfiguration): void;
+
 }
 
 /** Pixi main app */
-class PixiApp implements IPixiApp {
+class PixiEngine implements IPixiEngine {
 
-    private _config: IPixiAppConfiguration;
+    private _config: IPixiEngineConfiguration;
     private _renderer: PIXI.WebGLRenderer | PIXI.CanvasRenderer;
     private _rootContainer: PIXI.Container;
-    private _state: enumEngineStates;
+    private _state: EnumEngineStates;
     private _charm: ICharm;
     private _fpsMeter: FPSMeter;
+    private _isInitialized: boolean;
 
     /** Default constructor */
     constructor() {
         this._rootContainer = new PIXI.Container();
-        this._state = enumEngineStates.RUNNING;
+        this._state = EnumEngineStates.RUNNING;
     }
 
     public get renderer(): PIXI.WebGLRenderer | PIXI.CanvasRenderer {
@@ -85,43 +89,56 @@ class PixiApp implements IPixiApp {
         return sceneManagerInstance;
     }
 
-    public pause(): void {
-        this._state = enumEngineStates.PAUSED;
-    }
-
-    public resume(): void {
-        this._state = enumEngineStates.RUNNING;
+    public get state(): EnumEngineStates {
+        return this._state;
     }
 
     public get charm(): ICharm {
         return this._charm;
     }
 
-    /**
-     * Get current scene state
-     */
-    public get state(): enumEngineStates {
-        return this._state;
+    public get debugMode(): boolean {
+        return this._config.debugMode as boolean;
     }
 
 
-    public initialize(config: IPixiAppConfiguration): void {
 
-        this._config = config;
+
+
+    public pause(): void {
+        this._state = EnumEngineStates.PAUSED;
+    }
+
+    public resume(): void {
+        this._state = EnumEngineStates.RUNNING;
+    }
+
+    public initialize(config: IPixiEngineConfiguration): void {
+        // can only initialize once
+        if (this._isInitialized) { return; }
+        this._isInitialized = true;
+
+        // default configuracion
+        this._config = config || {};
+        this._config.resolution = config.resolution || window.devicePixelRatio;
+        this._config.debugMode = config.debugMode || false;
+        this._config.scaleToWindow = config.scaleToWindow || false;
 
         // initialize framerate ONLY in debug mode
-        if (this._config.isDebugMode) { this._initializeFpsMeter(); }
+        if (this._config.debugMode) { this._initializeFpsMeter(); }
 
         // create pixi rendered and append to html body
-        this._renderer = PIXI.autoDetectRenderer(this._config.designResolutionWidth, this._config.designResolutionHeight,
-            { resolution: window.devicePixelRatio, backgroundColor: this._config.backgroundColor });
+        this._renderer = PIXI.autoDetectRenderer(config);
         console.log(this._renderer.type === PIXI.RENDERER_TYPE.WEBGL ? "Using WebGL Renderer" : "Using Canvas renderer");
 
-        document.body.appendChild(this._renderer.view);
+        // si no se especifica un canvas, se añade al cuerpo html
+        if (!this._config.view) { document.body.appendChild(this._renderer.view); }
 
-        // escale to window
-        this._scaleToWindow(this._renderer.view);
-        window.addEventListener("resize", (_event: Event) => { this._scaleToWindow(this._renderer.view); });
+        // escale to window if full-screen mode
+        if (this._config.scaleToWindow) {
+            this._scaleToWindow(this._renderer.view);
+            window.addEventListener("resize", (_event: Event) => { this._scaleToWindow(this._renderer.view); });
+        }
 
         // initialize charm Tweening for pixi
         this._charm = new Charm(PIXI);
@@ -139,15 +156,17 @@ class PixiApp implements IPixiApp {
     }
 
 
+
+
     private _mainLoop(): void {
 
         requestAnimationFrame(() => { this._mainLoop(); });
 
         let scene: PIXI.Container = sceneManagerInstance.currentScene;
-        if (this._state !== enumEngineStates.RUNNING || !scene) { return; }
+        if (this._state !== EnumEngineStates.RUNNING || !scene) { return; }
 
         // fpsmeter ONLY debug mode
-        if (this._config.isDebugMode) { this._fpsMeter.tickStart(); }
+        if (this._config.debugMode) { this._fpsMeter.tickStart(); }
 
         // update charm Tweening
         this._charm.update();
@@ -163,7 +182,7 @@ class PixiApp implements IPixiApp {
         this._renderer.render(this._rootContainer);
 
         // fpsmeter ONLY debug mode
-        if (this._config.isDebugMode) { this._fpsMeter.tick(); }
+        if (this._config.debugMode) { this._fpsMeter.tick(); }
     }
 
     private _initializeFpsMeter(): void {
@@ -171,8 +190,7 @@ class PixiApp implements IPixiApp {
     }
 
     /**
-     * Function for scale a html element to windows from:
-     * https://github.com/kittykatattack/scaleToWindow/blob/master/LICENSE.txt
+     * Function for scale a html element to windows
      * @param element element to scale
      * @param backgroundColor backgroundColor to set
      * @return scale factor
@@ -249,4 +267,4 @@ class PixiApp implements IPixiApp {
 
 
 // create main app instance for export
-export let pixiApp: IPixiApp = new PixiApp();
+export let pixiEngineInstance: IPixiEngine = new PixiEngine();

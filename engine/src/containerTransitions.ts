@@ -1,9 +1,9 @@
-/* tslint:disable no-bitwise */
-import { pixiApp } from "./pixiApp";
+import { IResolve, IReject } from "./interfaces";
+import { pixiEngineInstance } from "./pixiEngine";
 import { ICharm } from "pixijs-charm";
 
-
-export enum enumDirections {
+/* tslint:disable no-bitwise */
+export enum EnumDirections {
     UP =    0b0001,
     DOWN =  0b0011,
     LEFT =  0b0100,
@@ -49,15 +49,15 @@ export class EasingTypes {
     public static readonly bounce: string = "bounce";
 }
 
-export abstract class ContainerTransitionBase implements IContainerTransition {
+export abstract class ContainerTransitionBase implements PIXI.EngineExtensions.IContainerTransition {
 
     protected _currentContainer: PIXI.Container;
-    protected _currentContainerOriginalState: IContainerProperties;
-    protected _currentContainerEndState: IContainerProperties;
+    protected _currentContainerOriginalState: PIXI.EngineExtensions.IContainerProperties;
+    protected _currentContainerEndState: PIXI.EngineExtensions.IContainerProperties;
 
     protected _nextContainer: PIXI.Container;
-    protected _nextContainerOriginalState: IContainerProperties;
-    protected _nextContainerEndState: IContainerProperties;
+    protected _nextContainerOriginalState: PIXI.EngineExtensions.IContainerProperties;
+    protected _nextContainerEndState: PIXI.EngineExtensions.IContainerProperties;
 
     constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container) {
 
@@ -103,14 +103,14 @@ export abstract class ContainerTransitionBase implements IContainerTransition {
  */
 export class ContainerTransitionSlide extends ContainerTransitionBase {
 
-    protected _direction: enumDirections;
+    protected _direction: EnumDirections;
     protected _frames: number | undefined;
     protected _easingType: string | undefined;
 
     private _nextSceneTween: ICharm.Tween.ITweenCollection;
     private _currentSceneTween: ICharm.Tween.ITweenCollection;
 
-    constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container, direction: enumDirections, frames?: number, easingType?: string) {
+    constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container, direction: EnumDirections, frames?: number, easingType?: string) {
         super(currentContainer, nextContainer);
 
         this._direction = direction;
@@ -124,9 +124,9 @@ export class ContainerTransitionSlide extends ContainerTransitionBase {
 
         let result: Promise<PIXI.Container> = new Promise((resolve: IResolve<PIXI.Container>, _reject: IReject) => {
 
-            this._nextSceneTween = pixiApp.charm.slide(this._nextContainer, this._nextContainerEndState.x,
+            this._nextSceneTween = pixiEngineInstance.charm.slide(this._nextContainer, this._nextContainerEndState.x,
                 this._nextContainerEndState.y, this._frames, this._easingType);
-            this._currentSceneTween = pixiApp.charm.slide(this._currentContainer,
+            this._currentSceneTween = pixiEngineInstance.charm.slide(this._currentContainer,
                 this._currentContainerEndState.x, this._currentContainerEndState.y);
 
             this._currentSceneTween.onCompleted = () => {
@@ -138,8 +138,8 @@ export class ContainerTransitionSlide extends ContainerTransitionBase {
     }
 
     public stop(): void {
-        pixiApp.charm.removeTween(this._nextSceneTween);
-        pixiApp.charm.removeTween(this._currentSceneTween);
+        pixiEngineInstance.charm.removeTween(this._nextSceneTween);
+        pixiEngineInstance.charm.removeTween(this._currentSceneTween);
     }
 
     protected _configure(): void {
@@ -147,16 +147,16 @@ export class ContainerTransitionSlide extends ContainerTransitionBase {
         this._nextContainerEndState.y = this._nextContainerOriginalState.y;
         this._nextContainerEndState.x = this._nextContainerOriginalState.x;
 
-        if ((this._direction & enumDirections.UP) === enumDirections.UP) {
+        if ((this._direction & EnumDirections.UP) === EnumDirections.UP) {
             this._currentContainerEndState.y = -this._currentContainer.parent.height;
         }
-        if ((this._direction & enumDirections.DOWN) === enumDirections.DOWN) {
+        if ((this._direction & EnumDirections.DOWN) === EnumDirections.DOWN) {
             this._currentContainerEndState.y = this._currentContainer.parent.height;
         }
-        if ((this._direction & enumDirections.LEFT) === enumDirections.LEFT) {
+        if ((this._direction & EnumDirections.LEFT) === EnumDirections.LEFT) {
             this._currentContainerEndState.x = -this._currentContainer.parent.width;
         }
-        if ((this._direction & enumDirections.RIGHT) === enumDirections.RIGHT) {
+        if ((this._direction & EnumDirections.RIGHT) === EnumDirections.RIGHT) {
             this._currentContainerEndState.x = this._currentContainer.parent.width;
         }
 
@@ -172,7 +172,7 @@ export class ContainerTransitionFadeIn extends ContainerTransitionSlide {
 
     private _nextSceneFadeInTween: ICharm.Tween.ITween;
 
-    constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container, direction: enumDirections, frames?: number, easingType?: string) {
+    constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container, direction: EnumDirections, frames?: number, easingType?: string) {
         super(currentContainer, nextContainer, direction, frames, easingType);
 
         this._configure();
@@ -180,13 +180,13 @@ export class ContainerTransitionFadeIn extends ContainerTransitionSlide {
 
     public start(): Promise<PIXI.Container> {
         // equals to parent plus fadein
-        this._nextSceneFadeInTween = pixiApp.charm.fadeIn(this._nextContainer);
+        this._nextSceneFadeInTween = pixiEngineInstance.charm.fadeIn(this._nextContainer);
         return super.start();
     }
 
     public stop(): void {
         super.stop();
-        pixiApp.charm.removeTween(this._nextSceneFadeInTween);
+        pixiEngineInstance.charm.removeTween(this._nextSceneFadeInTween);
     }
 
     protected _configure(): void {
@@ -206,7 +206,7 @@ export class ContainerTransitionFadeOut extends ContainerTransitionSlide {
 
     private _nextSceneFadeOutTween: ICharm.Tween.ITween;
 
-    constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container, direction: enumDirections, frames?: number, easingType?: string) {
+    constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container, direction: EnumDirections, frames?: number, easingType?: string) {
         super(currentContainer, nextContainer, direction, frames, easingType);
 
         this._configure();
@@ -218,13 +218,13 @@ export class ContainerTransitionFadeOut extends ContainerTransitionSlide {
             this._currentContainer.parent.swapChildren(this._currentContainer, this._nextContainer);
         }
         // equals to parent plus fadeout
-        pixiApp.charm.fadeOut(this.currentContainer);
+        pixiEngineInstance.charm.fadeOut(this.currentContainer);
         return super.start();
     }
 
     public stop(): void {
         super.stop();
-        pixiApp.charm.removeTween(this._nextSceneFadeOutTween);
+        pixiEngineInstance.charm.removeTween(this._nextSceneFadeOutTween);
     }
 
     public restore(): void {
