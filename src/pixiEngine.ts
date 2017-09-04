@@ -2,6 +2,7 @@ import "./prototypes";
 import "./interfaces";
 import "./containerTransitions";
 
+import "pixi.js";
 import { ICharm, Charm } from "pixijs-charm";
 import "fpsmeter";
 
@@ -119,7 +120,7 @@ class PixiEngine implements IPixiEngine {
         this._isInitialized = true;
 
         // default configuracion
-        this._config = config || {};
+        this._config = config || {} as IPixiEngineConfiguration;
         this._config.resolution = config.resolution || window.devicePixelRatio;
         this._config.debugMode = config.debugMode || false;
         this._config.scaleToWindow = config.scaleToWindow || false;

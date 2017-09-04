@@ -1,7 +1,7 @@
 {
     "name": "lightweight-pixijs-engine",
     "description": "Lightweight HTML5 engine based on pixi.js V4",
-    "version": "0.1.7",
+    "version": "0.2.1",
     "keywords": [
         "pixijs",
         "engine",
@@ -16,8 +16,8 @@
     "bugs": {
         "url": "https://github.com/dgzornoza/lightweight-pixijs-engine/issues"
     },
-    "main": "./dist/lightweight-pixi-engine.js",
-    "types": "./dist/lightweight-pixi-engine.d.ts",
+    "main": "./dist/lightweight-pixijs-engine.js",
+    "typings": "./dist/lightweight-pixijs-engine.d.ts",
     "scripts": {
         "prepublish": "npm run build-release && npm run build-debug",
         "watch": "cross-env NODE_ENV=development webpack --debug --watch --config ./src/config/webpack.config.js",

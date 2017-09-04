@@ -7,11 +7,10 @@ var path = require("path");
 const { CheckerPlugin } = require("awesome-typescript-loader")
 
 
-var libraryName = "lightweight-pixi-engine";
+var libraryName = "lightweight-pixijs-engine";
 var baseUrl = __dirname + "/..";
 var plugins = [
-    new CheckerPlugin(),
-    new DtsBundlePlugin()
+    new CheckerPlugin()
 ];
 
 
@@ -22,6 +21,7 @@ if (process.env.NODE_ENV === "production") {
     plugins.push(new webpack.optimize.UglifyJsPlugin({ minimize: true }));
     outputFile = libraryName + ".min.js";
 } else {
+    plugins.push(new DtsBundlePlugin());
     outputFile = libraryName + ".js";
 }
 
@@ -71,9 +71,10 @@ DtsBundlePlugin.prototype.apply = function(compiler) {
 
         dts.bundle({
             name: libraryName,
-            main: baseUrl + "/../dist/pixiEngine.d.ts",
-            out: baseUrl + "/../dist/lightweight-pixi-engine.d.ts",
-            removeSource: true
+            main: baseUrl + "/../dist/**/*.d.ts",
+            out: baseUrl + "/../dist/lightweight-pixijs-engine.d.ts",
+            removeSource: true,
+            outputAsModuleFolder: true
         });
     });
 };
