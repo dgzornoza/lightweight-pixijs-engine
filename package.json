@@ -20,12 +20,9 @@
     "types": "./src/interfaces/charm.d.ts",
     "scripts": {
         "prepublish": "npm run build-release && npm run build-debug",
-        "watch": "cross-env NODE_ENV=development webpack --debug --watch --config ./engine/webpack/webpack.config.js",
-        "build-debug": "cross-env NODE_ENV=development webpack --display-reasons  --debug --config ./engine/webpack/webpack.config.js",
-        "build-release": "cross-env NODE_ENV=production webpack --display-reasons --debug --config ./engine/webpack/webpack.config.js",
-        "watch-samples": "cross-env NODE_ENV=development webpack --debug --watch --config ./samples/webpack/webpack.config.js",
-        "build-samples-debug": "cross-env NODE_ENV=development webpack --debug --config ./samples/webpack/webpack.config.js",
-        "build-samples-release": "cross-env NODE_ENV=production webpack --debug --config ./samples/webpack/webpack.config.js"
+        "watch": "cross-env NODE_ENV=development webpack --debug --watch --config ./src/webpack/webpack.config.js",
+        "build-debug": "cross-env NODE_ENV=development webpack --display-reasons  --debug --config ./src/webpack/webpack.config.js",
+        "build-release": "cross-env NODE_ENV=production webpack --display-reasons --debug --config ./src/webpack/webpack.config.js"
     },
     "devDependencies": {
         "@types/es6-shim": "~0.31.32",

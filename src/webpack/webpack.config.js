@@ -24,12 +24,12 @@ if (process.env.NODE_ENV === "production") {
 // webpack config
 var config = {
     entry: [
-        baseUrl + "/src/pixiEngine.ts"
+        baseUrl + "/pixiEngine.ts"
     ],
     // Source maps support ("inline-source-map" also works)
     devtool: "source-map",
     output: {
-        path: path.join(baseUrl, "/../dist/engine"),
+        path: path.join(baseUrl, "/../dist"),
         filename: outputFile,
         library: libraryName,
         libraryTarget: "umd",
@@ -43,7 +43,7 @@ var config = {
             test: /\.tsx?$/,
             loader: "awesome-typescript-loader",
             options: {
-                configFileName: baseUrl + "/src/tsconfig.json"
+                configFileName: baseUrl + "/tsconfig.json"
             }
         }]
     },
