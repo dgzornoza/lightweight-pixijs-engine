@@ -14,7 +14,7 @@ var plugins = [
     new DtsBundlePlugin({
         name: libraryName,
         main: baseUrl + "/../dist/pixiEngine.d.ts",
-        out: baseUrl + "/../dist/lightweight-pixijs-engine.d.ts",
+        out: baseUrl + "/../dist/lightweight-pixi-engine.d.ts",
         removeSource: true
     })
 ];
