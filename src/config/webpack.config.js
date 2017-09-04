@@ -10,13 +10,7 @@ const { CheckerPlugin } = require("awesome-typescript-loader")
 var libraryName = "lightweight-pixi-engine";
 var baseUrl = __dirname + "/..";
 var plugins = [
-    new CheckerPlugin(),
-    new DtsBundlePlugin({
-        name: libraryName,
-        main: baseUrl + "/../dist/pixiEngine.d.ts",
-        out: baseUrl + "/../dist/lightweight-pixi-engine.d.ts",
-        removeSource: true
-    })
+    new CheckerPlugin()
 ];
 
 
@@ -77,7 +71,7 @@ DtsBundlePlugin.prototype.apply = function(compiler) {
         dts.bundle({
             name: libraryName,
             main: baseUrl + "/../dist/pixiEngine.d.ts",
-            out: baseUrl + "/../dist/lightweight-pixijs-engine.d.ts",
+            out: baseUrl + "/../dist/lightweight-pixi-engine.d.ts",
             removeSource: true
         });
     });
