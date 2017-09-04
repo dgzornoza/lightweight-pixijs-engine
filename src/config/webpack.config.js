@@ -7,9 +7,19 @@ var path = require("path");
 const { CheckerPlugin } = require("awesome-typescript-loader")
 
 
-var libraryName = "lightweight-pixijs-engine";
+var libraryName = "lightweight-pixi-engine";
 var baseUrl = __dirname + "/..";
-var plugins = [new CheckerPlugin()];
+var plugins = [
+    new CheckerPlugin(),
+    new DtsBundlePlugin({
+        name: libraryName,
+        main: baseUrl + "/../dist/pixiEngine.d.ts",
+        out: baseUrl + "/../dist/lightweight-pixijs-engine.d.ts",
+        removeSource: true
+    })
+];
+
+
 
 // environment options
 var outputFile;
@@ -43,7 +53,7 @@ var config = {
             test: /\.tsx?$/,
             loader: "awesome-typescript-loader",
             options: {
-                configFileName: baseUrl + "/tsconfig.json"
+                configFileName: baseUrl + "/config/tsconfig.json"
             }
         }]
     },
@@ -54,3 +64,21 @@ var config = {
 };
 
 module.exports = config;
+
+
+/**
+ * Plugin for use dtsbundle and unify typescript declaration files
+ */
+function DtsBundlePlugin() {}
+DtsBundlePlugin.prototype.apply = function(compiler) {
+    compiler.plugin("done", function() {
+        var dts = require("dts-bundle");
+
+        dts.bundle({
+            name: libraryName,
+            main: baseUrl + "/../dist/pixiEngine.d.ts",
+            out: baseUrl + "/../dist/lightweight-pixijs-engine.d.ts",
+            removeSource: true
+        });
+    });
+};

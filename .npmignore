@@ -1,7 +1,6 @@
 .vscode
 node_modules
-engine
-samples
+src
 .editorconfig
 .gitignore
 .jsbeautifyrc

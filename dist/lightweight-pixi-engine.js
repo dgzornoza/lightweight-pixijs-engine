@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("es6-shim"));
 	else if(typeof define === 'function' && define.amd)
-		define("lightweight-pixijs-engine", ["es6-shim"], factory);
+		define("lightweight-pixi-engine", ["es6-shim"], factory);
 	else if(typeof exports === 'object')
-		exports["lightweight-pixijs-engine"] = factory(require("es6-shim"));
+		exports["lightweight-pixi-engine"] = factory(require("es6-shim"));
 	else
-		root["lightweight-pixijs-engine"] = factory(root["es6-shim"]);
+		root["lightweight-pixi-engine"] = factory(root["es6-shim"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_196__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -43914,4 +43914,4 @@ exports.Helpers = Helpers;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=lightweight-pixijs-engine.js.map
+//# sourceMappingURL=lightweight-pixi-engine.js.map

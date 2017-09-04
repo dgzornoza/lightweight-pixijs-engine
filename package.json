@@ -1,7 +1,7 @@
 {
     "name": "lightweight-pixijs-engine",
     "description": "Lightweight HTML5 engine based on pixi.js V4",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "keywords": [
         "pixijs",
         "engine",
@@ -16,13 +16,13 @@
     "bugs": {
         "url": "https://github.com/dgzornoza/lightweight-pixijs-engine/issues"
     },
-    "main": "./dist/charm.js",
-    "types": "./src/interfaces/charm.d.ts",
+    "main": "./dist/lightweight-pixijs-engine.js",
+    "types": "./dist/lightweight-pixijs-engine.d.ts",
     "scripts": {
         "prepublish": "npm run build-release && npm run build-debug",
-        "watch": "cross-env NODE_ENV=development webpack --debug --watch --config ./src/webpack/webpack.config.js",
-        "build-debug": "cross-env NODE_ENV=development webpack --display-reasons  --debug --config ./src/webpack/webpack.config.js",
-        "build-release": "cross-env NODE_ENV=production webpack --display-reasons --debug --config ./src/webpack/webpack.config.js"
+        "watch": "cross-env NODE_ENV=development webpack --debug --watch --config ./src/config/webpack.config.js",
+        "build-debug": "cross-env NODE_ENV=development webpack --display-reasons  --debug --config ./src/config/webpack.config.js",
+        "build-release": "cross-env NODE_ENV=production webpack --display-reasons --debug --config ./src/config/webpack.config.js"
     },
     "devDependencies": {
         "@types/es6-shim": "~0.31.32",
@@ -31,6 +31,7 @@
         "awesome-typescript-loader": "~3.2.3",
         "css-loader": "~0.28.6",
         "cross-env": "~5.0.5",
+        "dts-bundle": "~0.7.3",
         "extract-text-webpack-plugin": "~3.0.0",
         "file-loader": "~0.11.2",
         "html-loader": "~0.5.1",
