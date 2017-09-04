@@ -10,7 +10,8 @@ const { CheckerPlugin } = require("awesome-typescript-loader")
 var libraryName = "lightweight-pixi-engine";
 var baseUrl = __dirname + "/..";
 var plugins = [
-    new CheckerPlugin()
+    new CheckerPlugin(),
+    new DtsBundlePlugin()
 ];
 
 
