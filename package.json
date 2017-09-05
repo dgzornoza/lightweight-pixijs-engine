@@ -36,9 +36,9 @@
         "webpack": "~3.5.5"
     },
     "dependencies": {
-        "pixijs-charm": "~0.1.4",
         "es6-shim": "~0.35.3",
         "fpsmeter": "~0.3.1",
+        "pixijs-charm": "~0.1.4",
         "pixi.js": "~4.5.4"
     }
 }
