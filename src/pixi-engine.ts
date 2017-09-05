@@ -30,7 +30,7 @@ export interface IPixiEngine {
     /** Property for get pixi renderer */
     readonly renderer: PIXI.WebGLRenderer | PIXI.CanvasRenderer;
 
-    /** Property for get pixi renderer */
+    /** Property for get pixi scene manager */
     readonly sceneManager: ISceneManager;
 
     /**
