@@ -179,7 +179,7 @@ Object.defineProperty(exports, 'Sprite', {
   }
 });
 
-var _CanvasSpriteRenderer = __webpack_require__(123);
+var _CanvasSpriteRenderer = __webpack_require__(124);
 
 Object.defineProperty(exports, 'CanvasSpriteRenderer', {
   enumerable: true,
@@ -197,7 +197,7 @@ Object.defineProperty(exports, 'CanvasTinter', {
   }
 });
 
-var _SpriteRenderer = __webpack_require__(126);
+var _SpriteRenderer = __webpack_require__(127);
 
 Object.defineProperty(exports, 'SpriteRenderer', {
   enumerable: true,
@@ -206,7 +206,7 @@ Object.defineProperty(exports, 'SpriteRenderer', {
   }
 });
 
-var _Text = __webpack_require__(142);
+var _Text = __webpack_require__(143);
 
 Object.defineProperty(exports, 'Text', {
   enumerable: true,
@@ -233,7 +233,7 @@ Object.defineProperty(exports, 'TextMetrics', {
   }
 });
 
-var _Graphics = __webpack_require__(144);
+var _Graphics = __webpack_require__(145);
 
 Object.defineProperty(exports, 'Graphics', {
   enumerable: true,
@@ -251,7 +251,7 @@ Object.defineProperty(exports, 'GraphicsData', {
   }
 });
 
-var _GraphicsRenderer = __webpack_require__(146);
+var _GraphicsRenderer = __webpack_require__(147);
 
 Object.defineProperty(exports, 'GraphicsRenderer', {
   enumerable: true,
@@ -260,7 +260,7 @@ Object.defineProperty(exports, 'GraphicsRenderer', {
   }
 });
 
-var _CanvasGraphicsRenderer = __webpack_require__(153);
+var _CanvasGraphicsRenderer = __webpack_require__(154);
 
 Object.defineProperty(exports, 'CanvasGraphicsRenderer', {
   enumerable: true,
@@ -269,7 +269,7 @@ Object.defineProperty(exports, 'CanvasGraphicsRenderer', {
   }
 });
 
-var _Spritesheet = __webpack_require__(154);
+var _Spritesheet = __webpack_require__(155);
 
 Object.defineProperty(exports, 'Spritesheet', {
   enumerable: true,
@@ -841,11 +841,11 @@ var _eventemitter = __webpack_require__(7);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _pluginTarget = __webpack_require__(110);
+var _pluginTarget = __webpack_require__(111);
 
 var _pluginTarget2 = _interopRequireDefault(_pluginTarget);
 
-var _mixin = __webpack_require__(111);
+var _mixin = __webpack_require__(112);
 
 var mixins = _interopRequireWildcard(_mixin);
 
@@ -853,11 +853,11 @@ var _ismobilejs = __webpack_require__(26);
 
 var isMobile = _interopRequireWildcard(_ismobilejs);
 
-var _removeArrayItems = __webpack_require__(112);
+var _removeArrayItems = __webpack_require__(113);
 
 var _removeArrayItems2 = _interopRequireDefault(_removeArrayItems);
 
-var _mapPremultipliedBlendModes = __webpack_require__(113);
+var _mapPremultipliedBlendModes = __webpack_require__(114);
 
 var _mapPremultipliedBlendModes2 = _interopRequireDefault(_mapPremultipliedBlendModes);
 
@@ -1291,11 +1291,11 @@ function premultiplyTintToRgba(tint, alpha, out, premultiply) {
 
 exports.__esModule = true;
 
-var _maxRecommendedTextures = __webpack_require__(108);
+var _maxRecommendedTextures = __webpack_require__(109);
 
 var _maxRecommendedTextures2 = _interopRequireDefault(_maxRecommendedTextures);
 
-var _canUploadSameBuffer = __webpack_require__(109);
+var _canUploadSameBuffer = __webpack_require__(110);
 
 var _canUploadSameBuffer2 = _interopRequireDefault(_canUploadSameBuffer);
 
@@ -1567,7 +1567,7 @@ Object.defineProperty(exports, 'GroupD8', {
   }
 });
 
-var _Circle = __webpack_require__(98);
+var _Circle = __webpack_require__(99);
 
 Object.defineProperty(exports, 'Circle', {
   enumerable: true,
@@ -1576,7 +1576,7 @@ Object.defineProperty(exports, 'Circle', {
   }
 });
 
-var _Ellipse = __webpack_require__(99);
+var _Ellipse = __webpack_require__(100);
 
 Object.defineProperty(exports, 'Ellipse', {
   enumerable: true,
@@ -1585,7 +1585,7 @@ Object.defineProperty(exports, 'Ellipse', {
   }
 });
 
-var _Polygon = __webpack_require__(100);
+var _Polygon = __webpack_require__(101);
 
 Object.defineProperty(exports, 'Polygon', {
   enumerable: true,
@@ -1603,7 +1603,7 @@ Object.defineProperty(exports, 'Rectangle', {
   }
 });
 
-var _RoundedRectangle = __webpack_require__(101);
+var _RoundedRectangle = __webpack_require__(102);
 
 Object.defineProperty(exports, 'RoundedRectangle', {
   enumerable: true,
@@ -1620,14 +1620,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /***/ (function(module, exports, __webpack_require__) {
 
 var gl = {
-    createContext:          __webpack_require__(102),
+    createContext:          __webpack_require__(103),
     setVertexAttribArrays:  __webpack_require__(41),
-    GLBuffer:               __webpack_require__(103),
-    GLFramebuffer:          __webpack_require__(104),
-    GLShader:               __webpack_require__(105),
+    GLBuffer:               __webpack_require__(104),
+    GLFramebuffer:          __webpack_require__(105),
+    GLShader:               __webpack_require__(106),
     GLTexture:              __webpack_require__(42),
-    VertexArrayObject:      __webpack_require__(106),
-    shader:                 __webpack_require__(107)
+    VertexArrayObject:      __webpack_require__(107),
+    shader:                 __webpack_require__(108)
 };
 
 // Export for Node-compatible environments
@@ -1875,7 +1875,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(129)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(130)))
 
 /***/ }),
 /* 7 */
@@ -2897,7 +2897,7 @@ var _eventemitter = __webpack_require__(7);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _determineCrossOrigin = __webpack_require__(114);
+var _determineCrossOrigin = __webpack_require__(115);
 
 var _determineCrossOrigin2 = _interopRequireDefault(_determineCrossOrigin);
 
@@ -4363,7 +4363,7 @@ var _SystemRenderer2 = __webpack_require__(56);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
-var _CanvasMaskManager = __webpack_require__(124);
+var _CanvasMaskManager = __webpack_require__(125);
 
 var _CanvasMaskManager2 = _interopRequireDefault(_CanvasMaskManager);
 
@@ -4371,7 +4371,7 @@ var _CanvasRenderTarget = __webpack_require__(58);
 
 var _CanvasRenderTarget2 = _interopRequireDefault(_CanvasRenderTarget);
 
-var _mapCanvasBlendModesToPixi = __webpack_require__(125);
+var _mapCanvasBlendModesToPixi = __webpack_require__(126);
 
 var _mapCanvasBlendModesToPixi2 = _interopRequireDefault(_mapCanvasBlendModesToPixi);
 
@@ -4860,7 +4860,7 @@ exports.default = Shader;
 
 /* eslint-disable no-undef */
 
-var Loader = __webpack_require__(178).default;
+var Loader = __webpack_require__(179).default;
 var Resource = __webpack_require__(35).default;
 var async = __webpack_require__(83);
 var b64 = __webpack_require__(84);
@@ -5344,15 +5344,15 @@ var _SystemRenderer2 = __webpack_require__(56);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
-var _MaskManager = __webpack_require__(127);
+var _MaskManager = __webpack_require__(128);
 
 var _MaskManager2 = _interopRequireDefault(_MaskManager);
 
-var _StencilManager = __webpack_require__(130);
+var _StencilManager = __webpack_require__(131);
 
 var _StencilManager2 = _interopRequireDefault(_StencilManager);
 
-var _FilterManager = __webpack_require__(131);
+var _FilterManager = __webpack_require__(132);
 
 var _FilterManager2 = _interopRequireDefault(_FilterManager);
 
@@ -5364,7 +5364,7 @@ var _ObjectRenderer = __webpack_require__(16);
 
 var _ObjectRenderer2 = _interopRequireDefault(_ObjectRenderer);
 
-var _TextureManager = __webpack_require__(133);
+var _TextureManager = __webpack_require__(134);
 
 var _TextureManager2 = _interopRequireDefault(_TextureManager);
 
@@ -5372,19 +5372,19 @@ var _BaseTexture = __webpack_require__(9);
 
 var _BaseTexture2 = _interopRequireDefault(_BaseTexture);
 
-var _TextureGarbageCollector = __webpack_require__(134);
+var _TextureGarbageCollector = __webpack_require__(135);
 
 var _TextureGarbageCollector2 = _interopRequireDefault(_TextureGarbageCollector);
 
-var _WebGLState = __webpack_require__(135);
+var _WebGLState = __webpack_require__(136);
 
 var _WebGLState2 = _interopRequireDefault(_WebGLState);
 
-var _mapWebGLDrawModesToPixi = __webpack_require__(137);
+var _mapWebGLDrawModesToPixi = __webpack_require__(138);
 
 var _mapWebGLDrawModesToPixi2 = _interopRequireDefault(_mapWebGLDrawModesToPixi);
 
-var _validateContext = __webpack_require__(138);
+var _validateContext = __webpack_require__(139);
 
 var _validateContext2 = _interopRequireDefault(_validateContext);
 
@@ -9159,7 +9159,7 @@ exports.nextCombination = function(v) {
 exports.__esModule = true;
 exports.Ticker = exports.shared = undefined;
 
-var _Ticker = __webpack_require__(121);
+var _Ticker = __webpack_require__(122);
 
 var _Ticker2 = _interopRequireDefault(_Ticker);
 
@@ -11512,11 +11512,10 @@ function findTextStyle(item, queue) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(90);
 __webpack_require__(91);
-__webpack_require__(92);
 __webpack_require__(38);
-var pixijs_charm_1 = __webpack_require__(195);
+var pixijs_charm_1 = __webpack_require__(92);
 __webpack_require__(197);
-var sceneManager_1 = __webpack_require__(198);
+var scene_manager_1 = __webpack_require__(198);
 /**
  * Enum with allowed engine states
  */
@@ -11541,7 +11540,7 @@ var PixiEngine = (function () {
     });
     Object.defineProperty(PixiEngine.prototype, "sceneManager", {
         get: function () {
-            return sceneManager_1.sceneManagerInstance;
+            return scene_manager_1.sceneManagerInstance;
         },
         enumerable: true,
         configurable: true
@@ -11604,10 +11603,10 @@ var PixiEngine = (function () {
         // initialize charm Tweening for pixi
         this._charm = new pixijs_charm_1.Charm(PIXI);
         // initialize sceneManager
-        sceneManager_1.sceneManagerInstance.initialize(this._rootContainer);
+        scene_manager_1.sceneManagerInstance.initialize(this._rootContainer);
         // set mainscene
-        sceneManager_1.sceneManagerInstance.loadAndCreateScene(this._config.mainScene).then(function (mainScene) {
-            sceneManager_1.sceneManagerInstance.replaceScene(mainScene);
+        scene_manager_1.sceneManagerInstance.loadAndCreateScene(this._config.mainScene).then(function (mainScene) {
+            scene_manager_1.sceneManagerInstance.replaceScene(mainScene);
             // start main loop
             _this._mainLoop();
         });
@@ -11615,7 +11614,7 @@ var PixiEngine = (function () {
     PixiEngine.prototype._mainLoop = function () {
         var _this = this;
         requestAnimationFrame(function () { _this._mainLoop(); });
-        var scene = sceneManager_1.sceneManagerInstance.currentScene;
+        var scene = scene_manager_1.sceneManagerInstance.currentScene;
         if (this._state !== EnumEngineStates.RUNNING || !scene) {
             return;
         }
@@ -11720,118 +11719,40 @@ exports.pixiEngineInstance = new PixiEngine();
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
 
-exports.__esModule = true;
-exports.loader = exports.prepare = exports.particles = exports.mesh = exports.loaders = exports.interaction = exports.filters = exports.extras = exports.extract = exports.accessibility = undefined;
+Object.defineProperty(exports, "__esModule", { value: true });
+var ContainerHelpers = (function () {
+    function ContainerHelpers() {
+    }
+    /** method for get container properties */
+    ContainerHelpers.getContainerProperties = function (container) {
+        var result = {
+            height: container.height,
+            rotation: container.rotation,
+            width: container.width,
+            x: container.x,
+            y: container.y
+        };
+        result.pivot.copy(container.pivot);
+        result.scale.copy(container.scale);
+        result.skew.copy(container.skew);
+        return result;
+    };
+    /** method for set container properties */
+    ContainerHelpers.setContainerProperties = function (properties, container) {
+        container.height = properties.height;
+        container.pivot.copy(properties.pivot);
+        container.rotation = properties.rotation;
+        container.scale.copy(properties.scale);
+        container.skew.copy(properties.skew);
+        container.width = properties.width;
+        container.x = properties.x;
+        container.y = properties.y;
+    };
+    return ContainerHelpers;
+}());
+exports.ContainerHelpers = ContainerHelpers;
 
-var _polyfill = __webpack_require__(93);
-
-Object.keys(_polyfill).forEach(function (key) {
-    if (key === "default" || key === "__esModule") return;
-    Object.defineProperty(exports, key, {
-        enumerable: true,
-        get: function get() {
-            return _polyfill[key];
-        }
-    });
-});
-
-var _core = __webpack_require__(0);
-
-Object.keys(_core).forEach(function (key) {
-    if (key === "default" || key === "__esModule") return;
-    Object.defineProperty(exports, key, {
-        enumerable: true,
-        get: function get() {
-            return _core[key];
-        }
-    });
-});
-
-var _deprecation = __webpack_require__(155);
-
-var _deprecation2 = _interopRequireDefault(_deprecation);
-
-var _accessibility = __webpack_require__(156);
-
-var accessibility = _interopRequireWildcard(_accessibility);
-
-var _extract = __webpack_require__(158);
-
-var extract = _interopRequireWildcard(_extract);
-
-var _extras = __webpack_require__(70);
-
-var extras = _interopRequireWildcard(_extras);
-
-var _filters = __webpack_require__(168);
-
-var filters = _interopRequireWildcard(_filters);
-
-var _interaction = __webpack_require__(175);
-
-var interaction = _interopRequireWildcard(_interaction);
-
-var _loaders = __webpack_require__(177);
-
-var loaders = _interopRequireWildcard(_loaders);
-
-var _mesh = __webpack_require__(181);
-
-var mesh = _interopRequireWildcard(_mesh);
-
-var _particles = __webpack_require__(186);
-
-var particles = _interopRequireWildcard(_particles);
-
-var _prepare = __webpack_require__(191);
-
-var prepare = _interopRequireWildcard(_prepare);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// export core
-_core.utils.mixins.performMixins();
-
-/**
- * Alias for {@link PIXI.loaders.shared}.
- * @name loader
- * @memberof PIXI
- * @type {PIXI.loader.Loader}
- */
-
-
-// handle mixins now, after all code has been added, including deprecation
-
-
-// export libs
-// import polyfills. Done as an export to make sure polyfills are imported first
-var loader = loaders.shared || null;
-
-exports.accessibility = accessibility;
-exports.extract = extract;
-exports.extras = extras;
-exports.filters = filters;
-exports.interaction = interaction;
-exports.loaders = loaders;
-exports.mesh = mesh;
-exports.particles = particles;
-exports.prepare = prepare;
-exports.loader = loader;
-
-// Apply the deprecations
-
-if (typeof _deprecation2.default === 'function') {
-    (0, _deprecation2.default)(exports);
-}
-
-// Always export PixiJS globally.
-global.PIXI = exports; // eslint-disable-line
-//# sourceMappingURL=index.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
 
 /***/ }),
 /* 39 */
@@ -14149,8 +14070,8 @@ exports.default = Transform;
 
 
 
-var punycode = __webpack_require__(115);
-var util = __webpack_require__(117);
+var punycode = __webpack_require__(116);
+var util = __webpack_require__(118);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -14225,7 +14146,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(118);
+    querystring = __webpack_require__(119);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -16115,7 +16036,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _extractUniformsFromSrc = __webpack_require__(128);
+var _extractUniformsFromSrc = __webpack_require__(129);
 
 var _extractUniformsFromSrc2 = _interopRequireDefault(_extractUniformsFromSrc);
 
@@ -18737,7 +18658,7 @@ exports.default = {
 exports.__esModule = true;
 exports.BitmapText = exports.TilingSpriteRenderer = exports.TilingSprite = exports.TextureTransform = exports.AnimatedSprite = undefined;
 
-var _AnimatedSprite = __webpack_require__(161);
+var _AnimatedSprite = __webpack_require__(162);
 
 Object.defineProperty(exports, 'AnimatedSprite', {
   enumerable: true,
@@ -18755,7 +18676,7 @@ Object.defineProperty(exports, 'TextureTransform', {
   }
 });
 
-var _TilingSprite = __webpack_require__(162);
+var _TilingSprite = __webpack_require__(163);
 
 Object.defineProperty(exports, 'TilingSprite', {
   enumerable: true,
@@ -18764,7 +18685,7 @@ Object.defineProperty(exports, 'TilingSprite', {
   }
 });
 
-var _TilingSpriteRenderer = __webpack_require__(163);
+var _TilingSpriteRenderer = __webpack_require__(164);
 
 Object.defineProperty(exports, 'TilingSpriteRenderer', {
   enumerable: true,
@@ -18773,7 +18694,7 @@ Object.defineProperty(exports, 'TilingSpriteRenderer', {
   }
 });
 
-var _BitmapText = __webpack_require__(164);
+var _BitmapText = __webpack_require__(165);
 
 Object.defineProperty(exports, 'BitmapText', {
   enumerable: true,
@@ -18782,11 +18703,11 @@ Object.defineProperty(exports, 'BitmapText', {
   }
 });
 
-__webpack_require__(165);
-
 __webpack_require__(166);
 
 __webpack_require__(167);
+
+__webpack_require__(168);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20779,42 +20700,6 @@ module.exports = __webpack_require__(37);
 
 /***/ }),
 /* 90 */
-/***/ (function(module, exports) {
-
-/* tslint:disable no-invalid-this */
-PIXI.Container.prototype.getContainerProperties = function () {
-    return {
-        height: this.height,
-        pivotX: this.pivotX,
-        pivotY: this.pivotY,
-        rotation: this.rotation,
-        scaleX: this.scaleX,
-        scaleY: this.scaleY,
-        skewX: this.skewX,
-        skewY: this.skewY,
-        width: this.width,
-        x: this.x,
-        y: this.y
-    };
-};
-PIXI.Container.prototype.setContainerProperties = function (properties) {
-    this.height = properties.height;
-    this.pivotX = properties.pivotX;
-    this.pivotY = properties.pivotY;
-    this.rotation = properties.rotation;
-    this.scaleX = properties.scaleX;
-    this.scaleY = properties.scaleY;
-    this.skewX = properties.skewX;
-    this.skewY = properties.skewY;
-    this.width = properties.width;
-    this.x = properties.x;
-    this.y = properties.y;
-};
-/* tslint:enable no-invalid-this */
-
-
-/***/ }),
-/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20823,7 +20708,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20839,7 +20724,8 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var pixiEngine_1 = __webpack_require__(37);
+var pixi_engine_1 = __webpack_require__(37);
+var pixi_extensions_1 = __webpack_require__(38);
 /* tslint:disable no-bitwise */
 var EnumDirections;
 (function (EnumDirections) {
@@ -20890,10 +20776,10 @@ var ContainerTransitionBase = (function () {
         this._nextContainer = nextContainer;
         this._currentContainer = currentContainer;
         // initially all properties are some
-        this._currentContainerOriginalState = currentContainer.getContainerProperties();
-        this._currentContainerEndState = currentContainer.getContainerProperties();
-        this._nextContainerOriginalState = nextContainer.getContainerProperties();
-        this._nextContainerEndState = nextContainer.getContainerProperties();
+        this._currentContainerOriginalState = pixi_extensions_1.ContainerHelpers.getContainerProperties(currentContainer);
+        this._currentContainerEndState = pixi_extensions_1.ContainerHelpers.getContainerProperties(currentContainer);
+        this._nextContainerOriginalState = pixi_extensions_1.ContainerHelpers.getContainerProperties(nextContainer);
+        this._nextContainerEndState = pixi_extensions_1.ContainerHelpers.getContainerProperties(nextContainer);
     }
     Object.defineProperty(ContainerTransitionBase.prototype, "nextContainer", {
         get: function () {
@@ -20914,7 +20800,7 @@ var ContainerTransitionBase = (function () {
      * This function is called before change current scene for new scene
      */
     ContainerTransitionBase.prototype.restore = function () {
-        this._currentContainer.setContainerProperties(this._currentContainerOriginalState);
+        pixi_extensions_1.ContainerHelpers.setContainerProperties(this._currentContainerOriginalState, this._currentContainer);
     };
     return ContainerTransitionBase;
 }());
@@ -20935,8 +20821,8 @@ var ContainerTransitionSlide = (function (_super) {
     ContainerTransitionSlide.prototype.start = function () {
         var _this = this;
         var result = new Promise(function (resolve, _reject) {
-            _this._nextSceneTween = pixiEngine_1.pixiEngineInstance.charm.slide(_this._nextContainer, _this._nextContainerEndState.x, _this._nextContainerEndState.y, _this._frames, _this._easingType);
-            _this._currentSceneTween = pixiEngine_1.pixiEngineInstance.charm.slide(_this._currentContainer, _this._currentContainerEndState.x, _this._currentContainerEndState.y);
+            _this._nextSceneTween = pixi_engine_1.pixiEngineInstance.charm.slide(_this._nextContainer, _this._nextContainerEndState.x, _this._nextContainerEndState.y, _this._frames, _this._easingType);
+            _this._currentSceneTween = pixi_engine_1.pixiEngineInstance.charm.slide(_this._currentContainer, _this._currentContainerEndState.x, _this._currentContainerEndState.y);
             _this._currentSceneTween.onCompleted = function () {
                 resolve();
             };
@@ -20944,8 +20830,8 @@ var ContainerTransitionSlide = (function (_super) {
         return result;
     };
     ContainerTransitionSlide.prototype.stop = function () {
-        pixiEngine_1.pixiEngineInstance.charm.removeTween(this._nextSceneTween);
-        pixiEngine_1.pixiEngineInstance.charm.removeTween(this._currentSceneTween);
+        pixi_engine_1.pixiEngineInstance.charm.removeTween(this._nextSceneTween);
+        pixi_engine_1.pixiEngineInstance.charm.removeTween(this._currentSceneTween);
     };
     ContainerTransitionSlide.prototype._configure = function () {
         this._nextContainerEndState.y = this._nextContainerOriginalState.y;
@@ -20980,12 +20866,12 @@ var ContainerTransitionFadeIn = (function (_super) {
     }
     ContainerTransitionFadeIn.prototype.start = function () {
         // equals to parent plus fadein
-        this._nextSceneFadeInTween = pixiEngine_1.pixiEngineInstance.charm.fadeIn(this._nextContainer);
+        this._nextSceneFadeInTween = pixi_engine_1.pixiEngineInstance.charm.fadeIn(this._nextContainer);
         return _super.prototype.start.call(this);
     };
     ContainerTransitionFadeIn.prototype.stop = function () {
         _super.prototype.stop.call(this);
-        pixiEngine_1.pixiEngineInstance.charm.removeTween(this._nextSceneFadeInTween);
+        pixi_engine_1.pixiEngineInstance.charm.removeTween(this._nextSceneFadeInTween);
     };
     ContainerTransitionFadeIn.prototype._configure = function () {
         // equal parent but, current scene not move
@@ -21013,12 +20899,12 @@ var ContainerTransitionFadeOut = (function (_super) {
             this._currentContainer.parent.swapChildren(this._currentContainer, this._nextContainer);
         }
         // equals to parent plus fadeout
-        pixiEngine_1.pixiEngineInstance.charm.fadeOut(this.currentContainer);
+        pixi_engine_1.pixiEngineInstance.charm.fadeOut(this.currentContainer);
         return _super.prototype.start.call(this);
     };
     ContainerTransitionFadeOut.prototype.stop = function () {
         _super.prototype.stop.call(this);
-        pixiEngine_1.pixiEngineInstance.charm.removeTween(this._nextSceneFadeOutTween);
+        pixi_engine_1.pixiEngineInstance.charm.removeTween(this._nextSceneFadeOutTween);
     };
     ContainerTransitionFadeOut.prototype.restore = function () {
         _super.prototype.restore.call(this);
@@ -21037,17 +20923,1125 @@ exports.ContainerTransitionFadeOut = ContainerTransitionFadeOut;
 
 
 /***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory(__webpack_require__(93), __webpack_require__(196));
+	else if(typeof define === 'function' && define.amd)
+		define("pixijs-charm", ["pixi.js", "es6-shim"], factory);
+	else if(typeof exports === 'object')
+		exports["pixijs-charm"] = factory(require("pixi.js"), require("es6-shim"));
+	else
+		root["pixijs-charm"] = factory(root["pixi.js"], root["es6-shim"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(1);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+__webpack_require__(2);
+__webpack_require__(3);
+/* tslint:enable max-line-length */
+var Charm = (function () {
+    function Charm(renderingEngine) {
+        if (renderingEngine === void 0) { renderingEngine = PIXI; }
+        if (renderingEngine === undefined) {
+            throw new Error("Please assign a rendering engine in the constructor before using charm.js");
+        }
+        // Find out which rendering engine is being used (the default is Pixi)
+        this.renderer = "";
+        // If the 'renderingEngine' is Pixi, set up Pixi object aliases
+        if (renderingEngine.particles.ParticleContainer && renderingEngine.Sprite) {
+            this.renderer = "pixi";
+        }
+        // An array to store the global tweens
+        this.globalTweens = [];
+        // An object that stores all the easing formulas
+        this.easingFormulas = {
+            // Linear
+            linear: function (x) {
+                return x;
+            },
+            // Smoothstep
+            smoothstep: function (x) {
+                return x * x * (3 - 2 * x);
+            },
+            smoothstepSquared: function (x) {
+                return Math.pow((x * x * (3 - 2 * x)), 2);
+            },
+            smoothstepCubed: function (x) {
+                return Math.pow((x * x * (3 - 2 * x)), 3);
+            },
+            // Acceleration
+            acceleration: function (x) {
+                return x * x;
+            },
+            accelerationCubed: function (x) {
+                return Math.pow(x * x, 3);
+            },
+            // Deceleration
+            deceleration: function (x) {
+                return 1 - Math.pow(1 - x, 2);
+            },
+            decelerationCubed: function (x) {
+                return 1 - Math.pow(1 - x, 3);
+            },
+            // Sine
+            sine: function (x) {
+                return Math.sin(x * Math.PI / 2);
+            },
+            sineSquared: function (x) {
+                return Math.pow(Math.sin(x * Math.PI / 2), 2);
+            },
+            sineCubed: function (x) {
+                return Math.pow(Math.sin(x * Math.PI / 2), 2);
+            },
+            inverseSine: function (x) {
+                return 1 - Math.sin((1 - x) * Math.PI / 2);
+            },
+            inverseSineSquared: function (x) {
+                return 1 - Math.pow(Math.sin((1 - x) * Math.PI / 2), 2);
+            },
+            inverseSineCubed: function (x) {
+                return 1 - Math.pow(Math.sin((1 - x) * Math.PI / 2), 3);
+            },
+            // Spline
+            spline: function (t, p0, p1, p2, p3) {
+                return 0.5 * ((2 * p1) +
+                    (-p0 + p2) * t +
+                    (2 * p0 - 5 * p1 + 4 * p2 - p3) * t * t +
+                    (-p0 + 3 * p1 - 3 * p2 + p3) * t * t * t);
+            },
+            // Bezier curve
+            cubicBezier: function (t, a, b, c, d) {
+                var t2 = t * t;
+                var t3 = t2 * t;
+                return a + (-a * 3 + t * (3 * a - a * t)) * t + (3 * b + t * (-6 * b + b * 3 * t)) * t + (c * 3 - c * 3 * t) * t2 + d * t3;
+            }
+        };
+    }
+    /**
+     * The low level `tweenProperty` function is used as the foundation
+     * for the the higher level tween methods.
+     * @param tweenProperties Tween properties object
+     * @return Tween object
+     */
+    Charm.prototype.tweenProperty = function (tweenProperties) {
+        var _this = this;
+        tweenProperties.type = tweenProperties.type == undefined ? "smoothstep" : tweenProperties.type;
+        tweenProperties.yoyo = tweenProperties.yoyo == undefined ? false : tweenProperties.yoyo;
+        tweenProperties.delayBeforeRepeat = tweenProperties.delayBeforeRepeat == undefined ? 0 : tweenProperties.delayBeforeRepeat;
+        // Create the tween object
+        var o = {};
+        // If the tween is a bounce type (a spline), set the
+        // start and end magnitude values
+        var typeArray = tweenProperties.type.split(" ");
+        if (typeArray[0] === "bounce") {
+            o.startMagnitude = parseInt(typeArray[1], 10);
+            o.endMagnitude = parseInt(typeArray[2], 10);
+        }
+        // Use `o.start` to make a new tween using the current
+        // end point values
+        o.start = function (startValue, endValue) {
+            // Clone the start and end values so that any possible references to sprite
+            // properties are converted to ordinary numbers
+            o.startValue = JSON.parse(JSON.stringify(startValue));
+            o.endValue = JSON.parse(JSON.stringify(endValue));
+            o.playing = true;
+            o.totalFrames = tweenProperties.totalFrames;
+            o.frameCounter = 0;
+            // Add the tween to the global `tweens` array. The `tweens` array is
+            // updated on each frame
+            _this.globalTweens.push(o);
+        };
+        // Call `o.start` to start the tween
+        o.start(tweenProperties.startValue, tweenProperties.endValue);
+        // The `update` method will be called on each frame by the game loop.
+        // This is what makes the tween move
+        o.update = function () {
+            var curvedTime;
+            if (o.playing) {
+                // If the elapsed frames are less than the total frames,
+                // use the tweening formulas to move the sprite
+                if (o.frameCounter < o.totalFrames) {
+                    // Find the normalized value
+                    var normalizedTime = o.frameCounter / o.totalFrames;
+                    // Select the correct easing function from the
+                    // `ease` object’s library of easing functions
+                    // If it's not a spline, use one of the ordinary easing functions
+                    if (typeArray[0] !== "bounce") {
+                        curvedTime = _this.easingFormulas[tweenProperties.type](normalizedTime);
+                    }
+                    else {
+                        // If it's a spline, use the `spline` function and apply the
+                        // 2 additional `type` array values as the spline's start and
+                        // end points
+                        curvedTime = _this.easingFormulas.spline(normalizedTime, o.startMagnitude, 0, 1, o.endMagnitude);
+                    }
+                    // Interpolate the sprite's property based on the curve
+                    tweenProperties.displayObject[tweenProperties.property] = (o.endValue * curvedTime) + (o.startValue * (1 - curvedTime));
+                    o.frameCounter += 1;
+                }
+                else {
+                    // When the tween has finished playing, run the end tasks
+                    tweenProperties.displayObject[tweenProperties.property] = o.endValue;
+                    o.end();
+                }
+            }
+        };
+        // The `end` method will be called when the tween is finished
+        o.end = function () {
+            // Set `playing` to `false`
+            o.playing = false;
+            // Call the tween's `onComplete` method, if it's been assigned
+            if (o.onCompleted) {
+                o.onCompleted();
+            }
+            // Remove the tween from the `tweens` array
+            _this.globalTweens.splice(_this.globalTweens.indexOf(o), 1);
+            // If the tween's `yoyo` property is `true`, create a new tween
+            // using the same values, but use the current tween's `startValue`
+            // as the next tween's `endValue`
+            if (tweenProperties.yoyo) {
+                _this.wait(tweenProperties.delayBeforeRepeat).then(function () {
+                    o.start(o.endValue, o.startValue);
+                });
+            }
+        };
+        // Pause and play methods
+        o.play = function () { return o.playing = true; };
+        o.pause = function () { return o.playing = false; };
+        // Return the tween object
+        return o;
+    };
+    /**
+     * `makeTween` is a general low-level method for making complex tweens
+     * out of multiple `tweenProperty` functions. Its one argument.
+     * @param tweensToAdd array containing multiple 'Charm.Tween.ITween' for 'tweenProperty' calls
+     * @return Tween collection created
+     */
+    Charm.prototype.makeTween = function (tweensToAdd) {
+        var _this = this;
+        // Create an object to manage the tweens
+        var o = {};
+        // Create a `tweens` array to store the new tweens
+        o.tweens = [];
+        // Make a new tween for each array
+        tweensToAdd.forEach(function (tweenPropertyArguments) {
+            // Use the tween property arguments to make a new tween
+            var newTween = _this.tweenProperty(tweenPropertyArguments);
+            // Push the new tween into this object's internal `tweens` array
+            o.tweens.push(newTween);
+        });
+        // Add a counter to keep track of the
+        // number of tweens that have completed their actions
+        var completionCounter = 0;
+        // Add `onComplete` methods to all tweens
+        o.tweens.forEach(function (tween) {
+            tween.onCompleted = function () {
+                // Add 1 to the `completionCounter`
+                completionCounter += 1;
+                // If all tweens have finished, call the user-defined `onComplete`
+                // method, if it's been assigned. Reset the `completionCounter`
+                if (completionCounter === o.tweens.length) {
+                    if (o.onCompleted) {
+                        o.onCompleted();
+                    }
+                    completionCounter = 0;
+                }
+            };
+        });
+        // Add pause and play methods to control all the tweens
+        o.pause = function () {
+            o.tweens.forEach(function (tween) {
+                tween.playing = false;
+            });
+        };
+        o.play = function () {
+            o.tweens.forEach(function (tween) {
+                tween.playing = true;
+            });
+        };
+        // Return the tween object
+        return o;
+    };
+    /* High level tween methods */
+    /** SIMPLE TWEENS */
+    /**
+     * `fadeOut`
+     * @param displayObject
+     * @param frames (default 60)
+     * @return
+     */
+    Charm.prototype.fadeOut = function (displayObject, frames) {
+        if (frames === void 0) { frames = 60; }
+        return this.tweenProperty({
+            displayObject: displayObject,
+            endValue: 0,
+            property: "alpha",
+            startValue: displayObject.alpha,
+            totalFrames: frames,
+            type: "sine"
+        });
+    };
+    /**
+     * `fadeIn`
+     * @param displayObject
+     * @param frames (default 60)
+     * @return
+     */
+    Charm.prototype.fadeIn = function (displayObject, frames) {
+        if (frames === void 0) { frames = 60; }
+        return this.tweenProperty({
+            displayObject: displayObject,
+            endValue: 1,
+            property: "alpha",
+            startValue: displayObject.alpha,
+            totalFrames: frames,
+            type: "sine"
+        });
+    };
+    /**
+     * `pulse`
+     * Fades the displayObject in and out at a steady rate.
+     * Set the `minAlpha` to something greater than 0 if you
+     * don't want the displayObject to fade away completely
+     * @param displayObject
+     * @param frames (default 60)
+     * @param minAlpha (default 0)
+     * @return
+     */
+    Charm.prototype.pulse = function (displayObject, frames, minAlpha) {
+        if (frames === void 0) { frames = 60; }
+        if (minAlpha === void 0) { minAlpha = 0; }
+        return this.tweenProperty({
+            displayObject: displayObject,
+            endValue: minAlpha,
+            property: "alpha",
+            startValue: displayObject.alpha,
+            totalFrames: frames,
+            type: "smoothstep",
+            yoyo: true
+        });
+    };
+    /** COMPLEX TWEENS */
+    /**
+     * Complex tweens
+     * @param displayObject
+     * @param endX
+     * @param endY
+     * @param frames (default 60)
+     * @param type (default smoothstep)
+     * @param yoyo (default false)
+     * @param delayBeforeRepeat (default 0)
+     * @return
+     */
+    Charm.prototype.slide = function (displayObject, endX, endY, frames, type, yoyo, delayBeforeRepeat) {
+        if (frames === void 0) { frames = 60; }
+        if (type === void 0) { type = "smoothstep"; }
+        if (yoyo === void 0) { yoyo = false; }
+        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
+        return this.makeTween([
+            // Create the x axis tween
+            {
+                delayBeforeRepeat: delayBeforeRepeat,
+                displayObject: displayObject,
+                endValue: endX,
+                property: "x",
+                startValue: displayObject.x,
+                totalFrames: frames,
+                type: type,
+                yoyo: yoyo
+            },
+            // Create the y axis tween
+            {
+                delayBeforeRepeat: delayBeforeRepeat,
+                displayObject: displayObject,
+                endValue: endY,
+                property: "y",
+                startValue: displayObject.y,
+                totalFrames: frames,
+                type: type,
+                yoyo: yoyo
+            }
+        ]);
+    };
+    /**
+     *
+     * @param displayObject
+     * @param endScaleX (default 0.8)
+     * @param endScaleY (default 0.8)
+     * @param frames (default 60)
+     * @param yoyo (default true)
+     * @param delayBeforeRepeat (default 0)
+     * @return
+     */
+    Charm.prototype.breathe = function (displayObject, endScaleX, endScaleY, frames, yoyo, delayBeforeRepeat) {
+        if (endScaleX === void 0) { endScaleX = 0.8; }
+        if (endScaleY === void 0) { endScaleY = 0.8; }
+        if (frames === void 0) { frames = 60; }
+        if (yoyo === void 0) { yoyo = true; }
+        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
+        // Add `scaleX` and `scaleY` properties to Pixi sprites
+        this._addScaleProperties(displayObject);
+        return this.makeTween([
+            // Create the scaleX tween
+            {
+                delayBeforeRepeat: delayBeforeRepeat,
+                displayObject: displayObject,
+                endValue: endScaleX,
+                property: "scaleX",
+                startValue: displayObject.scale.x,
+                totalFrames: frames,
+                type: "smoothstepSquared",
+                yoyo: yoyo
+            },
+            // Create the scaleY tween
+            {
+                delayBeforeRepeat: delayBeforeRepeat,
+                displayObject: displayObject,
+                endValue: endScaleY,
+                property: "scaleY",
+                startValue: displayObject.scale.y,
+                totalFrames: frames,
+                type: "smoothstepSquared",
+                yoyo: yoyo
+            }
+        ]);
+    };
+    /**
+     *
+     * @param displayObject
+     * @param endScaleX (default 0.5)
+     * @param endScaleY (default 0.5)
+     * @param frames (default 60)
+     * @return
+     */
+    Charm.prototype.scale = function (displayObject, endScaleX, endScaleY, frames) {
+        if (endScaleX === void 0) { endScaleX = 0.5; }
+        if (endScaleY === void 0) { endScaleY = 0.5; }
+        if (frames === void 0) { frames = 60; }
+        // Add `scaleX` and `scaleY` properties to Pixi sprites
+        this._addScaleProperties(displayObject);
+        return this.makeTween([
+            // Create the scaleX tween
+            {
+                displayObject: displayObject,
+                endValue: endScaleX,
+                property: "scaleX",
+                startValue: displayObject.scale.x,
+                totalFrames: frames,
+                type: "smoothstep",
+                yoyo: false
+            },
+            // Create the scaleY tween
+            {
+                displayObject: displayObject,
+                endValue: endScaleY,
+                property: "scaleY",
+                startValue: displayObject.scale.y,
+                totalFrames: frames,
+                type: "smoothstep",
+                yoyo: false
+            }
+        ]);
+    };
+    /**
+     *
+     * @param displayObject
+     * @param scaleFactor (default 1.3)
+     * @param startMagnitude (default 10)
+     * @param endMagnitude (default 20)
+     * @param frames (default 10)
+     * @param yoyo (default true)
+     * @param delayBeforeRepeat (default 0)
+     * @return
+     */
+    Charm.prototype.strobe = function (displayObject, scaleFactor, startMagnitude, endMagnitude, frames, yoyo, delayBeforeRepeat) {
+        if (scaleFactor === void 0) { scaleFactor = 1.3; }
+        if (startMagnitude === void 0) { startMagnitude = 10; }
+        if (endMagnitude === void 0) { endMagnitude = 20; }
+        if (frames === void 0) { frames = 10; }
+        if (yoyo === void 0) { yoyo = true; }
+        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
+        var bounce = "bounce " + startMagnitude + " " + endMagnitude;
+        // Add `scaleX` and `scaleY` properties to Pixi sprites
+        this._addScaleProperties(displayObject);
+        return this.makeTween([
+            // Create the scaleX tween
+            {
+                delayBeforeRepeat: delayBeforeRepeat,
+                displayObject: displayObject,
+                endValue: scaleFactor,
+                property: "scaleX",
+                startValue: displayObject.scale.x,
+                totalFrames: frames,
+                type: bounce,
+                yoyo: false
+            },
+            // Create the scaleY tween
+            {
+                delayBeforeRepeat: delayBeforeRepeat,
+                displayObject: displayObject,
+                endValue: scaleFactor,
+                property: "scaleY",
+                startValue: displayObject.scale.y,
+                totalFrames: frames,
+                type: bounce,
+                yoyo: yoyo
+            }
+        ]);
+    };
+    /**
+     *
+     * @param displayObject
+     * @param scaleFactorX (default 1.2)
+     * @param scaleFactorY (default 1.2)
+     * @param frames (default 10)
+     * @param xStartMagnitude (default 10)
+     * @param xEndMagnitude (default 10)
+     * @param yStartMagnitude (default -10)
+     * @param yEndMagnitude (default -10)
+     * @param friction (default 0.98)
+     * @param yoyo (default true)
+     * @param delayBeforeRepeat (default 0)
+     * @return
+     */
+    Charm.prototype.wobble = function (displayObject, scaleFactorX, scaleFactorY, frames, xStartMagnitude, xEndMagnitude, yStartMagnitude, yEndMagnitude, friction, yoyo, delayBeforeRepeat) {
+        var _this = this;
+        if (scaleFactorX === void 0) { scaleFactorX = 1.2; }
+        if (scaleFactorY === void 0) { scaleFactorY = 1.2; }
+        if (frames === void 0) { frames = 10; }
+        if (xStartMagnitude === void 0) { xStartMagnitude = 10; }
+        if (xEndMagnitude === void 0) { xEndMagnitude = 10; }
+        if (yStartMagnitude === void 0) { yStartMagnitude = -10; }
+        if (yEndMagnitude === void 0) { yEndMagnitude = -10; }
+        if (friction === void 0) { friction = 0.98; }
+        if (yoyo === void 0) { yoyo = true; }
+        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
+        var bounceX = "bounce " + xStartMagnitude + " " + xEndMagnitude;
+        var bounceY = "bounce " + yStartMagnitude + " " + yEndMagnitude;
+        // Add `scaleX` and `scaleY` properties to Pixi sprites
+        this._addScaleProperties(displayObject);
+        var o = this.makeTween([
+            // Create the scaleX tween
+            {
+                delayBeforeRepeat: delayBeforeRepeat,
+                displayObject: displayObject,
+                endValue: scaleFactorX,
+                property: "scaleX",
+                startValue: displayObject.scale.x,
+                totalFrames: frames,
+                type: bounceX,
+                yoyo: yoyo
+            },
+            // Create the scaleY tween
+            {
+                delayBeforeRepeat: delayBeforeRepeat,
+                displayObject: displayObject,
+                endValue: scaleFactorY,
+                property: "scaleY",
+                startValue: displayObject.scale.y,
+                totalFrames: frames,
+                type: bounceY,
+                yoyo: yoyo
+            }
+        ]);
+        // Add some friction to the `endValue` at the end of each tween
+        o.tweens.forEach(function (tween) {
+            tween.onCompleted = function () {
+                // Add friction if the `endValue` is greater than 1
+                if (tween.endValue > 1) {
+                    tween.endValue *= friction;
+                    // Set the `endValue` to 1 when the effect is finished and
+                    // remove the tween from the global `tweens` array
+                    if (tween.endValue <= 1) {
+                        tween.endValue = 1;
+                        _this.removeTween(tween);
+                    }
+                }
+            };
+        });
+        return o;
+    };
+    // 3. Motion path tweens
+    /**
+     *
+     * @param displayObject
+     * @param pointsArray Bezier curve as a 2D array of 4 x/y points
+     * @param totalFrames
+     * @param type (default 'smoothstep')
+     * @param yoyo (default false)
+     * @param delayBeforeRepeat (default 0)
+     * @return
+     */
+    Charm.prototype.followCurve = function (displayObject, pointsArray, totalFrames, type, yoyo, delayBeforeRepeat) {
+        var _this = this;
+        if (type === void 0) { type = "smoothstep"; }
+        if (yoyo === void 0) { yoyo = false; }
+        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
+        // Create the tween object
+        var o = {};
+        // If the tween is a bounce type (a spline), set the
+        // start and end magnitude values
+        var typeArray = type.split(" ");
+        if (typeArray[0] === "bounce") {
+            o.startMagnitude = parseInt(typeArray[1], 10);
+            o.endMagnitude = parseInt(typeArray[2], 10);
+        }
+        // Use `tween.start` to make a new tween using the current
+        // end point values
+        o.start = function (_pointsArray) {
+            o.playing = true;
+            o.totalFrames = totalFrames;
+            o.frameCounter = 0;
+            // Clone the points array
+            o.pointsArray = JSON.parse(JSON.stringify(_pointsArray));
+            // Add the tween to the `globalTweens` array. The `globalTweens` array is
+            // updated on each frame
+            _this.globalTweens.push(o);
+        };
+        // Call `tween.start` to start the first tween
+        o.start(pointsArray);
+        // The `update` method will be called on each frame by the game loop.
+        // This is what makes the tween move
+        o.update = function () {
+            var normalizedTime, curvedTime, p = o.pointsArray;
+            if (o.playing) {
+                // If the elapsed frames are less than the total frames,
+                // use the tweening formulas to move the sprite
+                if (o.frameCounter < o.totalFrames) {
+                    // Find the normalized value
+                    normalizedTime = o.frameCounter / o.totalFrames;
+                    // Select the correct easing function
+                    // If it's not a spline, use one of the ordinary tween
+                    // functions
+                    if (typeArray[0] !== "bounce") {
+                        curvedTime = _this.easingFormulas[type](normalizedTime);
+                    }
+                    else {
+                        // If it's a spline, use the `spline` function and apply the
+                        // 2 additional `type` array values as the spline's start and
+                        // end points
+                        // curve = tweenFunction.spline(n, type[1], 0, 1, type[2]);
+                        curvedTime = _this.easingFormulas.spline(normalizedTime, o.startMagnitude, 0, 1, o.endMagnitude);
+                    }
+                    // Apply the Bezier curve to the sprite's position
+                    displayObject.x = _this.easingFormulas.cubicBezier(curvedTime, p[0][0], p[1][0], p[2][0], p[3][0]);
+                    displayObject.y = _this.easingFormulas.cubicBezier(curvedTime, p[0][1], p[1][1], p[2][1], p[3][1]);
+                    // Add one to the `elapsedFrames`
+                    o.frameCounter += 1;
+                }
+                else {
+                    // When the tween has finished playing, run the end tasks
+                    // displayObject[property] = o.endValue;
+                    o.end();
+                }
+            }
+        };
+        // The `end` method will be called when the tween is finished
+        o.end = function () {
+            // Set `playing` to `false`
+            o.playing = false;
+            // Call the tween's `onComplete` method, if it's been
+            // assigned
+            if (o.onCompleted) {
+                o.onCompleted();
+            }
+            // Remove the tween from the global `tweens` array
+            _this.globalTweens.splice(_this.globalTweens.indexOf(o), 1);
+            // If the tween's `yoyo` property is `true`, reverse the array and
+            // use it to create a new tween
+            if (yoyo) {
+                _this.wait(delayBeforeRepeat).then(function () {
+                    o.pointsArray = o.pointsArray.reverse();
+                    o.start(o.pointsArray);
+                });
+            }
+        };
+        // Pause and play methods
+        o.pause = function () {
+            o.playing = false;
+        };
+        o.play = function () {
+            o.playing = true;
+        };
+        // Return the tween object
+        return o;
+    };
+    /**
+     *
+     * @param displayObject
+     * @param originalPath Array of 2D array of x/y position waypoints that map out the path you want to follow.
+     * @param totalFrames The duration, in frames (default 300)
+     * @param type The easing type (default 'smoothstep')
+     * @param loop Should the animation loop? (default false)
+     * @param yoyo Shoud the direction reverse? (default false)
+     * @param delayBetweenSections Delay, in milliseconds, between sections (default 0)
+     * @return
+     */
+    Charm.prototype.walkPath = function (displayObject, originalPathArray, totalFrames, type, loop, yoyo, delayBetweenSections) {
+        var _this = this;
+        if (totalFrames === void 0) { totalFrames = 300; }
+        if (type === void 0) { type = "smoothstep"; }
+        if (loop === void 0) { loop = false; }
+        if (yoyo === void 0) { yoyo = false; }
+        if (delayBetweenSections === void 0) { delayBetweenSections = 0; }
+        // Clone the path array so that any possible references to sprite
+        // properties are converted into ordinary numbers
+        var pathArray = JSON.parse(JSON.stringify(originalPathArray));
+        // Figure out the duration, in frames, of each path section by
+        // dividing the `totalFrames` by the length of the `pathArray`
+        var frames = totalFrames / pathArray.length;
+        // Set the current point to 0, which will be the first waypoint
+        var currentPoint = 0;
+        // The `makePath` function creates a single tween between two points and
+        // then schedules the next path to be made after it
+        var makePath = function (_currentPoint) {
+            // Use the `makeTween` function to tween the sprite's
+            // x and y position
+            var tweenCollection = _this.makeTween([
+                // Create the x axis tween between the first x value in the
+                // current point and the x value in the following point
+                {
+                    displayObject: displayObject,
+                    endValue: pathArray[currentPoint + 1][0],
+                    property: "x",
+                    startValue: pathArray[currentPoint][0],
+                    totalFrames: frames,
+                    type: type
+                },
+                // Create the y axis tween in the same way
+                {
+                    displayObject: displayObject,
+                    endValue: pathArray[currentPoint + 1][1],
+                    property: "y",
+                    startValue: pathArray[currentPoint][1],
+                    totalFrames: frames,
+                    type: type
+                }
+            ]);
+            // When the tween is complete, advance the `currentPoint` by one.
+            // Add an optional delay between path segments, and then make the
+            // next connecting path
+            tweenCollection.onCompleted = function () {
+                // Advance to the next point
+                currentPoint += 1;
+                // If the sprite hasn't reached the end of the
+                // path, tween the sprite to the next point
+                if (currentPoint < pathArray.length - 1) {
+                    _this.wait(delayBetweenSections).then(function () {
+                        tweenCollection = makePath(currentPoint);
+                    });
+                }
+                else {
+                    // If we've reached the end of the path, optionally
+                    // loop and yoyo it
+                    // Reverse the path if `loop` is `true`
+                    if (loop) {
+                        // Reverse the array if `yoyo` is `true`
+                        if (yoyo) {
+                            pathArray.reverse();
+                        }
+                        // Optionally wait before restarting
+                        _this.wait(delayBetweenSections).then(function () {
+                            // Reset the `currentPoint` to 0 so that we can
+                            // restart at the first point
+                            currentPoint = 0;
+                            // Set the sprite to the first point
+                            displayObject.x = pathArray[0][0];
+                            displayObject.y = pathArray[0][1];
+                            // Make the first new path
+                            tweenCollection = makePath(currentPoint);
+                            // ... and so it continues!
+                        });
+                    }
+                }
+            };
+            // Return the path tween to the main function
+            return tweenCollection;
+        };
+        // Make the first path using the internal `makePath` function (below)
+        var tweenResult = makePath(currentPoint);
+        // Pass the tween back to the main program
+        return tweenResult;
+    };
+    /**
+     *
+     * @param displayObject
+     * @param curvedWaypoints 2D array of Bezier curves (Bezier curves is a 2D array of 4 x/y points)
+     * @param totalFrames (default 300)
+     * @param type (default 'smoothstep')
+     * @param loop (default false)
+     * @param yoyo (default false)
+     * @param delayBeforeContinue (default 0)
+     * @return
+     */
+    Charm.prototype.walkCurve = function (displayObject, curvedWaypoints, totalFrames, type, loop, yoyo, delayBeforeContinue) {
+        var _this = this;
+        if (totalFrames === void 0) { totalFrames = 300; }
+        if (type === void 0) { type = "smoothstep"; }
+        if (loop === void 0) { loop = false; }
+        if (yoyo === void 0) { yoyo = false; }
+        if (delayBeforeContinue === void 0) { delayBeforeContinue = 0; }
+        // Divide the `totalFrames` into sections for each part of the path
+        var frames = totalFrames / curvedWaypoints.length;
+        // Set the current curve to 0, which will be the first one
+        var currentCurve = 0;
+        // The `makePath` function
+        var makePath = function (_currentCurve) {
+            // Use the custom `followCurve` function to make
+            // a sprite follow a curve
+            var tween = _this.followCurve(displayObject, curvedWaypoints[currentCurve], frames, type);
+            // When the tween is complete, advance the `currentCurve` by one.
+            // Add an optional delay between path segments, and then make the
+            // next path
+            tween.onCompleted = function () {
+                currentCurve += 1;
+                if (currentCurve < curvedWaypoints.length) {
+                    _this.wait(delayBeforeContinue).then(function () {
+                        tween = makePath(currentCurve);
+                    });
+                }
+                else {
+                    // If we've reached the end of the path, optionally
+                    // loop and reverse it
+                    if (loop) {
+                        if (yoyo) {
+                            // Reverse order of the curves in the `pathArray`
+                            curvedWaypoints.reverse();
+                            // Reverse the order of the points in each curve
+                            curvedWaypoints.forEach(function (curveArray) { return curveArray.reverse(); });
+                        }
+                        // After an optional delay, reset the sprite to the
+                        // beginning of the path and make the next new path
+                        _this.wait(delayBeforeContinue).then(function () {
+                            currentCurve = 0;
+                            displayObject.x = curvedWaypoints[0][0][0];
+                            displayObject.y = curvedWaypoints[0][0][1];
+                            tween = makePath(currentCurve);
+                        });
+                    }
+                }
+            };
+            // Return the path tween to the main function
+            return tween;
+        };
+        // Make the first path
+        var tweenResult = makePath(currentCurve);
+        // Pass the tween back to the main program
+        return tweenResult;
+    };
+    // 4. Utilities
+    /**
+     * The `wait` method lets you set up a timed sequence of events
+     *
+     *   wait(1000)
+     *     .then(() => console.log("One"))
+     *     .then(() => wait(1000))
+     *     .then(() => console.log("Two"))
+     *     .then(() => wait(1000))
+     *     .then(() => console.log("Three"))
+     * @param duration
+     * @return
+     */
+    Charm.prototype.wait = function (duration) {
+        if (duration === void 0) { duration = 0; }
+        return new Promise(function (resolve, _reject) {
+            setTimeout(resolve, duration);
+        });
+    };
+    /**
+     * A utility to remove tweens from globalTweens
+     * @param tweenObject
+     */
+    Charm.prototype.removeTween = function (tweenObject) {
+        var _this = this;
+        // Remove the tween if `tweenObject` doesn't have any nested
+        // tween objects
+        if (!tweenObject.tweens) {
+            tweenObject.pause();
+            // array.splice(-1,1) will always remove last elemnt of array, so this
+            // extra check prevents that (Thank you, MCumic10! https:// github.com/kittykatattack/charm/issues/5)
+            if (this.globalTweens.indexOf(tweenObject) !== -1) {
+                this.globalTweens.splice(this.globalTweens.indexOf(tweenObject), 1);
+            }
+            // Otherwise, remove the nested tween objects
+        }
+        else {
+            tweenObject.pause();
+            tweenObject.tweens.forEach(function (element) {
+                _this.globalTweens.splice(_this.globalTweens.indexOf(element), 1);
+            });
+        }
+    };
+    /**
+     * Update all the tween objects in the `globalTweens` array
+     */
+    Charm.prototype.update = function () {
+        // Update all the tween objects in the `globalTweens` array
+        if (this.globalTweens.length > 0) {
+            for (var i = this.globalTweens.length - 1; i >= 0; i--) {
+                var tween = this.globalTweens[i];
+                if (tween) {
+                    tween.update();
+                }
+            }
+        }
+    };
+    // Add `scaleX` and `scaleY` properties to Pixi sprites
+    Charm.prototype._addScaleProperties = function (displayObject) {
+        if (this.renderer === "pixi") {
+            if (!("scaleX" in displayObject) && ("scale" in displayObject) && ("x" in displayObject.scale)) {
+                Object.defineProperty(displayObject, "scaleX", {
+                    get: function () {
+                        return displayObject.scale.x;
+                    },
+                    set: function (value) {
+                        displayObject.scale.x = value;
+                    }
+                });
+            }
+            if (!("scaleY" in displayObject) && ("scale" in displayObject) && ("y" in displayObject.scale)) {
+                Object.defineProperty(displayObject, "scaleY", {
+                    get: function () {
+                        return displayObject.scale.y;
+                    },
+                    set: function (value) {
+                        displayObject.scale.y = value;
+                    }
+                });
+            }
+        }
+    };
+    return Charm;
+}());
+exports.Charm = Charm;
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
+
+/***/ })
+/******/ ]);
+});
+//# sourceMappingURL=pixijs-charm.js.map
+
+/***/ }),
 /* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+exports.__esModule = true;
+exports.loader = exports.prepare = exports.particles = exports.mesh = exports.loaders = exports.interaction = exports.filters = exports.extras = exports.extract = exports.accessibility = undefined;
+
+var _polyfill = __webpack_require__(94);
+
+Object.keys(_polyfill).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    Object.defineProperty(exports, key, {
+        enumerable: true,
+        get: function get() {
+            return _polyfill[key];
+        }
+    });
+});
+
+var _core = __webpack_require__(0);
+
+Object.keys(_core).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    Object.defineProperty(exports, key, {
+        enumerable: true,
+        get: function get() {
+            return _core[key];
+        }
+    });
+});
+
+var _deprecation = __webpack_require__(156);
+
+var _deprecation2 = _interopRequireDefault(_deprecation);
+
+var _accessibility = __webpack_require__(157);
+
+var accessibility = _interopRequireWildcard(_accessibility);
+
+var _extract = __webpack_require__(159);
+
+var extract = _interopRequireWildcard(_extract);
+
+var _extras = __webpack_require__(70);
+
+var extras = _interopRequireWildcard(_extras);
+
+var _filters = __webpack_require__(169);
+
+var filters = _interopRequireWildcard(_filters);
+
+var _interaction = __webpack_require__(176);
+
+var interaction = _interopRequireWildcard(_interaction);
+
+var _loaders = __webpack_require__(178);
+
+var loaders = _interopRequireWildcard(_loaders);
+
+var _mesh = __webpack_require__(182);
+
+var mesh = _interopRequireWildcard(_mesh);
+
+var _particles = __webpack_require__(187);
+
+var particles = _interopRequireWildcard(_particles);
+
+var _prepare = __webpack_require__(192);
+
+var prepare = _interopRequireWildcard(_prepare);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// export core
+_core.utils.mixins.performMixins();
+
+/**
+ * Alias for {@link PIXI.loaders.shared}.
+ * @name loader
+ * @memberof PIXI
+ * @type {PIXI.loader.Loader}
+ */
+
+
+// handle mixins now, after all code has been added, including deprecation
+
+
+// export libs
+// import polyfills. Done as an export to make sure polyfills are imported first
+var loader = loaders.shared || null;
+
+exports.accessibility = accessibility;
+exports.extract = extract;
+exports.extras = extras;
+exports.filters = filters;
+exports.interaction = interaction;
+exports.loaders = loaders;
+exports.mesh = mesh;
+exports.particles = particles;
+exports.prepare = prepare;
+exports.loader = loader;
+
+// Apply the deprecations
+
+if (typeof _deprecation2.default === 'function') {
+    (0, _deprecation2.default)(exports);
+}
+
+// Always export PixiJS globally.
+global.PIXI = exports; // eslint-disable-line
+//# sourceMappingURL=index.js.map
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
+
+/***/ }),
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(94);
-
-__webpack_require__(96);
+__webpack_require__(95);
 
 __webpack_require__(97);
+
+__webpack_require__(98);
 
 if (!window.ArrayBuffer) {
     window.ArrayBuffer = Array;
@@ -21067,13 +22061,13 @@ if (!window.Uint16Array) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _objectAssign = __webpack_require__(95);
+var _objectAssign = __webpack_require__(96);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -21087,7 +22081,7 @@ if (!Object.assign) {
 //# sourceMappingURL=Object.assign.js.map
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21184,7 +22178,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21265,7 +22259,7 @@ if (!global.cancelAnimationFrame) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21288,7 +22282,7 @@ if (!Math.sign) {
 //# sourceMappingURL=Math.sign.js.map
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21407,7 +22401,7 @@ exports.default = Circle;
 //# sourceMappingURL=Circle.js.map
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21534,7 +22528,7 @@ exports.default = Ellipse;
 //# sourceMappingURL=Ellipse.js.map
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21670,7 +22664,7 @@ exports.default = Polygon;
 //# sourceMappingURL=Polygon.js.map
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21808,7 +22802,7 @@ exports.default = RoundedRectangle;
 //# sourceMappingURL=RoundedRectangle.js.map
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports) {
 
 
@@ -21840,7 +22834,7 @@ module.exports = createContext;
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports) {
 
 var EMPTY_ARRAY_BUFFER = new ArrayBuffer(0);
@@ -21965,7 +22959,7 @@ module.exports = Buffer;
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -22196,7 +23190,7 @@ module.exports = Framebuffer;
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -22293,7 +23287,7 @@ module.exports = Shader;
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -22561,7 +23555,7 @@ VertexArrayObject.prototype.getSize = function()
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -22576,7 +23570,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22603,7 +23597,7 @@ function maxRecommendedTextures(max) {
 //# sourceMappingURL=maxRecommendedTextures.js.map
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22622,7 +23616,7 @@ function canUploadSameBuffer() {
 //# sourceMappingURL=canUploadSameBuffer.js.map
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22693,7 +23687,7 @@ exports.default = {
 //# sourceMappingURL=pluginTarget.js.map
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22760,7 +23754,7 @@ function performMixins() {
 //# sourceMappingURL=mixin.js.map
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22795,7 +23789,7 @@ module.exports = function removeItems(arr, startIdx, removeCount)
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22843,7 +23837,7 @@ function mapPremultipliedBlendModes() {
 //# sourceMappingURL=mapPremultipliedBlendModes.js.map
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22904,7 +23898,7 @@ function determineCrossOrigin(url) {
 //# sourceMappingURL=determineCrossOrigin.js.map
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -23440,10 +24434,10 @@ function determineCrossOrigin(url) {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(116)(module), __webpack_require__(20)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(117)(module), __webpack_require__(20)))
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -23471,7 +24465,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23494,18 +24488,18 @@ module.exports = {
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(119);
-exports.encode = exports.stringify = __webpack_require__(120);
+exports.decode = exports.parse = __webpack_require__(120);
+exports.encode = exports.stringify = __webpack_require__(121);
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23596,7 +24590,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23688,7 +24682,7 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23704,7 +24698,7 @@ var _settings2 = _interopRequireDefault(_settings);
 
 var _const = __webpack_require__(1);
 
-var _TickerListener = __webpack_require__(122);
+var _TickerListener = __webpack_require__(123);
 
 var _TickerListener2 = _interopRequireDefault(_TickerListener);
 
@@ -24166,7 +25160,7 @@ exports.default = Ticker;
 //# sourceMappingURL=Ticker.js.map
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24345,7 +25339,7 @@ exports.default = TickerListener;
 //# sourceMappingURL=TickerListener.js.map
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24503,7 +25497,7 @@ _CanvasRenderer2.default.registerPlugin('sprite', CanvasSpriteRenderer);
 //# sourceMappingURL=CanvasSpriteRenderer.js.map
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24677,7 +25671,7 @@ exports.default = CanvasMaskManager;
 //# sourceMappingURL=CanvasMaskManager.js.map
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24754,7 +25748,7 @@ function mapCanvasBlendModesToPixi() {
 //# sourceMappingURL=mapCanvasBlendModesToPixi.js.map
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24774,15 +25768,15 @@ var _createIndicesForQuads = __webpack_require__(33);
 
 var _createIndicesForQuads2 = _interopRequireDefault(_createIndicesForQuads);
 
-var _generateMultiTextureShader = __webpack_require__(139);
+var _generateMultiTextureShader = __webpack_require__(140);
 
 var _generateMultiTextureShader2 = _interopRequireDefault(_generateMultiTextureShader);
 
-var _checkMaxIfStatmentsInShader = __webpack_require__(140);
+var _checkMaxIfStatmentsInShader = __webpack_require__(141);
 
 var _checkMaxIfStatmentsInShader2 = _interopRequireDefault(_checkMaxIfStatmentsInShader);
 
-var _BatchBuffer = __webpack_require__(141);
+var _BatchBuffer = __webpack_require__(142);
 
 var _BatchBuffer2 = _interopRequireDefault(_BatchBuffer);
 
@@ -25301,7 +26295,7 @@ _WebGLRenderer2.default.registerPlugin('sprite', SpriteRenderer);
 //# sourceMappingURL=SpriteRenderer.js.map
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25516,7 +26510,7 @@ exports.default = MaskManager;
 //# sourceMappingURL=MaskManager.js.map
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25583,7 +26577,7 @@ function extractUniformsFromString(string) {
 //# sourceMappingURL=extractUniformsFromSrc.js.map
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -25773,7 +26767,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25931,7 +26925,7 @@ exports.default = StencilManager;
 //# sourceMappingURL=StencilManager.js.map
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25957,7 +26951,7 @@ var _Shader = __webpack_require__(13);
 
 var _Shader2 = _interopRequireDefault(_Shader);
 
-var _filterTransforms = __webpack_require__(132);
+var _filterTransforms = __webpack_require__(133);
 
 var filterTransforms = _interopRequireWildcard(_filterTransforms);
 
@@ -26506,7 +27500,7 @@ exports.default = FilterManager;
 //# sourceMappingURL=FilterManager.js.map
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26593,7 +27587,7 @@ function calculateSpriteMatrix(outputMatrix, filterArea, textureSize, sprite) {
 //# sourceMappingURL=filterTransforms.js.map
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26854,7 +27848,7 @@ exports.default = TextureManager;
 //# sourceMappingURL=TextureManager.js.map
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26979,7 +27973,7 @@ exports.default = TextureGarbageCollector;
 //# sourceMappingURL=TextureGarbageCollector.js.map
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26987,7 +27981,7 @@ exports.default = TextureGarbageCollector;
 
 exports.__esModule = true;
 
-var _mapWebGLBlendModesToPixi = __webpack_require__(136);
+var _mapWebGLBlendModesToPixi = __webpack_require__(137);
 
 var _mapWebGLBlendModesToPixi2 = _interopRequireDefault(_mapWebGLBlendModesToPixi);
 
@@ -27264,7 +28258,7 @@ exports.default = WebGLState;
 //# sourceMappingURL=WebGLState.js.map
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27318,7 +28312,7 @@ function mapWebGLBlendModesToPixi(gl) {
 //# sourceMappingURL=mapWebGLBlendModesToPixi.js.map
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27355,7 +28349,7 @@ function mapWebGLDrawModesToPixi(gl) {
 //# sourceMappingURL=mapWebGLDrawModesToPixi.js.map
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27376,7 +28370,7 @@ function validateContext(gl) {
 //# sourceMappingURL=validateContext.js.map
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27444,7 +28438,7 @@ function generateSampleSrc(maxTextures) {
 //# sourceMappingURL=generateMultiTextureShader.js.map
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27524,7 +28518,7 @@ function generateIfTestSrc(maxIfs) {
 //# sourceMappingURL=checkMaxIfStatmentsInShader.js.map
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27582,7 +28576,7 @@ exports.default = Buffer;
 //# sourceMappingURL=BatchBuffer.js.map
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27618,7 +28612,7 @@ var _TextMetrics = __webpack_require__(64);
 
 var _TextMetrics2 = _interopRequireDefault(_TextMetrics);
 
-var _trimCanvas = __webpack_require__(143);
+var _trimCanvas = __webpack_require__(144);
 
 var _trimCanvas2 = _interopRequireDefault(_trimCanvas);
 
@@ -28242,7 +29236,7 @@ exports.default = Text;
 //# sourceMappingURL=Text.js.map
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28323,7 +29317,7 @@ function trimCanvas(canvas) {
 //# sourceMappingURL=trimCanvas.js.map
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28361,7 +29355,7 @@ var _Bounds = __webpack_require__(25);
 
 var _Bounds2 = _interopRequireDefault(_Bounds);
 
-var _bezierCurveTo2 = __webpack_require__(145);
+var _bezierCurveTo2 = __webpack_require__(146);
 
 var _bezierCurveTo3 = _interopRequireDefault(_bezierCurveTo2);
 
@@ -29500,7 +30494,7 @@ Graphics._SPRITE_TEXTURE = null;
 //# sourceMappingURL=Graphics.js.map
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29555,7 +30549,7 @@ function bezierCurveTo(fromX, fromY, cpX, cpY, cpX2, cpY2, toX, toY) {
 //# sourceMappingURL=bezierCurveTo.js.map
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29575,27 +30569,27 @@ var _WebGLRenderer = __webpack_require__(17);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
-var _WebGLGraphicsData = __webpack_require__(147);
+var _WebGLGraphicsData = __webpack_require__(148);
 
 var _WebGLGraphicsData2 = _interopRequireDefault(_WebGLGraphicsData);
 
-var _PrimitiveShader = __webpack_require__(148);
+var _PrimitiveShader = __webpack_require__(149);
 
 var _PrimitiveShader2 = _interopRequireDefault(_PrimitiveShader);
 
-var _buildPoly = __webpack_require__(149);
+var _buildPoly = __webpack_require__(150);
 
 var _buildPoly2 = _interopRequireDefault(_buildPoly);
 
-var _buildRectangle = __webpack_require__(150);
+var _buildRectangle = __webpack_require__(151);
 
 var _buildRectangle2 = _interopRequireDefault(_buildRectangle);
 
-var _buildRoundedRectangle = __webpack_require__(151);
+var _buildRoundedRectangle = __webpack_require__(152);
 
 var _buildRoundedRectangle2 = _interopRequireDefault(_buildRoundedRectangle);
 
-var _buildCircle = __webpack_require__(152);
+var _buildCircle = __webpack_require__(153);
 
 var _buildCircle2 = _interopRequireDefault(_buildCircle);
 
@@ -29825,7 +30819,7 @@ _WebGLRenderer2.default.registerPlugin('graphics', GraphicsRenderer);
 //# sourceMappingURL=GraphicsRenderer.js.map
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29973,7 +30967,7 @@ exports.default = WebGLGraphicsData;
 //# sourceMappingURL=WebGLGraphicsData.js.map
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30023,7 +31017,7 @@ exports.default = PrimitiveShader;
 //# sourceMappingURL=PrimitiveShader.js.map
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30114,7 +31108,7 @@ function buildPoly(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildPoly.js.map
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30195,7 +31189,7 @@ function buildRectangle(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildRectangle.js.map
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30356,7 +31350,7 @@ function quadraticBezierCurve(fromX, fromY, cpX, cpY, toX, toY) {
 //# sourceMappingURL=buildRoundedRectangle.js.map
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30454,7 +31448,7 @@ function buildCircle(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildCircle.js.map
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30728,7 +31722,7 @@ _CanvasRenderer2.default.registerPlugin('graphics', CanvasGraphicsRenderer);
 //# sourceMappingURL=CanvasGraphicsRenderer.js.map
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30994,7 +31988,7 @@ exports.default = Spritesheet;
 //# sourceMappingURL=Spritesheet.js.map
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32095,7 +33089,7 @@ function deprecation(core) {
 //# sourceMappingURL=deprecation.js.map
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32112,7 +33106,7 @@ Object.defineProperty(exports, 'accessibleTarget', {
   }
 });
 
-var _AccessibilityManager = __webpack_require__(157);
+var _AccessibilityManager = __webpack_require__(158);
 
 Object.defineProperty(exports, 'AccessibilityManager', {
   enumerable: true,
@@ -32125,7 +33119,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32624,7 +33618,7 @@ core.CanvasRenderer.registerPlugin('accessibility', AccessibilityManager);
 //# sourceMappingURL=AccessibilityManager.js.map
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32632,7 +33626,7 @@ core.CanvasRenderer.registerPlugin('accessibility', AccessibilityManager);
 
 exports.__esModule = true;
 
-var _WebGLExtract = __webpack_require__(159);
+var _WebGLExtract = __webpack_require__(160);
 
 Object.defineProperty(exports, 'webgl', {
   enumerable: true,
@@ -32641,7 +33635,7 @@ Object.defineProperty(exports, 'webgl', {
   }
 });
 
-var _CanvasExtract = __webpack_require__(160);
+var _CanvasExtract = __webpack_require__(161);
 
 Object.defineProperty(exports, 'canvas', {
   enumerable: true,
@@ -32654,7 +33648,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32882,7 +33876,7 @@ core.WebGLRenderer.registerPlugin('extract', WebGLExtract);
 //# sourceMappingURL=WebGLExtract.js.map
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33067,7 +34061,7 @@ core.CanvasRenderer.registerPlugin('extract', CanvasExtract);
 //# sourceMappingURL=CanvasExtract.js.map
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33480,7 +34474,7 @@ exports.default = AnimatedSprite;
 //# sourceMappingURL=AnimatedSprite.js.map
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33937,7 +34931,7 @@ exports.default = TilingSprite;
 //# sourceMappingURL=TilingSprite.js.map
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34104,7 +35098,7 @@ core.WebGLRenderer.registerPlugin('tilingSprite', TilingSpriteRenderer);
 //# sourceMappingURL=TilingSpriteRenderer.js.map
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34697,7 +35691,7 @@ BitmapText.fonts = {};
 //# sourceMappingURL=BitmapText.js.map
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35106,7 +36100,7 @@ DisplayObject.prototype._cacheAsBitmapDestroy = function _cacheAsBitmapDestroy(o
 //# sourceMappingURL=cacheAsBitmap.js.map
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35145,7 +36139,7 @@ core.Container.prototype.getChildByName = function getChildByName(name) {
 //# sourceMappingURL=getChildByName.js.map
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35183,7 +36177,7 @@ core.DisplayObject.prototype.getGlobalPosition = function getGlobalPosition() {
 //# sourceMappingURL=getGlobalPosition.js.map
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35191,7 +36185,7 @@ core.DisplayObject.prototype.getGlobalPosition = function getGlobalPosition() {
 
 exports.__esModule = true;
 
-var _FXAAFilter = __webpack_require__(169);
+var _FXAAFilter = __webpack_require__(170);
 
 Object.defineProperty(exports, 'FXAAFilter', {
   enumerable: true,
@@ -35200,7 +36194,7 @@ Object.defineProperty(exports, 'FXAAFilter', {
   }
 });
 
-var _NoiseFilter = __webpack_require__(170);
+var _NoiseFilter = __webpack_require__(171);
 
 Object.defineProperty(exports, 'NoiseFilter', {
   enumerable: true,
@@ -35209,7 +36203,7 @@ Object.defineProperty(exports, 'NoiseFilter', {
   }
 });
 
-var _DisplacementFilter = __webpack_require__(171);
+var _DisplacementFilter = __webpack_require__(172);
 
 Object.defineProperty(exports, 'DisplacementFilter', {
   enumerable: true,
@@ -35218,7 +36212,7 @@ Object.defineProperty(exports, 'DisplacementFilter', {
   }
 });
 
-var _BlurFilter = __webpack_require__(172);
+var _BlurFilter = __webpack_require__(173);
 
 Object.defineProperty(exports, 'BlurFilter', {
   enumerable: true,
@@ -35245,7 +36239,7 @@ Object.defineProperty(exports, 'BlurYFilter', {
   }
 });
 
-var _ColorMatrixFilter = __webpack_require__(173);
+var _ColorMatrixFilter = __webpack_require__(174);
 
 Object.defineProperty(exports, 'ColorMatrixFilter', {
   enumerable: true,
@@ -35254,7 +36248,7 @@ Object.defineProperty(exports, 'ColorMatrixFilter', {
   }
 });
 
-var _VoidFilter = __webpack_require__(174);
+var _VoidFilter = __webpack_require__(175);
 
 Object.defineProperty(exports, 'VoidFilter', {
   enumerable: true,
@@ -35267,7 +36261,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35326,7 +36320,7 @@ exports.default = FXAAFilter;
 //# sourceMappingURL=FXAAFilter.js.map
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35428,7 +36422,7 @@ exports.default = NoiseFilter;
 //# sourceMappingURL=NoiseFilter.js.map
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35543,7 +36537,7 @@ exports.default = DisplacementFilter;
 //# sourceMappingURL=DisplacementFilter.js.map
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35722,7 +36716,7 @@ exports.default = BlurFilter;
 //# sourceMappingURL=BlurFilter.js.map
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36278,7 +37272,7 @@ ColorMatrixFilter.prototype.grayscale = ColorMatrixFilter.prototype.greyscale;
 //# sourceMappingURL=ColorMatrixFilter.js.map
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36333,7 +37327,7 @@ exports.default = VoidFilter;
 //# sourceMappingURL=VoidFilter.js.map
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36350,7 +37344,7 @@ Object.defineProperty(exports, 'InteractionData', {
   }
 });
 
-var _InteractionManager = __webpack_require__(176);
+var _InteractionManager = __webpack_require__(177);
 
 Object.defineProperty(exports, 'InteractionManager', {
   enumerable: true,
@@ -36390,7 +37384,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38155,7 +39149,7 @@ core.CanvasRenderer.registerPlugin('interaction', InteractionManager);
 //# sourceMappingURL=InteractionManager.js.map
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38216,7 +39210,7 @@ var _Application = __webpack_require__(67);
 
 var _Application2 = _interopRequireDefault(_Application);
 
-var _loader = __webpack_require__(179);
+var _loader = __webpack_require__(180);
 
 var _loader2 = _interopRequireDefault(_loader);
 
@@ -38288,7 +39282,7 @@ AppPrototype.destroy = function destroy(removeView) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38911,7 +39905,7 @@ exports.default = Loader;
 //# sourceMappingURL=Loader.js.map
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38923,7 +39917,7 @@ var _resourceLoader = __webpack_require__(14);
 
 var _resourceLoader2 = _interopRequireDefault(_resourceLoader);
 
-var _blob = __webpack_require__(180);
+var _blob = __webpack_require__(181);
 
 var _eventemitter = __webpack_require__(7);
 
@@ -39087,7 +40081,7 @@ Resource.setExtensionXhrType('fnt', Resource.XHR_RESPONSE_TYPE.DOCUMENT);
 //# sourceMappingURL=loader.js.map
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39180,7 +40174,7 @@ function blobMiddlewareFactory() {
 //# sourceMappingURL=blob.js.map
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39197,7 +40191,7 @@ Object.defineProperty(exports, 'Mesh', {
   }
 });
 
-var _MeshRenderer = __webpack_require__(182);
+var _MeshRenderer = __webpack_require__(183);
 
 Object.defineProperty(exports, 'MeshRenderer', {
   enumerable: true,
@@ -39206,7 +40200,7 @@ Object.defineProperty(exports, 'MeshRenderer', {
   }
 });
 
-var _CanvasMeshRenderer = __webpack_require__(183);
+var _CanvasMeshRenderer = __webpack_require__(184);
 
 Object.defineProperty(exports, 'CanvasMeshRenderer', {
   enumerable: true,
@@ -39224,7 +40218,7 @@ Object.defineProperty(exports, 'Plane', {
   }
 });
 
-var _NineSlicePlane = __webpack_require__(184);
+var _NineSlicePlane = __webpack_require__(185);
 
 Object.defineProperty(exports, 'NineSlicePlane', {
   enumerable: true,
@@ -39233,7 +40227,7 @@ Object.defineProperty(exports, 'NineSlicePlane', {
   }
 });
 
-var _Rope = __webpack_require__(185);
+var _Rope = __webpack_require__(186);
 
 Object.defineProperty(exports, 'Rope', {
   enumerable: true,
@@ -39246,7 +40240,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39402,7 +40396,7 @@ core.WebGLRenderer.registerPlugin('mesh', MeshRenderer);
 //# sourceMappingURL=MeshRenderer.js.map
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39690,7 +40684,7 @@ core.CanvasRenderer.registerPlugin('mesh', MeshSpriteRenderer);
 //# sourceMappingURL=CanvasMeshRenderer.js.map
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40081,7 +41075,7 @@ exports.default = NineSlicePlane;
 //# sourceMappingURL=NineSlicePlane.js.map
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40322,7 +41316,7 @@ exports.default = Rope;
 //# sourceMappingURL=Rope.js.map
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40330,7 +41324,7 @@ exports.default = Rope;
 
 exports.__esModule = true;
 
-var _ParticleContainer = __webpack_require__(187);
+var _ParticleContainer = __webpack_require__(188);
 
 Object.defineProperty(exports, 'ParticleContainer', {
   enumerable: true,
@@ -40339,7 +41333,7 @@ Object.defineProperty(exports, 'ParticleContainer', {
   }
 });
 
-var _ParticleRenderer = __webpack_require__(188);
+var _ParticleRenderer = __webpack_require__(189);
 
 Object.defineProperty(exports, 'ParticleRenderer', {
   enumerable: true,
@@ -40352,7 +41346,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40724,7 +41718,7 @@ exports.default = ParticleContainer;
 //# sourceMappingURL=ParticleContainer.js.map
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40736,11 +41730,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _ParticleShader = __webpack_require__(189);
+var _ParticleShader = __webpack_require__(190);
 
 var _ParticleShader2 = _interopRequireDefault(_ParticleShader);
 
-var _ParticleBuffer = __webpack_require__(190);
+var _ParticleBuffer = __webpack_require__(191);
 
 var _ParticleBuffer2 = _interopRequireDefault(_ParticleBuffer);
 
@@ -41174,7 +42168,7 @@ core.WebGLRenderer.registerPlugin('particle', ParticleRenderer);
 //# sourceMappingURL=ParticleRenderer.js.map
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41222,7 +42216,7 @@ exports.default = ParticleShader;
 //# sourceMappingURL=ParticleShader.js.map
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41467,7 +42461,7 @@ exports.default = ParticleBuffer;
 //# sourceMappingURL=ParticleBuffer.js.map
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41475,7 +42469,7 @@ exports.default = ParticleBuffer;
 
 exports.__esModule = true;
 
-var _WebGLPrepare = __webpack_require__(192);
+var _WebGLPrepare = __webpack_require__(193);
 
 Object.defineProperty(exports, 'webgl', {
   enumerable: true,
@@ -41484,7 +42478,7 @@ Object.defineProperty(exports, 'webgl', {
   }
 });
 
-var _CanvasPrepare = __webpack_require__(193);
+var _CanvasPrepare = __webpack_require__(194);
 
 Object.defineProperty(exports, 'canvas', {
   enumerable: true,
@@ -41511,7 +42505,7 @@ Object.defineProperty(exports, 'CountLimiter', {
   }
 });
 
-var _TimeLimiter = __webpack_require__(194);
+var _TimeLimiter = __webpack_require__(195);
 
 Object.defineProperty(exports, 'TimeLimiter', {
   enumerable: true,
@@ -41524,7 +42518,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41651,7 +42645,7 @@ core.WebGLRenderer.registerPlugin('prepare', WebGLPrepare);
 //# sourceMappingURL=WebGLPrepare.js.map
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41776,7 +42770,7 @@ core.CanvasRenderer.registerPlugin('prepare', CanvasPrepare);
 //# sourceMappingURL=CanvasPrepare.js.map
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41837,996 +42831,6 @@ var TimeLimiter = function () {
 
 exports.default = TimeLimiter;
 //# sourceMappingURL=TimeLimiter.js.map
-
-/***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
-
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(true)
-		module.exports = factory(__webpack_require__(38), __webpack_require__(196));
-	else if(typeof define === 'function' && define.amd)
-		define("pixijs-charm", ["pixi.js", "es6-shim"], factory);
-	else if(typeof exports === 'object')
-		exports["pixijs-charm"] = factory(require("pixi.js"), require("es6-shim"));
-	else
-		root["pixijs-charm"] = factory(root["pixi.js"], root["es6-shim"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(1);
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(2);
-__webpack_require__(3);
-/* tslint:enable max-line-length */
-var Charm = (function () {
-    function Charm(renderingEngine) {
-        if (renderingEngine === void 0) { renderingEngine = PIXI; }
-        if (renderingEngine === undefined) {
-            throw new Error("Please assign a rendering engine in the constructor before using charm.js");
-        }
-        // Find out which rendering engine is being used (the default is Pixi)
-        this.renderer = "";
-        // If the 'renderingEngine' is Pixi, set up Pixi object aliases
-        if (renderingEngine.particles.ParticleContainer && renderingEngine.Sprite) {
-            this.renderer = "pixi";
-        }
-        // An array to store the global tweens
-        this.globalTweens = [];
-        // An object that stores all the easing formulas
-        this.easingFormulas = {
-            // Linear
-            linear: function (x) {
-                return x;
-            },
-            // Smoothstep
-            smoothstep: function (x) {
-                return x * x * (3 - 2 * x);
-            },
-            smoothstepSquared: function (x) {
-                return Math.pow((x * x * (3 - 2 * x)), 2);
-            },
-            smoothstepCubed: function (x) {
-                return Math.pow((x * x * (3 - 2 * x)), 3);
-            },
-            // Acceleration
-            acceleration: function (x) {
-                return x * x;
-            },
-            accelerationCubed: function (x) {
-                return Math.pow(x * x, 3);
-            },
-            // Deceleration
-            deceleration: function (x) {
-                return 1 - Math.pow(1 - x, 2);
-            },
-            decelerationCubed: function (x) {
-                return 1 - Math.pow(1 - x, 3);
-            },
-            // Sine
-            sine: function (x) {
-                return Math.sin(x * Math.PI / 2);
-            },
-            sineSquared: function (x) {
-                return Math.pow(Math.sin(x * Math.PI / 2), 2);
-            },
-            sineCubed: function (x) {
-                return Math.pow(Math.sin(x * Math.PI / 2), 2);
-            },
-            inverseSine: function (x) {
-                return 1 - Math.sin((1 - x) * Math.PI / 2);
-            },
-            inverseSineSquared: function (x) {
-                return 1 - Math.pow(Math.sin((1 - x) * Math.PI / 2), 2);
-            },
-            inverseSineCubed: function (x) {
-                return 1 - Math.pow(Math.sin((1 - x) * Math.PI / 2), 3);
-            },
-            // Spline
-            spline: function (t, p0, p1, p2, p3) {
-                return 0.5 * ((2 * p1) +
-                    (-p0 + p2) * t +
-                    (2 * p0 - 5 * p1 + 4 * p2 - p3) * t * t +
-                    (-p0 + 3 * p1 - 3 * p2 + p3) * t * t * t);
-            },
-            // Bezier curve
-            cubicBezier: function (t, a, b, c, d) {
-                var t2 = t * t;
-                var t3 = t2 * t;
-                return a + (-a * 3 + t * (3 * a - a * t)) * t + (3 * b + t * (-6 * b + b * 3 * t)) * t + (c * 3 - c * 3 * t) * t2 + d * t3;
-            }
-        };
-    }
-    /**
-     * The low level `tweenProperty` function is used as the foundation
-     * for the the higher level tween methods.
-     * @param tweenProperties Tween properties object
-     * @return Tween object
-     */
-    Charm.prototype.tweenProperty = function (tweenProperties) {
-        var _this = this;
-        tweenProperties.type = tweenProperties.type == undefined ? "smoothstep" : tweenProperties.type;
-        tweenProperties.yoyo = tweenProperties.yoyo == undefined ? false : tweenProperties.yoyo;
-        tweenProperties.delayBeforeRepeat = tweenProperties.delayBeforeRepeat == undefined ? 0 : tweenProperties.delayBeforeRepeat;
-        // Create the tween object
-        var o = {};
-        // If the tween is a bounce type (a spline), set the
-        // start and end magnitude values
-        var typeArray = tweenProperties.type.split(" ");
-        if (typeArray[0] === "bounce") {
-            o.startMagnitude = parseInt(typeArray[1], 10);
-            o.endMagnitude = parseInt(typeArray[2], 10);
-        }
-        // Use `o.start` to make a new tween using the current
-        // end point values
-        o.start = function (startValue, endValue) {
-            // Clone the start and end values so that any possible references to sprite
-            // properties are converted to ordinary numbers
-            o.startValue = JSON.parse(JSON.stringify(startValue));
-            o.endValue = JSON.parse(JSON.stringify(endValue));
-            o.playing = true;
-            o.totalFrames = tweenProperties.totalFrames;
-            o.frameCounter = 0;
-            // Add the tween to the global `tweens` array. The `tweens` array is
-            // updated on each frame
-            _this.globalTweens.push(o);
-        };
-        // Call `o.start` to start the tween
-        o.start(tweenProperties.startValue, tweenProperties.endValue);
-        // The `update` method will be called on each frame by the game loop.
-        // This is what makes the tween move
-        o.update = function () {
-            var curvedTime;
-            if (o.playing) {
-                // If the elapsed frames are less than the total frames,
-                // use the tweening formulas to move the sprite
-                if (o.frameCounter < o.totalFrames) {
-                    // Find the normalized value
-                    var normalizedTime = o.frameCounter / o.totalFrames;
-                    // Select the correct easing function from the
-                    // `ease` object’s library of easing functions
-                    // If it's not a spline, use one of the ordinary easing functions
-                    if (typeArray[0] !== "bounce") {
-                        curvedTime = _this.easingFormulas[tweenProperties.type](normalizedTime);
-                    }
-                    else {
-                        // If it's a spline, use the `spline` function and apply the
-                        // 2 additional `type` array values as the spline's start and
-                        // end points
-                        curvedTime = _this.easingFormulas.spline(normalizedTime, o.startMagnitude, 0, 1, o.endMagnitude);
-                    }
-                    // Interpolate the sprite's property based on the curve
-                    tweenProperties.displayObject[tweenProperties.property] = (o.endValue * curvedTime) + (o.startValue * (1 - curvedTime));
-                    o.frameCounter += 1;
-                }
-                else {
-                    // When the tween has finished playing, run the end tasks
-                    tweenProperties.displayObject[tweenProperties.property] = o.endValue;
-                    o.end();
-                }
-            }
-        };
-        // The `end` method will be called when the tween is finished
-        o.end = function () {
-            // Set `playing` to `false`
-            o.playing = false;
-            // Call the tween's `onComplete` method, if it's been assigned
-            if (o.onCompleted) {
-                o.onCompleted();
-            }
-            // Remove the tween from the `tweens` array
-            _this.globalTweens.splice(_this.globalTweens.indexOf(o), 1);
-            // If the tween's `yoyo` property is `true`, create a new tween
-            // using the same values, but use the current tween's `startValue`
-            // as the next tween's `endValue`
-            if (tweenProperties.yoyo) {
-                _this.wait(tweenProperties.delayBeforeRepeat).then(function () {
-                    o.start(o.endValue, o.startValue);
-                });
-            }
-        };
-        // Pause and play methods
-        o.play = function () { return o.playing = true; };
-        o.pause = function () { return o.playing = false; };
-        // Return the tween object
-        return o;
-    };
-    /**
-     * `makeTween` is a general low-level method for making complex tweens
-     * out of multiple `tweenProperty` functions. Its one argument.
-     * @param tweensToAdd array containing multiple 'Charm.Tween.ITween' for 'tweenProperty' calls
-     * @return Tween collection created
-     */
-    Charm.prototype.makeTween = function (tweensToAdd) {
-        var _this = this;
-        // Create an object to manage the tweens
-        var o = {};
-        // Create a `tweens` array to store the new tweens
-        o.tweens = [];
-        // Make a new tween for each array
-        tweensToAdd.forEach(function (tweenPropertyArguments) {
-            // Use the tween property arguments to make a new tween
-            var newTween = _this.tweenProperty(tweenPropertyArguments);
-            // Push the new tween into this object's internal `tweens` array
-            o.tweens.push(newTween);
-        });
-        // Add a counter to keep track of the
-        // number of tweens that have completed their actions
-        var completionCounter = 0;
-        // Add `onComplete` methods to all tweens
-        o.tweens.forEach(function (tween) {
-            tween.onCompleted = function () {
-                // Add 1 to the `completionCounter`
-                completionCounter += 1;
-                // If all tweens have finished, call the user-defined `onComplete`
-                // method, if it's been assigned. Reset the `completionCounter`
-                if (completionCounter === o.tweens.length) {
-                    if (o.onCompleted) {
-                        o.onCompleted();
-                    }
-                    completionCounter = 0;
-                }
-            };
-        });
-        // Add pause and play methods to control all the tweens
-        o.pause = function () {
-            o.tweens.forEach(function (tween) {
-                tween.playing = false;
-            });
-        };
-        o.play = function () {
-            o.tweens.forEach(function (tween) {
-                tween.playing = true;
-            });
-        };
-        // Return the tween object
-        return o;
-    };
-    /* High level tween methods */
-    /** SIMPLE TWEENS */
-    /**
-     * `fadeOut`
-     * @param displayObject
-     * @param frames (default 60)
-     * @return
-     */
-    Charm.prototype.fadeOut = function (displayObject, frames) {
-        if (frames === void 0) { frames = 60; }
-        return this.tweenProperty({
-            displayObject: displayObject,
-            endValue: 0,
-            property: "alpha",
-            startValue: displayObject.alpha,
-            totalFrames: frames,
-            type: "sine"
-        });
-    };
-    /**
-     * `fadeIn`
-     * @param displayObject
-     * @param frames (default 60)
-     * @return
-     */
-    Charm.prototype.fadeIn = function (displayObject, frames) {
-        if (frames === void 0) { frames = 60; }
-        return this.tweenProperty({
-            displayObject: displayObject,
-            endValue: 1,
-            property: "alpha",
-            startValue: displayObject.alpha,
-            totalFrames: frames,
-            type: "sine"
-        });
-    };
-    /**
-     * `pulse`
-     * Fades the displayObject in and out at a steady rate.
-     * Set the `minAlpha` to something greater than 0 if you
-     * don't want the displayObject to fade away completely
-     * @param displayObject
-     * @param frames (default 60)
-     * @param minAlpha (default 0)
-     * @return
-     */
-    Charm.prototype.pulse = function (displayObject, frames, minAlpha) {
-        if (frames === void 0) { frames = 60; }
-        if (minAlpha === void 0) { minAlpha = 0; }
-        return this.tweenProperty({
-            displayObject: displayObject,
-            endValue: minAlpha,
-            property: "alpha",
-            startValue: displayObject.alpha,
-            totalFrames: frames,
-            type: "smoothstep",
-            yoyo: true
-        });
-    };
-    /** COMPLEX TWEENS */
-    /**
-     * Complex tweens
-     * @param displayObject
-     * @param endX
-     * @param endY
-     * @param frames (default 60)
-     * @param type (default smoothstep)
-     * @param yoyo (default false)
-     * @param delayBeforeRepeat (default 0)
-     * @return
-     */
-    Charm.prototype.slide = function (displayObject, endX, endY, frames, type, yoyo, delayBeforeRepeat) {
-        if (frames === void 0) { frames = 60; }
-        if (type === void 0) { type = "smoothstep"; }
-        if (yoyo === void 0) { yoyo = false; }
-        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
-        return this.makeTween([
-            // Create the x axis tween
-            {
-                delayBeforeRepeat: delayBeforeRepeat,
-                displayObject: displayObject,
-                endValue: endX,
-                property: "x",
-                startValue: displayObject.x,
-                totalFrames: frames,
-                type: type,
-                yoyo: yoyo
-            },
-            // Create the y axis tween
-            {
-                delayBeforeRepeat: delayBeforeRepeat,
-                displayObject: displayObject,
-                endValue: endY,
-                property: "y",
-                startValue: displayObject.y,
-                totalFrames: frames,
-                type: type,
-                yoyo: yoyo
-            }
-        ]);
-    };
-    /**
-     *
-     * @param displayObject
-     * @param endScaleX (default 0.8)
-     * @param endScaleY (default 0.8)
-     * @param frames (default 60)
-     * @param yoyo (default true)
-     * @param delayBeforeRepeat (default 0)
-     * @return
-     */
-    Charm.prototype.breathe = function (displayObject, endScaleX, endScaleY, frames, yoyo, delayBeforeRepeat) {
-        if (endScaleX === void 0) { endScaleX = 0.8; }
-        if (endScaleY === void 0) { endScaleY = 0.8; }
-        if (frames === void 0) { frames = 60; }
-        if (yoyo === void 0) { yoyo = true; }
-        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
-        // Add `scaleX` and `scaleY` properties to Pixi sprites
-        this._addScaleProperties(displayObject);
-        return this.makeTween([
-            // Create the scaleX tween
-            {
-                delayBeforeRepeat: delayBeforeRepeat,
-                displayObject: displayObject,
-                endValue: endScaleX,
-                property: "scaleX",
-                startValue: displayObject.scale.x,
-                totalFrames: frames,
-                type: "smoothstepSquared",
-                yoyo: yoyo
-            },
-            // Create the scaleY tween
-            {
-                delayBeforeRepeat: delayBeforeRepeat,
-                displayObject: displayObject,
-                endValue: endScaleY,
-                property: "scaleY",
-                startValue: displayObject.scale.y,
-                totalFrames: frames,
-                type: "smoothstepSquared",
-                yoyo: yoyo
-            }
-        ]);
-    };
-    /**
-     *
-     * @param displayObject
-     * @param endScaleX (default 0.5)
-     * @param endScaleY (default 0.5)
-     * @param frames (default 60)
-     * @return
-     */
-    Charm.prototype.scale = function (displayObject, endScaleX, endScaleY, frames) {
-        if (endScaleX === void 0) { endScaleX = 0.5; }
-        if (endScaleY === void 0) { endScaleY = 0.5; }
-        if (frames === void 0) { frames = 60; }
-        // Add `scaleX` and `scaleY` properties to Pixi sprites
-        this._addScaleProperties(displayObject);
-        return this.makeTween([
-            // Create the scaleX tween
-            {
-                displayObject: displayObject,
-                endValue: endScaleX,
-                property: "scaleX",
-                startValue: displayObject.scale.x,
-                totalFrames: frames,
-                type: "smoothstep",
-                yoyo: false
-            },
-            // Create the scaleY tween
-            {
-                displayObject: displayObject,
-                endValue: endScaleY,
-                property: "scaleY",
-                startValue: displayObject.scale.y,
-                totalFrames: frames,
-                type: "smoothstep",
-                yoyo: false
-            }
-        ]);
-    };
-    /**
-     *
-     * @param displayObject
-     * @param scaleFactor (default 1.3)
-     * @param startMagnitude (default 10)
-     * @param endMagnitude (default 20)
-     * @param frames (default 10)
-     * @param yoyo (default true)
-     * @param delayBeforeRepeat (default 0)
-     * @return
-     */
-    Charm.prototype.strobe = function (displayObject, scaleFactor, startMagnitude, endMagnitude, frames, yoyo, delayBeforeRepeat) {
-        if (scaleFactor === void 0) { scaleFactor = 1.3; }
-        if (startMagnitude === void 0) { startMagnitude = 10; }
-        if (endMagnitude === void 0) { endMagnitude = 20; }
-        if (frames === void 0) { frames = 10; }
-        if (yoyo === void 0) { yoyo = true; }
-        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
-        var bounce = "bounce " + startMagnitude + " " + endMagnitude;
-        // Add `scaleX` and `scaleY` properties to Pixi sprites
-        this._addScaleProperties(displayObject);
-        return this.makeTween([
-            // Create the scaleX tween
-            {
-                delayBeforeRepeat: delayBeforeRepeat,
-                displayObject: displayObject,
-                endValue: scaleFactor,
-                property: "scaleX",
-                startValue: displayObject.scale.x,
-                totalFrames: frames,
-                type: bounce,
-                yoyo: false
-            },
-            // Create the scaleY tween
-            {
-                delayBeforeRepeat: delayBeforeRepeat,
-                displayObject: displayObject,
-                endValue: scaleFactor,
-                property: "scaleY",
-                startValue: displayObject.scale.y,
-                totalFrames: frames,
-                type: bounce,
-                yoyo: yoyo
-            }
-        ]);
-    };
-    /**
-     *
-     * @param displayObject
-     * @param scaleFactorX (default 1.2)
-     * @param scaleFactorY (default 1.2)
-     * @param frames (default 10)
-     * @param xStartMagnitude (default 10)
-     * @param xEndMagnitude (default 10)
-     * @param yStartMagnitude (default -10)
-     * @param yEndMagnitude (default -10)
-     * @param friction (default 0.98)
-     * @param yoyo (default true)
-     * @param delayBeforeRepeat (default 0)
-     * @return
-     */
-    Charm.prototype.wobble = function (displayObject, scaleFactorX, scaleFactorY, frames, xStartMagnitude, xEndMagnitude, yStartMagnitude, yEndMagnitude, friction, yoyo, delayBeforeRepeat) {
-        var _this = this;
-        if (scaleFactorX === void 0) { scaleFactorX = 1.2; }
-        if (scaleFactorY === void 0) { scaleFactorY = 1.2; }
-        if (frames === void 0) { frames = 10; }
-        if (xStartMagnitude === void 0) { xStartMagnitude = 10; }
-        if (xEndMagnitude === void 0) { xEndMagnitude = 10; }
-        if (yStartMagnitude === void 0) { yStartMagnitude = -10; }
-        if (yEndMagnitude === void 0) { yEndMagnitude = -10; }
-        if (friction === void 0) { friction = 0.98; }
-        if (yoyo === void 0) { yoyo = true; }
-        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
-        var bounceX = "bounce " + xStartMagnitude + " " + xEndMagnitude;
-        var bounceY = "bounce " + yStartMagnitude + " " + yEndMagnitude;
-        // Add `scaleX` and `scaleY` properties to Pixi sprites
-        this._addScaleProperties(displayObject);
-        var o = this.makeTween([
-            // Create the scaleX tween
-            {
-                delayBeforeRepeat: delayBeforeRepeat,
-                displayObject: displayObject,
-                endValue: scaleFactorX,
-                property: "scaleX",
-                startValue: displayObject.scale.x,
-                totalFrames: frames,
-                type: bounceX,
-                yoyo: yoyo
-            },
-            // Create the scaleY tween
-            {
-                delayBeforeRepeat: delayBeforeRepeat,
-                displayObject: displayObject,
-                endValue: scaleFactorY,
-                property: "scaleY",
-                startValue: displayObject.scale.y,
-                totalFrames: frames,
-                type: bounceY,
-                yoyo: yoyo
-            }
-        ]);
-        // Add some friction to the `endValue` at the end of each tween
-        o.tweens.forEach(function (tween) {
-            tween.onCompleted = function () {
-                // Add friction if the `endValue` is greater than 1
-                if (tween.endValue > 1) {
-                    tween.endValue *= friction;
-                    // Set the `endValue` to 1 when the effect is finished and
-                    // remove the tween from the global `tweens` array
-                    if (tween.endValue <= 1) {
-                        tween.endValue = 1;
-                        _this.removeTween(tween);
-                    }
-                }
-            };
-        });
-        return o;
-    };
-    // 3. Motion path tweens
-    /**
-     *
-     * @param displayObject
-     * @param pointsArray Bezier curve as a 2D array of 4 x/y points
-     * @param totalFrames
-     * @param type (default 'smoothstep')
-     * @param yoyo (default false)
-     * @param delayBeforeRepeat (default 0)
-     * @return
-     */
-    Charm.prototype.followCurve = function (displayObject, pointsArray, totalFrames, type, yoyo, delayBeforeRepeat) {
-        var _this = this;
-        if (type === void 0) { type = "smoothstep"; }
-        if (yoyo === void 0) { yoyo = false; }
-        if (delayBeforeRepeat === void 0) { delayBeforeRepeat = 0; }
-        // Create the tween object
-        var o = {};
-        // If the tween is a bounce type (a spline), set the
-        // start and end magnitude values
-        var typeArray = type.split(" ");
-        if (typeArray[0] === "bounce") {
-            o.startMagnitude = parseInt(typeArray[1], 10);
-            o.endMagnitude = parseInt(typeArray[2], 10);
-        }
-        // Use `tween.start` to make a new tween using the current
-        // end point values
-        o.start = function (_pointsArray) {
-            o.playing = true;
-            o.totalFrames = totalFrames;
-            o.frameCounter = 0;
-            // Clone the points array
-            o.pointsArray = JSON.parse(JSON.stringify(_pointsArray));
-            // Add the tween to the `globalTweens` array. The `globalTweens` array is
-            // updated on each frame
-            _this.globalTweens.push(o);
-        };
-        // Call `tween.start` to start the first tween
-        o.start(pointsArray);
-        // The `update` method will be called on each frame by the game loop.
-        // This is what makes the tween move
-        o.update = function () {
-            var normalizedTime, curvedTime, p = o.pointsArray;
-            if (o.playing) {
-                // If the elapsed frames are less than the total frames,
-                // use the tweening formulas to move the sprite
-                if (o.frameCounter < o.totalFrames) {
-                    // Find the normalized value
-                    normalizedTime = o.frameCounter / o.totalFrames;
-                    // Select the correct easing function
-                    // If it's not a spline, use one of the ordinary tween
-                    // functions
-                    if (typeArray[0] !== "bounce") {
-                        curvedTime = _this.easingFormulas[type](normalizedTime);
-                    }
-                    else {
-                        // If it's a spline, use the `spline` function and apply the
-                        // 2 additional `type` array values as the spline's start and
-                        // end points
-                        // curve = tweenFunction.spline(n, type[1], 0, 1, type[2]);
-                        curvedTime = _this.easingFormulas.spline(normalizedTime, o.startMagnitude, 0, 1, o.endMagnitude);
-                    }
-                    // Apply the Bezier curve to the sprite's position
-                    displayObject.x = _this.easingFormulas.cubicBezier(curvedTime, p[0][0], p[1][0], p[2][0], p[3][0]);
-                    displayObject.y = _this.easingFormulas.cubicBezier(curvedTime, p[0][1], p[1][1], p[2][1], p[3][1]);
-                    // Add one to the `elapsedFrames`
-                    o.frameCounter += 1;
-                }
-                else {
-                    // When the tween has finished playing, run the end tasks
-                    // displayObject[property] = o.endValue;
-                    o.end();
-                }
-            }
-        };
-        // The `end` method will be called when the tween is finished
-        o.end = function () {
-            // Set `playing` to `false`
-            o.playing = false;
-            // Call the tween's `onComplete` method, if it's been
-            // assigned
-            if (o.onCompleted) {
-                o.onCompleted();
-            }
-            // Remove the tween from the global `tweens` array
-            _this.globalTweens.splice(_this.globalTweens.indexOf(o), 1);
-            // If the tween's `yoyo` property is `true`, reverse the array and
-            // use it to create a new tween
-            if (yoyo) {
-                _this.wait(delayBeforeRepeat).then(function () {
-                    o.pointsArray = o.pointsArray.reverse();
-                    o.start(o.pointsArray);
-                });
-            }
-        };
-        // Pause and play methods
-        o.pause = function () {
-            o.playing = false;
-        };
-        o.play = function () {
-            o.playing = true;
-        };
-        // Return the tween object
-        return o;
-    };
-    /**
-     *
-     * @param displayObject
-     * @param originalPath Array of 2D array of x/y position waypoints that map out the path you want to follow.
-     * @param totalFrames The duration, in frames (default 300)
-     * @param type The easing type (default 'smoothstep')
-     * @param loop Should the animation loop? (default false)
-     * @param yoyo Shoud the direction reverse? (default false)
-     * @param delayBetweenSections Delay, in milliseconds, between sections (default 0)
-     * @return
-     */
-    Charm.prototype.walkPath = function (displayObject, originalPathArray, totalFrames, type, loop, yoyo, delayBetweenSections) {
-        var _this = this;
-        if (totalFrames === void 0) { totalFrames = 300; }
-        if (type === void 0) { type = "smoothstep"; }
-        if (loop === void 0) { loop = false; }
-        if (yoyo === void 0) { yoyo = false; }
-        if (delayBetweenSections === void 0) { delayBetweenSections = 0; }
-        // Clone the path array so that any possible references to sprite
-        // properties are converted into ordinary numbers
-        var pathArray = JSON.parse(JSON.stringify(originalPathArray));
-        // Figure out the duration, in frames, of each path section by
-        // dividing the `totalFrames` by the length of the `pathArray`
-        var frames = totalFrames / pathArray.length;
-        // Set the current point to 0, which will be the first waypoint
-        var currentPoint = 0;
-        // The `makePath` function creates a single tween between two points and
-        // then schedules the next path to be made after it
-        var makePath = function (_currentPoint) {
-            // Use the `makeTween` function to tween the sprite's
-            // x and y position
-            var tweenCollection = _this.makeTween([
-                // Create the x axis tween between the first x value in the
-                // current point and the x value in the following point
-                {
-                    displayObject: displayObject,
-                    endValue: pathArray[currentPoint + 1][0],
-                    property: "x",
-                    startValue: pathArray[currentPoint][0],
-                    totalFrames: frames,
-                    type: type
-                },
-                // Create the y axis tween in the same way
-                {
-                    displayObject: displayObject,
-                    endValue: pathArray[currentPoint + 1][1],
-                    property: "y",
-                    startValue: pathArray[currentPoint][1],
-                    totalFrames: frames,
-                    type: type
-                }
-            ]);
-            // When the tween is complete, advance the `currentPoint` by one.
-            // Add an optional delay between path segments, and then make the
-            // next connecting path
-            tweenCollection.onCompleted = function () {
-                // Advance to the next point
-                currentPoint += 1;
-                // If the sprite hasn't reached the end of the
-                // path, tween the sprite to the next point
-                if (currentPoint < pathArray.length - 1) {
-                    _this.wait(delayBetweenSections).then(function () {
-                        tweenCollection = makePath(currentPoint);
-                    });
-                }
-                else {
-                    // If we've reached the end of the path, optionally
-                    // loop and yoyo it
-                    // Reverse the path if `loop` is `true`
-                    if (loop) {
-                        // Reverse the array if `yoyo` is `true`
-                        if (yoyo) {
-                            pathArray.reverse();
-                        }
-                        // Optionally wait before restarting
-                        _this.wait(delayBetweenSections).then(function () {
-                            // Reset the `currentPoint` to 0 so that we can
-                            // restart at the first point
-                            currentPoint = 0;
-                            // Set the sprite to the first point
-                            displayObject.x = pathArray[0][0];
-                            displayObject.y = pathArray[0][1];
-                            // Make the first new path
-                            tweenCollection = makePath(currentPoint);
-                            // ... and so it continues!
-                        });
-                    }
-                }
-            };
-            // Return the path tween to the main function
-            return tweenCollection;
-        };
-        // Make the first path using the internal `makePath` function (below)
-        var tweenResult = makePath(currentPoint);
-        // Pass the tween back to the main program
-        return tweenResult;
-    };
-    /**
-     *
-     * @param displayObject
-     * @param curvedWaypoints 2D array of Bezier curves (Bezier curves is a 2D array of 4 x/y points)
-     * @param totalFrames (default 300)
-     * @param type (default 'smoothstep')
-     * @param loop (default false)
-     * @param yoyo (default false)
-     * @param delayBeforeContinue (default 0)
-     * @return
-     */
-    Charm.prototype.walkCurve = function (displayObject, curvedWaypoints, totalFrames, type, loop, yoyo, delayBeforeContinue) {
-        var _this = this;
-        if (totalFrames === void 0) { totalFrames = 300; }
-        if (type === void 0) { type = "smoothstep"; }
-        if (loop === void 0) { loop = false; }
-        if (yoyo === void 0) { yoyo = false; }
-        if (delayBeforeContinue === void 0) { delayBeforeContinue = 0; }
-        // Divide the `totalFrames` into sections for each part of the path
-        var frames = totalFrames / curvedWaypoints.length;
-        // Set the current curve to 0, which will be the first one
-        var currentCurve = 0;
-        // The `makePath` function
-        var makePath = function (_currentCurve) {
-            // Use the custom `followCurve` function to make
-            // a sprite follow a curve
-            var tween = _this.followCurve(displayObject, curvedWaypoints[currentCurve], frames, type);
-            // When the tween is complete, advance the `currentCurve` by one.
-            // Add an optional delay between path segments, and then make the
-            // next path
-            tween.onCompleted = function () {
-                currentCurve += 1;
-                if (currentCurve < curvedWaypoints.length) {
-                    _this.wait(delayBeforeContinue).then(function () {
-                        tween = makePath(currentCurve);
-                    });
-                }
-                else {
-                    // If we've reached the end of the path, optionally
-                    // loop and reverse it
-                    if (loop) {
-                        if (yoyo) {
-                            // Reverse order of the curves in the `pathArray`
-                            curvedWaypoints.reverse();
-                            // Reverse the order of the points in each curve
-                            curvedWaypoints.forEach(function (curveArray) { return curveArray.reverse(); });
-                        }
-                        // After an optional delay, reset the sprite to the
-                        // beginning of the path and make the next new path
-                        _this.wait(delayBeforeContinue).then(function () {
-                            currentCurve = 0;
-                            displayObject.x = curvedWaypoints[0][0][0];
-                            displayObject.y = curvedWaypoints[0][0][1];
-                            tween = makePath(currentCurve);
-                        });
-                    }
-                }
-            };
-            // Return the path tween to the main function
-            return tween;
-        };
-        // Make the first path
-        var tweenResult = makePath(currentCurve);
-        // Pass the tween back to the main program
-        return tweenResult;
-    };
-    // 4. Utilities
-    /**
-     * The `wait` method lets you set up a timed sequence of events
-     *
-     *   wait(1000)
-     *     .then(() => console.log("One"))
-     *     .then(() => wait(1000))
-     *     .then(() => console.log("Two"))
-     *     .then(() => wait(1000))
-     *     .then(() => console.log("Three"))
-     * @param duration
-     * @return
-     */
-    Charm.prototype.wait = function (duration) {
-        if (duration === void 0) { duration = 0; }
-        return new Promise(function (resolve, _reject) {
-            setTimeout(resolve, duration);
-        });
-    };
-    /**
-     * A utility to remove tweens from globalTweens
-     * @param tweenObject
-     */
-    Charm.prototype.removeTween = function (tweenObject) {
-        var _this = this;
-        // Remove the tween if `tweenObject` doesn't have any nested
-        // tween objects
-        if (!tweenObject.tweens) {
-            tweenObject.pause();
-            // array.splice(-1,1) will always remove last elemnt of array, so this
-            // extra check prevents that (Thank you, MCumic10! https:// github.com/kittykatattack/charm/issues/5)
-            if (this.globalTweens.indexOf(tweenObject) !== -1) {
-                this.globalTweens.splice(this.globalTweens.indexOf(tweenObject), 1);
-            }
-            // Otherwise, remove the nested tween objects
-        }
-        else {
-            tweenObject.pause();
-            tweenObject.tweens.forEach(function (element) {
-                _this.globalTweens.splice(_this.globalTweens.indexOf(element), 1);
-            });
-        }
-    };
-    /**
-     * Update all the tween objects in the `globalTweens` array
-     */
-    Charm.prototype.update = function () {
-        // Update all the tween objects in the `globalTweens` array
-        if (this.globalTweens.length > 0) {
-            for (var i = this.globalTweens.length - 1; i >= 0; i--) {
-                var tween = this.globalTweens[i];
-                if (tween) {
-                    tween.update();
-                }
-            }
-        }
-    };
-    // Add `scaleX` and `scaleY` properties to Pixi sprites
-    Charm.prototype._addScaleProperties = function (displayObject) {
-        if (this.renderer === "pixi") {
-            if (!("scaleX" in displayObject) && ("scale" in displayObject) && ("x" in displayObject.scale)) {
-                Object.defineProperty(displayObject, "scaleX", {
-                    get: function () {
-                        return displayObject.scale.x;
-                    },
-                    set: function (value) {
-                        displayObject.scale.x = value;
-                    }
-                });
-            }
-            if (!("scaleY" in displayObject) && ("scale" in displayObject) && ("y" in displayObject.scale)) {
-                Object.defineProperty(displayObject, "scaleY", {
-                    get: function () {
-                        return displayObject.scale.y;
-                    },
-                    set: function (value) {
-                        displayObject.scale.y = value;
-                    }
-                });
-            }
-        }
-    };
-    return Charm;
-}());
-exports.Charm = Charm;
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
-
-/***/ })
-/******/ ]);
-});
-//# sourceMappingURL=pixijs-charm.js.map
 
 /***/ }),
 /* 196 */

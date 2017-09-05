@@ -43,13 +43,13 @@ export class EasingTypes {
             */
         static readonly bounce: string;
 }
-export abstract class ContainerTransitionBase implements PIXI.EngineExtensions.IContainerTransition {
+export abstract class ContainerTransitionBase implements IContainerTransition {
         protected _currentContainer: PIXI.Container;
-        protected _currentContainerOriginalState: PIXI.EngineExtensions.IContainerProperties;
-        protected _currentContainerEndState: PIXI.EngineExtensions.IContainerProperties;
+        protected _currentContainerOriginalState: IContainerProperties;
+        protected _currentContainerEndState: IContainerProperties;
         protected _nextContainer: PIXI.Container;
-        protected _nextContainerOriginalState: PIXI.EngineExtensions.IContainerProperties;
-        protected _nextContainerEndState: PIXI.EngineExtensions.IContainerProperties;
+        protected _nextContainerOriginalState: IContainerProperties;
+        protected _nextContainerEndState: IContainerProperties;
         constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container);
         readonly nextContainer: PIXI.Container;
         readonly currentContainer: PIXI.Container;
@@ -144,10 +144,9 @@ export interface IUpdateFrame {
         updateFrame(): void;
 }
 
-import "./prototypes";
 import "./interfaces";
-import "./containerTransitions";
-import "pixi.js";
+import "./container-transitions";
+import "./pixi-extensions";
 import "fpsmeter";
 /**
     * Enum with allowed engine states
@@ -196,42 +195,34 @@ export interface IPixiEngine {
 }
 export let pixiEngineInstance: IPixiEngine;
 
-/**  Extend PIXI.Container interface with new features  */
-namespace PIXI {
-        interface Container {
-                /** Extend method for get container properties */
-                getContainerProperties(): EngineExtensions.IContainerProperties;
-                /** Extend method for set container properties */
-                setContainerProperties(properties: EngineExtensions.IContainerProperties): void;
-        }
-        namespace EngineExtensions {
-                /**
-                    * Interface for create transitions
-                    */
-                interface IContainerTransition {
-                        readonly nextContainer: PIXI.Container;
-                        readonly currentContainer: PIXI.Container;
-                        start(): Promise<PIXI.Container>;
-                        stop(): void;
-                        restore(): void;
-                }
-                /**
-                    * Pixi container properties
-                    */
-                interface IContainerProperties {
-                        x: number;
-                        y: number;
-                        scaleX: number;
-                        scaleY: number;
-                        rotation: number;
-                        skewX: number;
-                        skewY: number;
-                        pivotX: number;
-                        pivotY: number;
-                        width: number;
-                        height: number;
-                }
-        }
+/**
+    * Interface for create transitions
+    */
+export interface IContainerTransition {
+        readonly nextContainer: PIXI.Container;
+        readonly currentContainer: PIXI.Container;
+        start(): Promise<PIXI.Container>;
+        stop(): void;
+        restore(): void;
+}
+/**
+    * Pixi container properties
+    */
+export interface IContainerProperties {
+        x: number;
+        y: number;
+        scale: PIXI.Point | PIXI.ObservablePoint;
+        rotation: number;
+        skew: PIXI.ObservablePoint;
+        pivot: PIXI.Point | PIXI.ObservablePoint;
+        width: number;
+        height: number;
+}
+export class ContainerHelpers {
+        /** method for get container properties */
+        static getContainerProperties(container: PIXI.Container): IContainerProperties;
+        /** method for set container properties */
+        static setContainerProperties(properties: IContainerProperties, container: PIXI.Container): void;
 }
 
 export interface ISceneManager {
@@ -288,7 +279,7 @@ export interface ISceneManager {
             * @param transition transition for change scene
             * @return true if replaced, false otherwise
             */
-        replaceSceneWithTransition(transition: PIXI.EngineExtensions.IContainerTransition): Promise<boolean>;
+        replaceSceneWithTransition(transition: IContainerTransition): Promise<boolean>;
         /**
             * Replace current scene with scene
             * @param scene nextScene to replace

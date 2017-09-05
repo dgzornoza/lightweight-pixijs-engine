@@ -1,12 +1,11 @@
-import "./prototypes";
 import "./interfaces";
-import "./containerTransitions";
+import "./container-transitions";
+import "./pixi-extensions";
 
-import "pixi.js";
 import { ICharm, Charm } from "pixijs-charm";
 import "fpsmeter";
 
-import { sceneManagerInstance, ISceneManager } from "./sceneManager";
+import { sceneManagerInstance, ISceneManager } from "./scene-manager";
 
 /**
  * Enum with allowed engine states

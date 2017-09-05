@@ -1,5 +1,6 @@
 import { IDynamic, IResolve, IReject } from "./interfaces";
 import { Helpers } from "./helpers";
+import { IContainerTransition } from "./pixi-extensions";
 
 export interface ISceneManager {
 
@@ -64,7 +65,7 @@ export interface ISceneManager {
      * @param transition transition for change scene
      * @return true if replaced, false otherwise
      */
-    replaceSceneWithTransition(transition: PIXI.EngineExtensions.IContainerTransition): Promise<boolean>;
+    replaceSceneWithTransition(transition: IContainerTransition): Promise<boolean>;
 
     /**
      * Replace current scene with scene
@@ -183,7 +184,7 @@ class SceneManager implements ISceneManager {
         return this.replaceScene(nextScene);
     }
 
-    public replaceSceneWithTransition(transition: PIXI.EngineExtensions.IContainerTransition): Promise<boolean> {
+    public replaceSceneWithTransition(transition: IContainerTransition): Promise<boolean> {
 
         this._rootContainer.addChild(transition.nextContainer);
 

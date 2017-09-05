@@ -1,6 +1,8 @@
 import { IResolve, IReject } from "./interfaces";
-import { pixiEngineInstance } from "./pixiEngine";
+import { pixiEngineInstance } from "./pixi-engine";
+import { ContainerHelpers, IContainerTransition, IContainerProperties } from "./pixi-extensions";
 import { ICharm } from "pixijs-charm";
+
 
 /* tslint:disable no-bitwise */
 export enum EnumDirections {
@@ -49,15 +51,15 @@ export class EasingTypes {
     public static readonly bounce: string = "bounce";
 }
 
-export abstract class ContainerTransitionBase implements PIXI.EngineExtensions.IContainerTransition {
+export abstract class ContainerTransitionBase implements IContainerTransition {
 
     protected _currentContainer: PIXI.Container;
-    protected _currentContainerOriginalState: PIXI.EngineExtensions.IContainerProperties;
-    protected _currentContainerEndState: PIXI.EngineExtensions.IContainerProperties;
+    protected _currentContainerOriginalState: IContainerProperties;
+    protected _currentContainerEndState: IContainerProperties;
 
     protected _nextContainer: PIXI.Container;
-    protected _nextContainerOriginalState: PIXI.EngineExtensions.IContainerProperties;
-    protected _nextContainerEndState: PIXI.EngineExtensions.IContainerProperties;
+    protected _nextContainerOriginalState: IContainerProperties;
+    protected _nextContainerEndState: IContainerProperties;
 
     constructor(currentContainer: PIXI.Container, nextContainer: PIXI.Container) {
 
@@ -65,11 +67,11 @@ export abstract class ContainerTransitionBase implements PIXI.EngineExtensions.I
         this._currentContainer = currentContainer;
 
         // initially all properties are some
-        this._currentContainerOriginalState = currentContainer.getContainerProperties();
-        this._currentContainerEndState = currentContainer.getContainerProperties();
+        this._currentContainerOriginalState = ContainerHelpers.getContainerProperties(currentContainer);
+        this._currentContainerEndState = ContainerHelpers.getContainerProperties(currentContainer);
 
-        this._nextContainerOriginalState = nextContainer.getContainerProperties();
-        this._nextContainerEndState = nextContainer.getContainerProperties();
+        this._nextContainerOriginalState = ContainerHelpers.getContainerProperties(nextContainer);
+        this._nextContainerEndState = ContainerHelpers.getContainerProperties(nextContainer);
     }
 
     get nextContainer(): PIXI.Container {
@@ -94,7 +96,7 @@ export abstract class ContainerTransitionBase implements PIXI.EngineExtensions.I
      * This function is called before change current scene for new scene
      */
     public restore(): void {
-        this._currentContainer.setContainerProperties(this._currentContainerOriginalState);
+        ContainerHelpers.setContainerProperties(this._currentContainerOriginalState, this._currentContainer);
     }
 }
 

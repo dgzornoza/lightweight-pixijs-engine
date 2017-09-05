@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "production") {
 // webpack config
 var config = {
     entry: [
-        baseUrl + "/pixiEngine.ts"
+        baseUrl + "/pixi-engine.ts"
     ],
     // Source maps support ("inline-source-map" also works)
     devtool: "source-map",
