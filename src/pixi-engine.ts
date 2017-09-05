@@ -19,8 +19,7 @@ export enum EnumEngineStates {
 export interface IPixiEngineConfiguration extends PIXI.RendererOptions {
     /** Flag for set debug mode (default = false) */
     debugMode?: boolean;
-    /** main scene path */
-    mainScene: string;
+
     /** Flag for set full-screen mode (default = false) */
     scaleToWindow?: boolean;
 }
@@ -78,7 +77,7 @@ class PixiEngine implements IPixiEngine {
     /** Default constructor */
     constructor() {
         this._rootContainer = new PIXI.Container();
-        this._state = EnumEngineStates.RUNNING;
+        this._state = EnumEngineStates.PAUSED;
     }
 
     public get renderer(): PIXI.WebGLRenderer | PIXI.CanvasRenderer {
@@ -146,13 +145,11 @@ class PixiEngine implements IPixiEngine {
         // initialize sceneManager
         sceneManagerInstance.initialize(this._rootContainer);
 
-        // set mainscene
-        sceneManagerInstance.loadAndCreateScene(this._config.mainScene).then((mainScene: PIXI.Container) => {
-            sceneManagerInstance.replaceScene(mainScene);
+        // start main loop
+        this._mainLoop();
 
-            // start main loop
-            this._mainLoop();
-        });
+        // play engine
+        this._state = EnumEngineStates.RUNNING;
     }
 
 

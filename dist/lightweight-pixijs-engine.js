@@ -11529,7 +11529,7 @@ var PixiEngine = (function () {
     /** Default constructor */
     function PixiEngine() {
         this._rootContainer = new PIXI.Container();
-        this._state = EnumEngineStates.RUNNING;
+        this._state = EnumEngineStates.PAUSED;
     }
     Object.defineProperty(PixiEngine.prototype, "renderer", {
         get: function () {
@@ -11604,12 +11604,10 @@ var PixiEngine = (function () {
         this._charm = new pixijs_charm_1.Charm(PIXI);
         // initialize sceneManager
         scene_manager_1.sceneManagerInstance.initialize(this._rootContainer);
-        // set mainscene
-        scene_manager_1.sceneManagerInstance.loadAndCreateScene(this._config.mainScene).then(function (mainScene) {
-            scene_manager_1.sceneManagerInstance.replaceScene(mainScene);
-            // start main loop
-            _this._mainLoop();
-        });
+        // start main loop
+        this._mainLoop();
+        // play engine
+        this._state = EnumEngineStates.RUNNING;
     };
     PixiEngine.prototype._mainLoop = function () {
         var _this = this;

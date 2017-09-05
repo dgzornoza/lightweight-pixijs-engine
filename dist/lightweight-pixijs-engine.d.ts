@@ -159,8 +159,6 @@ export enum EnumEngineStates {
 export interface IPixiEngineConfiguration extends PIXI.RendererOptions {
         /** Flag for set debug mode (default = false) */
         debugMode?: boolean;
-        /** main scene path */
-        mainScene: string;
         /** Flag for set full-screen mode (default = false) */
         scaleToWindow?: boolean;
 }
