@@ -36,9 +36,9 @@ export class ContainerHelpers {
             y: container.y
         } as any;
 
-        result.pivot.copy(container.pivot);
-        result.scale.copy(container.scale);
-        result.skew.copy(container.skew);
+        if (result.pivot) { result.pivot.copy(container.pivot); }
+        if (result.scale) { result.scale.copy(container.scale); }
+        if (result.skew) { result.skew.copy(container.skew); }
 
         return result;
     }
@@ -46,13 +46,13 @@ export class ContainerHelpers {
     /** method for set container properties */
     public static setContainerProperties(properties: IContainerProperties, container: PIXI.Container): void {
         container.height = properties.height;
-        container.pivot.copy(properties.pivot);
         container.rotation = properties.rotation;
-        container.scale.copy(properties.scale);
-        container.skew.copy(properties.skew);
         container.width = properties.width;
         container.x = properties.x;
         container.y = properties.y;
+        if (container.pivot) { container.pivot.copy(properties.pivot); }
+        if (container.scale) { container.scale.copy(properties.scale); }
+        if (container.skew) { container.skew.copy(properties.skew); }
     }
 }
 
