@@ -1,7 +1,7 @@
 {
     "name": "lightweight-pixijs-engine",
     "description": "Lightweight HTML5 engine based on pixi.js V4",
-    "version": "0.2.4",
+    "version": "0.2.6",
     "keywords": [
         "pixijs",
         "engine",
