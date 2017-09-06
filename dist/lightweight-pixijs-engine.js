@@ -410,20 +410,17 @@ var ContainerHelpers = (function () {
     ContainerHelpers.getContainerProperties = function (container) {
         var result = {
             height: container.height,
+            pivot: {},
             rotation: container.rotation,
+            scale: {},
+            skew: {},
             width: container.width,
             x: container.x,
             y: container.y
         };
-        if (result.pivot) {
-            result.pivot.copy(container.pivot);
-        }
-        if (result.scale) {
-            result.scale.copy(container.scale);
-        }
-        if (result.skew) {
-            result.skew.copy(container.skew);
-        }
+        result.pivot.copy(container.pivot);
+        result.scale.copy(container.scale);
+        result.skew.copy(container.skew);
         return result;
     };
     /** method for set container properties */
