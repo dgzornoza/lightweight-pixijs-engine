@@ -99,29 +99,6 @@ export class ContainerTransitionFadeOut extends ContainerTransitionSlide {
         protected _configure(): void;
 }
 
-/** @Brief Class for define help methods */
-export class Helpers {
-        /** Funcion para crear un mixing en typescript y poder componer clases
-            * @param clase derivada de los objetos que se quiere componer
-            * @param array con las clases hijas usadas para la composicion
-            * https://www.typescriptlang.org/docs/handbook/mixins.html
-            */
-        static applyMixins(derivedCtor: any, baseCtors: any[]): void;
-        /**
-            * helper for create object instance from name.
-            * @param context object context for create instance
-            * @param name Name of class for create instance
-            * @param args constructor arguments
-            */
-        static createInstance<T>(context: Object, name: string, ...args: any[]): T;
-        /**
-            * Funcion para cargar un script de forma dinamica
-            * @param url Url del script a cargar
-            * @param callback Funcion callback que sera invocada tras cargar el script
-            */
-        static loadScript(url: string, callback: Function): void;
-}
-
 /** Interface for create dynamic objects */
 export interface IDynamic<T> {
         [key: string]: T;
@@ -166,7 +143,7 @@ export interface IPixiEngineConfiguration extends PIXI.RendererOptions {
 export interface IPixiEngine {
         /** Property for get pixi renderer */
         readonly renderer: PIXI.WebGLRenderer | PIXI.CanvasRenderer;
-        /** Property for get pixi renderer */
+        /** Property for get pixi scene manager */
         readonly sceneManager: ISceneManager;
         /**
             * Get current engine state
@@ -235,14 +212,16 @@ export interface ISceneManager {
             */
         initialize(rootContainer: PIXI.Container): boolean;
         /**
-            * Load and create new scene from file (for lazy load scenes)
-            * @param path to scene file (relative to 'BASE_URL' without extension), by convention the class should be use the file name in Pascal Case.
-            * @return Promise with Scene created, reject if can't create
-            * @remarks the scene id is equial to file path.
+            * create and replace scene from class type
+            * @param id unique identifier for scene
+            * @param sceneType scene type to create
+            * @return true if replaced, false otherwise
             */
-        loadAndCreateScene<T extends PIXI.Container>(path: string): Promise<T>;
+        createAndReplaceScene<T extends PIXI.Container>(id: string, sceneType: {
+                new (): T;
+        }): boolean;
         /**
-            * Create new scene from class
+            * Create new scene from class type
             * @param id unique identifier for scene
             * @param sceneType scene type to create
             * @return Scene created, undefined if can't create

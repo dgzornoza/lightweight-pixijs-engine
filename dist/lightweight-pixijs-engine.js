@@ -43730,7 +43730,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_196__;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var helpers_1 = __webpack_require__(199);
 /**
  * Engine SceneManager
  */
@@ -43754,28 +43753,6 @@ var SceneManager = (function () {
         enumerable: true,
         configurable: true
     });
-    SceneManager.prototype.loadAndCreateScene = function (path) {
-        var _this = this;
-        var result = new Promise(function (resolve, _reject) {
-            if (_this._scenes[path]) {
-                console.warn("Scene with path:'" + path + "' already exists");
-                _reject();
-            }
-            // load async script
-            helpers_1.Helpers.loadScript(path, function () {
-                try {
-                    var sceneName = ("/" + path.split("/").pop()).slice(1);
-                    sceneName = sceneName.charAt(0).toUpperCase() + sceneName.slice(1);
-                    _this._scenes[path] = helpers_1.Helpers.createInstance({}, sceneName);
-                }
-                catch (error) {
-                    throw "Scene with path:'" + path + "' can't create";
-                }
-                resolve(_this._scenes[path]);
-            });
-        });
-        return result;
-    };
     SceneManager.prototype.createScene = function (id, sceneType) {
         if (this._scenes[id]) {
             console.warn("Scene with id:'" + id + "' already exists");
@@ -43783,6 +43760,17 @@ var SceneManager = (function () {
         }
         this._scenes[id] = new sceneType();
         return this._scenes[id];
+    };
+    SceneManager.prototype.createAndReplaceScene = function (id, sceneType) {
+        var result = false;
+        var scene = this.createScene(id, sceneType);
+        if (scene) {
+            result = this.replaceScene(scene);
+            if (!result) {
+                this.destroyScene(scene);
+            }
+        }
+        return result;
     };
     SceneManager.prototype.destroySceneById = function (id) {
         var scene = this._scenes[id];
@@ -43842,76 +43830,6 @@ var SceneManager = (function () {
 }());
 // create unique scenemanager instance for export
 exports.sceneManagerInstance = new SceneManager();
-
-
-/***/ }),
-/* 199 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/******************************************
- * Helpers
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-/** @Brief Class for define help methods */
-var Helpers = (function () {
-    function Helpers() {
-    }
-    /** Funcion para crear un mixing en typescript y poder componer clases
-     * @param clase derivada de los objetos que se quiere componer
-     * @param array con las clases hijas usadas para la composicion
-     * https://www.typescriptlang.org/docs/handbook/mixins.html
-     */
-    Helpers.applyMixins = function (derivedCtor, baseCtors) {
-        baseCtors.forEach(function (baseCtor) {
-            Object.getOwnPropertyNames(baseCtor.prototype).forEach(function (name) {
-                derivedCtor.prototype[name] = baseCtor.prototype[name];
-            });
-        });
-    };
-    /**
-     * helper for create object instance from name.
-     * @param context object context for create instance
-     * @param name Name of class for create instance
-     * @param args constructor arguments
-     */
-    Helpers.createInstance = function (context, name) {
-        var args = [];
-        for (var _i = 2; _i < arguments.length; _i++) {
-            args[_i - 2] = arguments[_i];
-        }
-        var instance = Object.create(context[name].prototype);
-        instance.constructor.apply(instance, args);
-        return instance;
-    };
-    /**
-     * Funcion para cargar un script de forma dinamica
-     * @param url Url del script a cargar
-     * @param callback Funcion callback que sera invocada tras cargar el script
-     */
-    Helpers.loadScript = function (url, callback) {
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        // IE
-        if (script.readyState) {
-            script.onreadystatechange = function () {
-                if (script.readyState === "loaded" || script.readyState === "complete") {
-                    script.onreadystatechange = undefined;
-                    callback();
-                }
-            };
-            // Others
-        }
-        else {
-            script.onload = function () { callback(); };
-        }
-        script.src = url;
-        document.body.appendChild(script);
-    };
-    return Helpers;
-}());
-exports.Helpers = Helpers;
 
 
 /***/ })

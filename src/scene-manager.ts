@@ -1,5 +1,4 @@
-import { IDynamic, IResolve, IReject } from "./interfaces";
-import { Helpers } from "./helpers";
+import { IDynamic } from "./interfaces";
 import { IContainerTransition } from "./pixi-extensions";
 
 export interface ISceneManager {
@@ -17,20 +16,20 @@ export interface ISceneManager {
     initialize(rootContainer: PIXI.Container): boolean;
 
     /**
-     * Load and create new scene from file (for lazy load scenes)
-     * @param path to scene file (relative to 'BASE_URL' without extension), by convention the class should be use the file name in Pascal Case.
-     * @return Promise with Scene created, reject if can't create
-     * @remarks the scene id is equial to file path.
+     * create and replace scene from class type
+     * @param id unique identifier for scene
+     * @param sceneType scene type to create
+     * @return true if replaced, false otherwise
      */
-    loadAndCreateScene<T extends PIXI.Container>(path: string): Promise<T>;
+    createAndReplaceScene<T extends PIXI.Container>(id: string, sceneType: { new(): T; }): boolean;
 
     /**
-     * Create new scene from class
+     * Create new scene from class type
      * @param id unique identifier for scene
      * @param sceneType scene type to create
      * @return Scene created, undefined if can't create
      */
-    createScene<T extends PIXI.Container>(id: string, sceneType: { new (): T; }): T | undefined;
+    createScene<T extends PIXI.Container>(id: string, sceneType: { new(): T; }): T | undefined;
 
 
     /**
@@ -102,34 +101,7 @@ class SceneManager implements ISceneManager {
     }
 
 
-    public loadAndCreateScene<T extends PIXI.Container>(path: string): Promise<T> {
-
-        let result: Promise<T> = new Promise((resolve: IResolve<T>, _reject: IReject) => {
-
-            if (this._scenes[path]) {
-                console.warn(`Scene with path:'${path}' already exists`);
-                _reject();
-            }
-
-            // load async script
-            Helpers.loadScript(path, () => {
-                try {
-                    let sceneName: string = ("/" + path.split("/").pop()).slice(1);
-                    sceneName = sceneName.charAt(0).toUpperCase() + sceneName.slice(1);
-                    this._scenes[path] = Helpers.createInstance({}, sceneName);
-                } catch (error) {
-                    throw `Scene with path:'${path}' can't create`;
-                }
-
-                resolve(this._scenes[path] as T);
-            });
-
-        });
-
-        return result;
-    }
-
-    public createScene<T extends PIXI.Container>(id: string, sceneType: { new (): T; }): T | undefined {
+    public createScene<T extends PIXI.Container>(id: string, sceneType: { new(): T; }): T | undefined {
 
         if (this._scenes[id]) {
             console.warn(`Scene with id:'${id}' already exists`);
@@ -138,6 +110,18 @@ class SceneManager implements ISceneManager {
 
         this._scenes[id] = new sceneType();
         return this._scenes[id] as T;
+    }
+
+    public createAndReplaceScene<T extends PIXI.Container>(id: string, sceneType: { new(): T; }): boolean {
+
+        let result: boolean = false;
+        let scene: PIXI.Container | undefined = this.createScene(id, sceneType);
+        if (scene) {
+            result = this.replaceScene(scene);
+            if (!result) { this.destroyScene(scene); }
+        }
+
+        return result;
     }
 
     public destroySceneById(id: string): void {
@@ -149,7 +133,7 @@ class SceneManager implements ISceneManager {
         }
 
         // delete scene from pixi
-        this._scenes[id].destroy({ children: true, texture: true, baseTexture: true});
+        this._scenes[id].destroy({ children: true, texture: true, baseTexture: true });
 
         // remove from scenemanager
         delete this._scenes[id];
