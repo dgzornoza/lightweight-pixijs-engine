@@ -13,12 +13,11 @@ export interface IContainerTransition {
  * Pixi container properties
  */
 export interface IContainerProperties {
-    x: number;
-    y: number;
-    scale: PIXI.Point | PIXI.ObservablePoint;
+    position: PIXI.PointLike;
+    scale: PIXI.PointLike;
     rotation: number;
-    skew: PIXI.ObservablePoint;
-    pivot: PIXI.Point | PIXI.ObservablePoint;
+    skew: PIXI.PointLike;
+    pivot: PIXI.PointLike;
     width: number;
     height: number;
 }
@@ -30,18 +29,25 @@ export class ContainerHelpers {
     public static getContainerProperties(container: PIXI.Container): IContainerProperties {
         let result: IContainerProperties = {
             height: container.height,
-            pivot: {},
+            pivot: {
+                x: container.pivot.x,
+                y: container.pivot.y
+            } as PIXI.PointLike,
+            position: {
+                x: container.position.x,
+                y: container.position.y
+            } as PIXI.PointLike,
             rotation: container.rotation,
-            scale: {},
-            skew: {},
-            width: container.width,
-            x: container.x,
-            y: container.y
+            scale: {
+                x: container.scale.x,
+                y: container.scale.y
+            } as PIXI.PointLike,
+            skew: {
+                x: container.skew.x,
+                y: container.skew.y
+            } as PIXI.PointLike,
+            width: container.width
         } as any;
-
-        result.pivot.copy(container.pivot);
-        result.scale.copy(container.scale);
-        result.skew.copy(container.skew);
 
         return result;
     }
@@ -51,11 +57,11 @@ export class ContainerHelpers {
         container.height = properties.height;
         container.rotation = properties.rotation;
         container.width = properties.width;
-        container.x = properties.x;
-        container.y = properties.y;
-        if (container.pivot) { container.pivot.copy(properties.pivot); }
-        if (container.scale) { container.scale.copy(properties.scale); }
-        if (container.skew) { container.skew.copy(properties.skew); }
+
+        container.position.copy(properties.position);
+        container.pivot.copy(properties.pivot);
+        container.scale.copy(properties.scale);
+        container.skew.copy(properties.skew);
     }
 }
 

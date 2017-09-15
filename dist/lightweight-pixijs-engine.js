@@ -410,17 +410,25 @@ var ContainerHelpers = (function () {
     ContainerHelpers.getContainerProperties = function (container) {
         var result = {
             height: container.height,
-            pivot: {},
+            pivot: {
+                x: container.pivot.x,
+                y: container.pivot.y
+            },
+            position: {
+                x: container.position.x,
+                y: container.position.y
+            },
             rotation: container.rotation,
-            scale: {},
-            skew: {},
-            width: container.width,
-            x: container.x,
-            y: container.y
+            scale: {
+                x: container.scale.x,
+                y: container.scale.y
+            },
+            skew: {
+                x: container.skew.x,
+                y: container.skew.y
+            },
+            width: container.width
         };
-        result.pivot.copy(container.pivot);
-        result.scale.copy(container.scale);
-        result.skew.copy(container.skew);
         return result;
     };
     /** method for set container properties */
@@ -428,17 +436,10 @@ var ContainerHelpers = (function () {
         container.height = properties.height;
         container.rotation = properties.rotation;
         container.width = properties.width;
-        container.x = properties.x;
-        container.y = properties.y;
-        if (container.pivot) {
-            container.pivot.copy(properties.pivot);
-        }
-        if (container.scale) {
-            container.scale.copy(properties.scale);
-        }
-        if (container.skew) {
-            container.skew.copy(properties.skew);
-        }
+        container.position.copy(properties.position);
+        container.pivot.copy(properties.pivot);
+        container.scale.copy(properties.scale);
+        container.skew.copy(properties.skew);
     };
     return ContainerHelpers;
 }());
@@ -587,8 +588,8 @@ var ContainerTransitionSlide = (function (_super) {
     ContainerTransitionSlide.prototype.start = function () {
         var _this = this;
         var result = new Promise(function (resolve, _reject) {
-            _this._nextSceneTween = pixi_engine_1.pixiEngineInstance.charm.slide(_this._nextContainer, _this._nextContainerEndState.x, _this._nextContainerEndState.y, _this._frames, _this._easingType);
-            _this._currentSceneTween = pixi_engine_1.pixiEngineInstance.charm.slide(_this._currentContainer, _this._currentContainerEndState.x, _this._currentContainerEndState.y);
+            _this._nextSceneTween = pixi_engine_1.pixiEngineInstance.charm.slide(_this._nextContainer, _this._nextContainerEndState.position.x, _this._nextContainerEndState.position.y, _this._frames, _this._easingType);
+            _this._currentSceneTween = pixi_engine_1.pixiEngineInstance.charm.slide(_this._currentContainer, _this._currentContainerEndState.position.x, _this._currentContainerEndState.position.y);
             _this._currentSceneTween.onCompleted = function () {
                 resolve();
             };
@@ -600,22 +601,22 @@ var ContainerTransitionSlide = (function (_super) {
         pixi_engine_1.pixiEngineInstance.charm.removeTween(this._currentSceneTween);
     };
     ContainerTransitionSlide.prototype._configure = function () {
-        this._nextContainerEndState.y = this._nextContainerOriginalState.y;
-        this._nextContainerEndState.x = this._nextContainerOriginalState.x;
+        this._nextContainerEndState.position.y = this._nextContainerOriginalState.position.y;
+        this._nextContainerEndState.position.x = this._nextContainerOriginalState.position.x;
         if ((this._direction & EnumDirections.UP) === EnumDirections.UP) {
-            this._currentContainerEndState.y = -this._currentContainer.parent.height;
+            this._currentContainerEndState.position.y = -this._currentContainer.parent.height;
         }
         if ((this._direction & EnumDirections.DOWN) === EnumDirections.DOWN) {
-            this._currentContainerEndState.y = this._currentContainer.parent.height;
+            this._currentContainerEndState.position.y = this._currentContainer.parent.height;
         }
         if ((this._direction & EnumDirections.LEFT) === EnumDirections.LEFT) {
-            this._currentContainerEndState.x = -this._currentContainer.parent.width;
+            this._currentContainerEndState.position.x = -this._currentContainer.parent.width;
         }
         if ((this._direction & EnumDirections.RIGHT) === EnumDirections.RIGHT) {
-            this._currentContainerEndState.x = this._currentContainer.parent.width;
+            this._currentContainerEndState.position.x = this._currentContainer.parent.width;
         }
-        this.nextContainer.y = -this._currentContainerEndState.y;
-        this.nextContainer.x = -this._currentContainerEndState.x;
+        this.nextContainer.position.y = -this._currentContainerEndState.position.y;
+        this.nextContainer.position.x = -this._currentContainerEndState.position.x;
     };
     return ContainerTransitionSlide;
 }(ContainerTransitionBase));
@@ -642,8 +643,8 @@ var ContainerTransitionFadeIn = (function (_super) {
     ContainerTransitionFadeIn.prototype._configure = function () {
         // equal parent but, current scene not move
         _super.prototype._configure.call(this);
-        this._currentContainerEndState.x = this._currentContainerOriginalState.x;
-        this._currentContainerEndState.y = this._currentContainerOriginalState.y;
+        this._currentContainerEndState.position.x = this._currentContainerOriginalState.position.x;
+        this._currentContainerEndState.position.y = this._currentContainerOriginalState.position.y;
         this._nextContainer.alpha = 0;
     };
     return ContainerTransitionFadeIn;
@@ -680,8 +681,8 @@ var ContainerTransitionFadeOut = (function (_super) {
     ContainerTransitionFadeOut.prototype._configure = function () {
         // equal parent but, next scene not move
         _super.prototype._configure.call(this);
-        this.nextContainer.y = this._nextContainerOriginalState.x;
-        this.nextContainer.x = this._nextContainerOriginalState.y;
+        this.nextContainer.position.y = this._nextContainerOriginalState.position.x;
+        this.nextContainer.position.x = this._nextContainerOriginalState.position.y;
     };
     return ContainerTransitionFadeOut;
 }(ContainerTransitionSlide));

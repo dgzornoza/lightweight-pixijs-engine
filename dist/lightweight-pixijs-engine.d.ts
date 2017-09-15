@@ -205,12 +205,11 @@ export interface IContainerTransition {
     * Pixi container properties
     */
 export interface IContainerProperties {
-        x: number;
-        y: number;
-        scale: PIXI.Point | PIXI.ObservablePoint;
+        position: PIXI.PointLike;
+        scale: PIXI.PointLike;
         rotation: number;
-        skew: PIXI.ObservablePoint;
-        pivot: PIXI.Point | PIXI.ObservablePoint;
+        skew: PIXI.PointLike;
+        pivot: PIXI.PointLike;
         width: number;
         height: number;
 }

@@ -126,10 +126,10 @@ export class ContainerTransitionSlide extends ContainerTransitionBase {
 
         let result: Promise<PIXI.Container> = new Promise((resolve: IResolve<PIXI.Container>, _reject: IReject) => {
 
-            this._nextSceneTween = pixiEngineInstance.charm.slide(this._nextContainer, this._nextContainerEndState.x,
-                this._nextContainerEndState.y, this._frames, this._easingType);
+            this._nextSceneTween = pixiEngineInstance.charm.slide(this._nextContainer, this._nextContainerEndState.position.x,
+                this._nextContainerEndState.position.y, this._frames, this._easingType);
             this._currentSceneTween = pixiEngineInstance.charm.slide(this._currentContainer,
-                this._currentContainerEndState.x, this._currentContainerEndState.y);
+                this._currentContainerEndState.position.x, this._currentContainerEndState.position.y);
 
             this._currentSceneTween.onCompleted = () => {
                 resolve();
@@ -146,24 +146,24 @@ export class ContainerTransitionSlide extends ContainerTransitionBase {
 
     protected _configure(): void {
 
-        this._nextContainerEndState.y = this._nextContainerOriginalState.y;
-        this._nextContainerEndState.x = this._nextContainerOriginalState.x;
+        this._nextContainerEndState.position.y = this._nextContainerOriginalState.position.y;
+        this._nextContainerEndState.position.x = this._nextContainerOriginalState.position.x;
 
         if ((this._direction & EnumDirections.UP) === EnumDirections.UP) {
-            this._currentContainerEndState.y = -this._currentContainer.parent.height;
+            this._currentContainerEndState.position.y = -this._currentContainer.parent.height;
         }
         if ((this._direction & EnumDirections.DOWN) === EnumDirections.DOWN) {
-            this._currentContainerEndState.y = this._currentContainer.parent.height;
+            this._currentContainerEndState.position.y = this._currentContainer.parent.height;
         }
         if ((this._direction & EnumDirections.LEFT) === EnumDirections.LEFT) {
-            this._currentContainerEndState.x = -this._currentContainer.parent.width;
+            this._currentContainerEndState.position.x = -this._currentContainer.parent.width;
         }
         if ((this._direction & EnumDirections.RIGHT) === EnumDirections.RIGHT) {
-            this._currentContainerEndState.x = this._currentContainer.parent.width;
+            this._currentContainerEndState.position.x = this._currentContainer.parent.width;
         }
 
-        this.nextContainer.y = -this._currentContainerEndState.y;
-        this.nextContainer.x = -this._currentContainerEndState.x;
+        this.nextContainer.position.y = -this._currentContainerEndState.position.y;
+        this.nextContainer.position.x = -this._currentContainerEndState.position.x;
     }
 }
 
@@ -194,8 +194,8 @@ export class ContainerTransitionFadeIn extends ContainerTransitionSlide {
     protected _configure(): void {
         // equal parent but, current scene not move
         super._configure();
-        this._currentContainerEndState.x = this._currentContainerOriginalState.x;
-        this._currentContainerEndState.y = this._currentContainerOriginalState.y;
+        this._currentContainerEndState.position.x = this._currentContainerOriginalState.position.x;
+        this._currentContainerEndState.position.y = this._currentContainerOriginalState.position.y;
 
         this._nextContainer.alpha = 0;
     }
@@ -238,7 +238,7 @@ export class ContainerTransitionFadeOut extends ContainerTransitionSlide {
     protected _configure(): void {
         // equal parent but, next scene not move
         super._configure();
-        this.nextContainer.y = this._nextContainerOriginalState.x;
-        this.nextContainer.x = this._nextContainerOriginalState.y;
+        this.nextContainer.position.y = this._nextContainerOriginalState.position.x;
+        this.nextContainer.position.x = this._nextContainerOriginalState.position.y;
     }
 }
