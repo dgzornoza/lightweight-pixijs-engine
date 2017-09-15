@@ -1,0 +1,92 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [{
+            "taskName": "build debug",
+            "args": [
+                "run",
+                "build-debug"
+            ],
+            // Watching
+            "isBackground": false,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Usar los mismos que la tarea 'build watch' si se quieren usar
+            "problemMatcher": []
+        },
+        {
+            "taskName": "build release",
+            "args": [
+                "run",
+                "build-release"
+            ],
+            // Watching
+            "isBackground": false,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Usar los mismos que la tarea 'build watch' si se quieren usar
+            "problemMatcher": []
+        },
+        {
+            "taskName": "watch",
+            "args": [
+                "run",
+                "watch"
+            ],
+            // Make this the default build command.
+            "isBuildCommand": true,
+            // Watching
+            "isBackground": true,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Use the standard less compilation problem matcher.
+            "problemMatcher": []
+        },
+        {
+            "taskName": "build samples debug",
+            "args": [
+                "run",
+                "build-samples-debug"
+            ],
+            // Watching
+            "isBackground": false,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Usar los mismos que la tarea 'build watch' si se quieren usar
+            "problemMatcher": []
+        },
+        {
+            "taskName": "build samples release",
+            "args": [
+                "run",
+                "build-samples-release"
+            ],
+            // Watching
+            "isBackground": false,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Usar los mismos que la tarea 'build watch' si se quieren usar
+            "problemMatcher": []
+        },
+        {
+            "taskName": "watch samples",
+            "args": [
+                "run",
+                "watch-samples"
+            ],
+            // Make this the default build command.
+            "isBuildCommand": true,
+            // Watching
+            "isBackground": true,
+            // Show the output window only if unrecognized errors occur.
+            "showOutput": "always",
+            // Use the standard less compilation problem matcher.
+            "problemMatcher": []
+        }
+    ]
+}

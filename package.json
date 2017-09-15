@@ -1,0 +1,44 @@
+{
+    "name": "lightweight-pixijs-engine",
+    "description": "Lightweight HTML5 engine based on pixi.js V4",
+    "version": "0.3.1",
+    "keywords": [
+        "pixijs",
+        "engine",
+        "lightweight"
+    ],
+    "author": "David González Zornoza <dgzornoza@dgzornoza.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dgzornoza/lightweight-pixijs-engine.git"
+    },
+    "bugs": {
+        "url": "https://github.com/dgzornoza/lightweight-pixijs-engine/issues"
+    },
+    "main": "./dist/lightweight-pixijs-engine.js",
+    "typings": "./dist/lightweight-pixijs-engine.d.ts",
+    "scripts": {
+        "prepublish": "npm run build-release && npm run build-debug",
+        "watch": "cross-env NODE_ENV=development webpack --debug --watch --config ./src/config/webpack.config.js",
+        "build-debug": "cross-env NODE_ENV=development webpack --display-reasons  --debug --config ./src/config/webpack.config.js",
+        "build-release": "cross-env NODE_ENV=production webpack --display-reasons --debug --config ./src/config/webpack.config.js"
+    },
+    "devDependencies": {
+        "@types/es6-shim": "~0.31.32",
+        "@types/fpsmeter": "~0.3.28",
+        "@types/pixi.js": "~4.5.3",
+        "awesome-typescript-loader": "~3.2.3",
+        "cross-env": "~5.0.5",
+        "dts-bundle": "~0.7.3",
+        "tslint": "^5.0.0",
+        "typescript": "~2.4.2",
+        "webpack": "~3.5.5"
+    },
+    "dependencies": {
+        "es6-shim": "~0.35.3",
+        "fpsmeter": "~0.3.1",
+        "pixijs-charm": "~0.1.4",
+        "pixi.js": "~4.5.4"
+    }
+}

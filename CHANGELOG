@@ -1,0 +1,8 @@
+
+
+lightweight-pixijs-engine-0.2.3 2017/09/05
+
+    [new] add framerate in debug mode
+    [new] add scene manager
+    [new] add Core
+    [new] add Transitions

@@ -1,0 +1,96 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        // LAUNCH
+        {
+            "name": "Launch Edge",
+            "type": "edge",
+            "request": "launch",
+            "url": "http://localhost:8000/",
+            "webRoot": "${workspaceRoot}/wwwroot/"
+        },
+        {
+            "name": "Launch Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8000/",
+            "webRoot": "${workspaceRoot}/wwwroot/"
+        },
+
+        // LAUNCH SOURCEMAPS
+        {
+            "name": "Launch Edge (with sourcemaps)",
+            "type": "edge",
+            "request": "launch",
+            "url": "http://localhost:8000",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/wwwroot/"
+        },
+        {
+            "name": "Launch Chrome (with sourcemaps)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8000",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/wwwroot/"
+        },
+
+
+        // ATTACH
+        {
+            "name": "Attach to Edge",
+            "type": "edge",
+            "request": "attach",
+            "port": 9222,
+            "webRoot": "${workspaceRoot}/wwwroot/"
+        },
+        {
+            "name": "Attach to Chrome",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "webRoot": "${workspaceRoot}/wwwroot/"
+        },
+
+        // ATTACH SOURCEMAPS
+        {
+            "name": "Attach to Edge, with sourcemaps",
+            "type": "edge",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/wwwroot/"
+        },
+        {
+            "name": "Attach to Chrome, with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/wwwroot/"
+        },
+
+        // GULP TASK
+        {
+            "name": "Gulp Task",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+            "stopOnEntry": false,
+            // Configurar tarea a depurar
+            "args": ["build-debug"],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": { },
+            "externalConsole": false,
+            "sourceMaps": false,
+            "outDir": null
+        }
+    ]
+}
+
