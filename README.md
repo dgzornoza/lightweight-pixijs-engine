@@ -1,4 +1,4 @@
-# pixijs-typescript-seed
+# lightweight-pixijs-engine
 Lightweight HTML5 engine based on pixi.js V4.  http://www.pixijs.com/
 
 
