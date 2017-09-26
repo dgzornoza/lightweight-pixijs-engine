@@ -137,12 +137,6 @@ class PixiEngine implements IPixiEngine {
         // si no se especifica un canvas, se añade al cuerpo html
         if (!this._config.view) { document.body.appendChild(this._renderer.view); }
 
-        // escale to window if full-screen mode
-        if (this._config.scaleToWindow) {
-            this._scaleToWindow(this._renderer.view);
-            window.addEventListener("resize", (_event: Event) => { this._scaleToWindow(this._renderer.view); });
-        }
-
         // initialize charm Tweening for pixi
         this._charm = new Charm(PIXI);
 
@@ -151,6 +145,12 @@ class PixiEngine implements IPixiEngine {
 
         // start main loop
         this._mainLoop();
+
+        // escale to window if full-screen mode
+        if (this._config.scaleToWindow) {
+            this._scaleToWindow(this._renderer.view);
+            window.addEventListener("resize", (_event: Event) => { this._scaleToWindow(this._renderer.view); });
+        }
 
         // play engine
         this._state = EnumEngineStates.RUNNING;

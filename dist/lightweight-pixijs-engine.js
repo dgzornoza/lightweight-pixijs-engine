@@ -170,17 +170,17 @@ var PixiEngine = (function () {
         if (!this._config.view) {
             document.body.appendChild(this._renderer.view);
         }
-        // escale to window if full-screen mode
-        if (this._config.scaleToWindow) {
-            this._scaleToWindow(this._renderer.view);
-            window.addEventListener("resize", function (_event) { _this._scaleToWindow(_this._renderer.view); });
-        }
         // initialize charm Tweening for pixi
         this._charm = new pixijs_charm_1.Charm(PIXI);
         // initialize sceneManager
         scene_manager_1.sceneManagerInstance.initialize(this._rootContainer);
         // start main loop
         this._mainLoop();
+        // escale to window if full-screen mode
+        if (this._config.scaleToWindow) {
+            this._scaleToWindow(this._renderer.view);
+            window.addEventListener("resize", function (_event) { _this._scaleToWindow(_this._renderer.view); });
+        }
         // play engine
         this._state = EnumEngineStates.RUNNING;
     };
