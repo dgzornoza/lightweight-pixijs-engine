@@ -19,13 +19,28 @@ export enum EnumEngineStates {
     RUNNING = 2
 }
 
+/**
+ * Enum for scale modes
+ */
+export enum EnumScaleMode {
+    NO_SCALE = 0,
+    EXACT_FIT = 1,
+    NO_BORDER = 2,
+    SHOW_ALL = 3,
+    FIXED_HEIGHT = 4,
+    FIXED_WIDTH = 5
+}
+
 /** PixiApp Configuration */
 export interface IPixiEngineConfiguration extends PIXI.RendererOptions {
     /** Flag for set debug mode (default = false) */
     debugMode?: boolean;
 
-    /** Flag for set full-screen mode (default = false) */
-    scaleToWindow?: boolean;
+    /** Flag for resize with browser size (default = true) */
+    resizeWithBrowserSize?: boolean;
+
+    /** Scale mode for canvas element (only if resizeWithBrowserSize = true) (default = EnumScaleMode.NO_SCALE) */
+    scaleMode?: EnumScaleMode;
 }
 
 /** Interface for pixi main app */
@@ -125,7 +140,8 @@ class PixiEngine implements IPixiEngine {
         this._config = config || {} as IPixiEngineConfiguration;
         this._config.resolution = config.resolution || window.devicePixelRatio;
         this._config.debugMode = config.debugMode || false;
-        this._config.scaleToWindow = config.scaleToWindow || false;
+        this._config.resizeWithBrowserSize = config.resizeWithBrowserSize === false ? false : true;
+        this._config.scaleMode = this._config.scaleMode || EnumScaleMode.NO_SCALE;
 
         // initialize framerate ONLY in debug mode
         if (this._config.debugMode) { this._initializeFpsMeter(); }
@@ -134,7 +150,7 @@ class PixiEngine implements IPixiEngine {
         this._renderer = PIXI.autoDetectRenderer(config);
         console.log(this._renderer.type === PIXI.RENDERER_TYPE.WEBGL ? "Using WebGL Renderer" : "Using Canvas renderer");
 
-        // si no se especifica un canvas, se añade al cuerpo html
+        // add canvas if not set.
         if (!this._config.view) { document.body.appendChild(this._renderer.view); }
 
         // initialize charm Tweening for pixi
@@ -146,18 +162,17 @@ class PixiEngine implements IPixiEngine {
         // start main loop
         this._mainLoop();
 
-        // escale to window if full-screen mode
-        if (this._config.scaleToWindow) {
-            this._scaleToWindow(this._renderer.view);
-            window.addEventListener("resize", (_event: Event) => { this._scaleToWindow(this._renderer.view); });
+        // configure resize with browser size and scale modes
+        if (this._config.resizeWithBrowserSize) {
+            document.body.style.overflowX = document.body.style.overflowY = "hidden";
+            this._resizeWithBrowserSize();
+            window.addEventListener("resize", (_event: Event) => { this._resizeWithBrowserSize(); });
+            window.addEventListener("deviceOrientation", (_event: Event) => { this._resizeWithBrowserSize(); });
         }
 
         // play engine
         this._state = EnumEngineStates.RUNNING;
     }
-
-
-
 
     private _mainLoop(): void {
 
@@ -191,79 +206,79 @@ class PixiEngine implements IPixiEngine {
     }
 
     /**
-     * Function for scale a html element to windows
-     * @param element element to scale
-     * @param backgroundColor backgroundColor to set
-     * @return scale factor
+     * Function for calculate the current window size and set the canvas renderer size accordingly
      */
-    private _scaleToWindow(element: HTMLElement, backgroundColor?: string): number {
+    private _resizeWithBrowserSize(): void {
 
-        backgroundColor = backgroundColor || "#2C3539";
-        let scaleX: number, scaleY: number, scale: number, center: string;
+        let canvasElement: HTMLCanvasElement = this._renderer.view;
 
-        // 1. Scale the element to the correct size
-        // Figure out the scale amount on each axis
-        scaleX = window.innerWidth / element.offsetWidth;
-        scaleY = window.innerHeight / element.offsetHeight;
+        // window width and height minus canvas border
+        let screenWidth: number = window.innerWidth + (canvasElement.width - canvasElement.offsetWidth);
+        let screenHeight: number = window.innerHeight + (canvasElement.height - canvasElement.offsetHeight);
+        let sceneWidth: number = this._config.width!;
+        let sceneHeight: number = this._config.height!;
 
-        // Scale the element based on whichever value is less: `scaleX` or `scaleY`
-        scale = Math.min(scaleX, scaleY);
-        element.style.transformOrigin = "0 0";
-        element.style.transform = "scale(" + scale + ")";
+        /**
+         * Set the canvas size and display size
+         * This way we can support retina graphics
+         */
+        canvasElement.width = screenWidth * window.devicePixelRatio;
+        canvasElement.height = screenHeight * window.devicePixelRatio;
+        canvasElement.style.width = screenWidth + "px";
+        canvasElement.style.height = screenHeight + "px";
 
-        // 2. Center the element.
-        // Decide whether to center the element vertically or horizontally.
-        // Wide elementes should be centered vertically, and
-        // square or tall elementes should be centered horizontally
-        if (element.offsetWidth > element.offsetHeight) {
-            if (element.offsetWidth * scale < window.innerWidth) {
-                center = "horizontally";
-            } else {
-                center = "vertically";
-            }
-        } else {
-            if (element.offsetHeight * scale < window.innerHeight) {
-                center = "vertically";
-            } else {
-                center = "horizontally";
-            }
+        /**
+         * Resize the PIXI renderer
+         * Let PIXI know that we changed the size of the viewport
+         */
+        this._renderer.resize(canvasElement.width, canvasElement.height);
+
+        /**
+         * Scale the canvas horizontally and vertically keeping in mind the screen estate we have
+         * at our disposal. This keeps the relative container dimensions in place.
+         */
+        switch (this._config.scaleMode) {
+            case EnumScaleMode.EXACT_FIT:
+                this._rootContainer.scale.x = screenWidth / sceneWidth;
+                this._rootContainer.scale.y = screenHeight / sceneHeight;
+                break;
+
+            case EnumScaleMode.NO_BORDER:
+                this._rootContainer.scale.x = (screenHeight / sceneHeight < screenWidth / sceneWidth) ?
+                    (screenWidth / sceneWidth) : (screenHeight / sceneHeight);
+                this._rootContainer.scale.y = this._rootContainer.scale.x;
+                break;
+
+            case EnumScaleMode.SHOW_ALL:
+                this._rootContainer.scale.x = (screenHeight / sceneHeight < screenWidth / sceneWidth) ?
+                    (screenHeight / sceneHeight) : (screenWidth / sceneWidth);
+                this._rootContainer.scale.y = this._rootContainer.scale.x;
+                break;
+
+            case EnumScaleMode.FIXED_HEIGHT:
+                this._rootContainer.scale.x = screenHeight / sceneHeight;
+                this._rootContainer.scale.y = this._rootContainer.scale.x;
+                break;
+
+            case EnumScaleMode.FIXED_WIDTH:
+                this._rootContainer.scale.x = screenWidth / sceneWidth;
+                this._rootContainer.scale.y = this._rootContainer.scale.x;
+                break;
+
+            default:
+                this._rootContainer.scale.x = 1;
+                this._rootContainer.scale.y = 1;
+                break;
         }
 
-        // Center horizontally (for square or tall elementes)
-        let margin: number;
-        if (center === "horizontally") {
-            margin = (window.innerWidth - element.offsetWidth * scale) / 2;
-            element.style.marginTop = "0";
-            element.style.marginBottom = "0";
-            element.style.marginLeft = margin + "px";
-            element.style.marginRight = margin + "px";
-        }
+        this._rootContainer.x = (screenWidth - sceneWidth * this._rootContainer.scale.x) * .5;
+        this._rootContainer.y = (screenHeight - sceneHeight * this._rootContainer.scale.y) * .5;
 
-        // Center vertically (for wide elementes)
-        if (center === "vertically") {
-            margin = (window.innerHeight - element.offsetHeight * scale) / 2;
-            element.style.marginTop = margin + "px";
-            element.style.marginBottom = margin + "px";
-            element.style.marginLeft = "0";
-            element.style.marginRight = "0";
-        }
-
-        // 3. Remove any padding from the element  and body and set the element
-        // display style to "block"
-        element.style.paddingLeft = "0";
-        element.style.paddingRight = "0";
-        element.style.paddingTop = "0";
-        element.style.paddingBottom = "0";
-        element.style.display = "block";
-
-        // 4. Set the color of the HTML body background
-        document.body.style.backgroundColor = backgroundColor;
-
-        // 5. Return the `scale` value. This is important, because you'll nee this value
-        // for correct hit testing between the pointer and sprites
-        return scale;
+        /**
+         * iOS likes to scroll when rotating - fix that
+         */
+        window.scrollTo(0, 0);
     }
-
 }
 
 

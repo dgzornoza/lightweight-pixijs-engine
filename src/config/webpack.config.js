@@ -71,11 +71,17 @@ function DtsBundlePlugin() {}
 DtsBundlePlugin.prototype.apply = function(compiler) {
     compiler.plugin("done", function() {
         var dts = require("dts-bundle");
+        var fs = require("fs");
 
+        // delete ouput
+        var outputDts = baseUrl + "/../dist/lightweight-pixijs-engine.d.ts";
+        if (fs.existsSync(outputDts)) { fs.unlinkSync(outputDts); }
+
+        // bundle
         dts.bundle({
             name: libraryName,
             main: baseUrl + "/../dist/**/*.d.ts",
-            out: baseUrl + "/../dist/lightweight-pixijs-engine.d.ts",
+            out: outputDts,
             removeSource: true,
             outputAsModuleFolder: true
         });
