@@ -1,8 +1,15 @@
-import { ICharm, Charm } from "pixijs-charm";
+// thirdparty
+import "pixi.js";
 import "fpsmeter";
+import "pixijs-charm";
+import { ICharm, Charm } from "pixijs-charm";
+import * as log from "loglevel";
+
+
 import { sceneManagerInstance, ISceneManager } from "./scene-manager";
 import "./interfaces";
 
+// exports library
 export * from "./container-transitions";
 export * from "./helpers";
 export * from "./interfaces";
@@ -148,7 +155,7 @@ class PixiEngine implements IPixiEngine {
 
         // create pixi rendered and append to html body
         this._renderer = PIXI.autoDetectRenderer(config);
-        console.log(this._renderer.type === PIXI.RENDERER_TYPE.WEBGL ? "Using WebGL Renderer" : "Using Canvas renderer");
+        log.debug(this._renderer.type === PIXI.RENDERER_TYPE.WEBGL ? "Using WebGL Renderer" : "Using Canvas renderer");
 
         // add canvas if not set.
         if (!this._config.view) { document.body.appendChild(this._renderer.view); }
@@ -218,12 +225,12 @@ class PixiEngine implements IPixiEngine {
         let sceneWidth: number = this._config.width!;
         let sceneHeight: number = this._config.height!;
 
+
         /**
          * Set the canvas size and display size
-         * This way we can support retina graphics
          */
-        canvasElement.width = screenWidth * window.devicePixelRatio;
-        canvasElement.height = screenHeight * window.devicePixelRatio;
+        canvasElement.width = screenWidth;
+        canvasElement.height = screenHeight;
         canvasElement.style.width = screenWidth + "px";
         canvasElement.style.height = screenHeight + "px";
 

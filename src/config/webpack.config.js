@@ -41,10 +41,7 @@ var config = {
         umdNamedDefine: true
     },
     externals: {
-        "es6-shim": "es6-shim",
-        "pixi.js": "pixi.js",
-        "fpsmeter": "fpsmeter",
-        "pixijs-charm": "pixijs-charm"
+        "pixi.js": "pixi.js"
     },
     module: {
         rules: [{

@@ -144,7 +144,9 @@ export interface IUpdateFrame {
         updateFrame(): void;
 }
 
+import "pixi.js";
 import "fpsmeter";
+import "pixijs-charm";
 import "./interfaces";
 /**
     * Enum with allowed engine states
