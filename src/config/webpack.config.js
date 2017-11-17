@@ -41,7 +41,8 @@ var config = {
         umdNamedDefine: true
     },
     externals: {
-        "pixi.js": "pixi.js"
+        "pixi.js": "pixi.js",
+
     },
     module: {
         rules: [{
