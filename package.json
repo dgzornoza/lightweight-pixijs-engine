@@ -1,7 +1,7 @@
 {
     "name": "lightweight-pixijs-engine",
     "description": "Lightweight HTML5 engine based on pixi.js V4",
-    "version": "0.3.7",
+    "version": "0.3.8",
     "keywords": [
         "pixijs",
         "engine",
@@ -37,7 +37,7 @@
     },
     "dependencies": {
         "fpsmeter": "~0.3.1",
-        "loglevel": "~1.5.1cl",
+        "loglevel": "~1.6.0",
         "pixijs-charm": "~0.1.4",
         "pixi.js": "~4.5.6"
     }
