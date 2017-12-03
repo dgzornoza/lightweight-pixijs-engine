@@ -150,16 +150,16 @@ export class ContainerTransitionSlide extends ContainerTransitionBase {
         this._nextContainerEndState.position.x = this._nextContainerOriginalState.position.x;
 
         if ((this._direction & EnumDirections.UP) === EnumDirections.UP) {
-            this._currentContainerEndState.position.y = -this._currentContainer.parent.height;
+            this._currentContainerEndState.position.y = -(this._currentContainer.parent.height / this._currentContainer.parent.scale.y);
         }
         if ((this._direction & EnumDirections.DOWN) === EnumDirections.DOWN) {
-            this._currentContainerEndState.position.y = this._currentContainer.parent.height;
+            this._currentContainerEndState.position.y = (this._currentContainer.parent.height / this._currentContainer.parent.scale.y);
         }
         if ((this._direction & EnumDirections.LEFT) === EnumDirections.LEFT) {
-            this._currentContainerEndState.position.x = -this._currentContainer.parent.width;
+            this._currentContainerEndState.position.x = -(this._currentContainer.parent.width / this._currentContainer.parent.scale.x);
         }
         if ((this._direction & EnumDirections.RIGHT) === EnumDirections.RIGHT) {
-            this._currentContainerEndState.position.x = this._currentContainer.parent.width;
+            this._currentContainerEndState.position.x = (this._currentContainer.parent.width / this._currentContainer.parent.scale.x);
         }
 
         this.nextContainer.position.y = -this._currentContainerEndState.position.y;
