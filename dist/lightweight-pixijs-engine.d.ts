@@ -144,7 +144,9 @@ export interface IUpdateFrame {
         updateFrame(): void;
 }
 
+import "pixi.js";
 import "fpsmeter";
+import "pixijs-charm";
 import "./interfaces";
 /**
     * Enum with allowed engine states
@@ -153,12 +155,25 @@ export enum EnumEngineStates {
         PAUSED = 1,
         RUNNING = 2,
 }
+/**
+    * Enum for scale modes
+    */
+export enum EnumScaleMode {
+        NO_SCALE = 0,
+        EXACT_FIT = 1,
+        NO_BORDER = 2,
+        SHOW_ALL = 3,
+        FIXED_HEIGHT = 4,
+        FIXED_WIDTH = 5,
+}
 /** PixiApp Configuration */
 export interface IPixiEngineConfiguration extends PIXI.RendererOptions {
         /** Flag for set debug mode (default = false) */
         debugMode?: boolean;
-        /** Flag for set full-screen mode (default = false) */
-        scaleToWindow?: boolean;
+        /** Flag for resize with browser size (default = true) */
+        resizeWithBrowserSize?: boolean;
+        /** Scale mode for canvas element (only if resizeWithBrowserSize = true) (default = EnumScaleMode.NO_SCALE) */
+        scaleMode?: EnumScaleMode;
 }
 /** Interface for pixi main app */
 export interface IPixiEngine {
