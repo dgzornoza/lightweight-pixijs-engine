@@ -220,8 +220,8 @@ class PixiEngine implements IPixiEngine {
         let canvasElement: HTMLCanvasElement = this._renderer.view;
 
         // window width and height minus canvas border
-        let screenWidth: number = window.innerWidth + (canvasElement.width - canvasElement.offsetWidth);
-        let screenHeight: number = window.innerHeight + (canvasElement.height - canvasElement.offsetHeight);
+        let screenWidth: number = window.innerWidth;
+        let screenHeight: number = window.innerHeight;
         let sceneWidth: number = this._config.width!;
         let sceneHeight: number = this._config.height!;
 
@@ -229,8 +229,8 @@ class PixiEngine implements IPixiEngine {
         /**
          * Set the canvas size and display size
          */
-        canvasElement.width = screenWidth;
-        canvasElement.height = screenHeight;
+        canvasElement.width = screenWidth - (canvasElement.offsetWidth - canvasElement.clientWidth);
+        canvasElement.height = screenHeight - (canvasElement.height - canvasElement.offsetHeight);
         canvasElement.style.width = screenWidth + "px";
         canvasElement.style.height = screenHeight + "px";
 

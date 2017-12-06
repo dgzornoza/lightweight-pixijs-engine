@@ -240,15 +240,15 @@ var PixiEngine = (function () {
     PixiEngine.prototype._resizeWithBrowserSize = function () {
         var canvasElement = this._renderer.view;
         // window width and height minus canvas border
-        var screenWidth = window.innerWidth + (canvasElement.width - canvasElement.offsetWidth);
-        var screenHeight = window.innerHeight + (canvasElement.height - canvasElement.offsetHeight);
+        var screenWidth = window.innerWidth;
+        var screenHeight = window.innerHeight;
         var sceneWidth = this._config.width;
         var sceneHeight = this._config.height;
         /**
          * Set the canvas size and display size
          */
-        canvasElement.width = screenWidth;
-        canvasElement.height = screenHeight;
+        canvasElement.width = screenWidth - (canvasElement.offsetWidth - canvasElement.clientWidth);
+        canvasElement.height = screenHeight - (canvasElement.height - canvasElement.offsetHeight);
         canvasElement.style.width = screenWidth + "px";
         canvasElement.style.height = screenHeight + "px";
         /**
