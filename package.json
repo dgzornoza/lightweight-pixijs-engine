@@ -1,7 +1,7 @@
 {
     "name": "lightweight-pixijs-engine",
     "description": "Lightweight HTML5 engine based on pixi.js V4",
-    "version": "0.3.8",
+    "version": "0.4.0",
     "keywords": [
         "pixijs",
         "engine",
@@ -32,13 +32,13 @@
         "cross-env": "~5.0.5",
         "dts-bundle": "~0.7.3",
         "tslint": "^5.8.0",
-        "typescript": "~2.4.2",
+        "typescript": "~2.6.2",
         "webpack": "^3.5.6"
     },
     "dependencies": {
         "fpsmeter": "~0.3.1",
         "loglevel": "~1.6.0",
-        "pixijs-charm": "~0.1.4",
+        "es6-tween": "~5.0.5",
         "pixi.js": "~4.5.6"
     }
 }

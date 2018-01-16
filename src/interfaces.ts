@@ -1,3 +1,4 @@
+
 /** Interface for create dynamic objects */
 export interface IDynamic<T> {
     [key: string]: T;
@@ -23,3 +24,7 @@ export interface IReject {
 export interface IUpdateFrame {
     updateFrame(): void;
 }
+
+
+
+

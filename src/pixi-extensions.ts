@@ -1,7 +1,7 @@
 /**
  * Interface for create transitions
  */
-export interface IContainerTransition {
+export interface ITransition {
     readonly nextContainer: PIXI.Container;
     readonly currentContainer: PIXI.Container;
     start(): Promise<PIXI.Container>;
@@ -20,6 +20,7 @@ export interface IContainerProperties {
     pivot: PIXI.PointLike;
     width: number;
     height: number;
+    alpha: number;
 }
 
 
@@ -28,6 +29,7 @@ export class ContainerHelpers {
     /** method for get container properties */
     public static getContainerProperties(container: PIXI.Container): IContainerProperties {
         let result: IContainerProperties = {
+            alpha: container.alpha,
             height: container.height,
             pivot: {
                 x: container.pivot.x,
@@ -54,6 +56,7 @@ export class ContainerHelpers {
 
     /** method for set container properties */
     public static setContainerProperties(properties: IContainerProperties, container: PIXI.Container): void {
+        container.alpha = properties.alpha;
         container.height = properties.height;
         container.rotation = properties.rotation;
         container.width = properties.width;
