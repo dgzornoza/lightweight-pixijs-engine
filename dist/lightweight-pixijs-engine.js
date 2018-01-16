@@ -1996,11 +1996,6 @@ var TransitionFadeOut = /** @class */ (function (_super) {
         }
         return _super.prototype.start.call(this);
     };
-    // public restore(): void {
-    //     super.restore();
-    //     // restore current container alpha
-    //     // this._currentContainer.alpha = 1;
-    // }
     TransitionFadeOut.prototype._configure = function () {
         // equal inheritance 'TransitionSlideBase' but, next scene not move
         _super.prototype._configure.call(this);
