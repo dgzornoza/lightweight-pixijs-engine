@@ -42,7 +42,7 @@ var config = {
     },
     externals: {
         "pixi.js": "pixi.js",
-
+        "es6-tween": "es6-tween",
     },
     module: {
         rules: [{

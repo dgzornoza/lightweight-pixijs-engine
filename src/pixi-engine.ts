@@ -1,21 +1,21 @@
 // thirdparty
 import "pixi.js";
 import "fpsmeter";
-import "pixijs-charm";
-import { ICharm, Charm } from "pixijs-charm";
 import * as log from "loglevel";
-
+import { update } from "es6-tween";
 
 import { sceneManagerInstance, ISceneManager } from "./scene-manager";
 import "./interfaces";
 
 // exports library
-export * from "./container-transitions";
 export * from "./helpers";
 export * from "./interfaces";
+export * from "./infraestructure";
 export * from "./pixi-extensions";
 export * from "./scene-manager";
-
+export * from "./transition-base";
+export * from "./transition-fade";
+export * from "./transition-slide";
 
 
 /**
@@ -64,11 +64,6 @@ export interface IPixiEngine {
      */
     readonly state: EnumEngineStates;
 
-    /**
-     * Get charm library instance for Tweening
-     */
-    readonly charm: ICharm;
-
     /** Property for get debu-gmode */
     readonly debugMode: boolean;
 
@@ -96,7 +91,6 @@ class PixiEngine implements IPixiEngine {
     private _renderer: PIXI.WebGLRenderer | PIXI.CanvasRenderer;
     private _rootContainer: PIXI.Container;
     private _state: EnumEngineStates;
-    private _charm: ICharm;
     private _fpsMeter: FPSMeter;
     private _isInitialized: boolean;
 
@@ -116,10 +110,6 @@ class PixiEngine implements IPixiEngine {
 
     public get state(): EnumEngineStates {
         return this._state;
-    }
-
-    public get charm(): ICharm {
-        return this._charm;
     }
 
     public get debugMode(): boolean {
@@ -160,14 +150,11 @@ class PixiEngine implements IPixiEngine {
         // add canvas if not set.
         if (!this._config.view) { document.body.appendChild(this._renderer.view); }
 
-        // initialize charm Tweening for pixi
-        this._charm = new Charm(PIXI);
-
         // initialize sceneManager
         sceneManagerInstance.initialize(this._rootContainer);
 
         // start main loop
-        this._mainLoop();
+        requestAnimationFrame(() => { this._mainLoop(); });
 
         // configure resize with browser size and scale modes
         if (this._config.resizeWithBrowserSize) {
@@ -181,9 +168,9 @@ class PixiEngine implements IPixiEngine {
         this._state = EnumEngineStates.RUNNING;
     }
 
-    private _mainLoop(): void {
+    private _mainLoop(time?: number): void {
 
-        requestAnimationFrame(() => { this._mainLoop(); });
+        requestAnimationFrame(() => { this._mainLoop(time); });
 
         let scene: PIXI.Container = sceneManagerInstance.currentScene;
         if (this._state !== EnumEngineStates.RUNNING || !scene) { return; }
@@ -191,8 +178,8 @@ class PixiEngine implements IPixiEngine {
         // fpsmeter ONLY debug mode
         if (this._config.debugMode) { this._fpsMeter.tickStart(); }
 
-        // update charm Tweening
-        this._charm.update();
+        // update tween
+        update(time);
 
         // call update in scenes
         for (let displayObject of this._rootContainer.children) {
@@ -230,9 +217,9 @@ class PixiEngine implements IPixiEngine {
          * Set the canvas size and display size
          */
         canvasElement.width = screenWidth - (canvasElement.offsetWidth - canvasElement.clientWidth);
-        canvasElement.height = screenHeight - (canvasElement.height - canvasElement.offsetHeight);
-        canvasElement.style.width = screenWidth + "px";
-        canvasElement.style.height = screenHeight + "px";
+        canvasElement.height = screenHeight - (canvasElement.offsetHeight - canvasElement.clientHeight);
+        canvasElement.style.width = canvasElement.width + "px";
+        canvasElement.style.height = canvasElement.height + "px";
 
         /**
          * Resize the PIXI renderer
